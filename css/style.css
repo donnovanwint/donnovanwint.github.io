@@ -314,7 +314,7 @@ button a:hover {
   }
 
   #mywork {
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   #mywork .row .col-lg-6 {
@@ -334,12 +334,11 @@ button a:hover {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.4)
     );
-    overflow: scroll;
   }
 
   #aboutme {
     font-size: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   #contact .container {
@@ -349,11 +348,5 @@ button a:hover {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.1)
     );
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  #contact button {
-    display: block;
   }
 }
