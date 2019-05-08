@@ -291,7 +291,54 @@ button a:hover {
 
 /* Media Queries */
 @media only screen and (max-width: 992px) {
+  #aboutme .container {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.4)
+    );
+  }
+
+  #aboutme {
+    font-size: 90%;
+  }
+
+  #mywork {
+    overflow: scroll;
+  }
+
   #mywork .row .col-lg-6 {
     margin-top: 1em;
+  }
+
+  #mywork .col-lg-6 {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  #aboutme .container {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.4)
+    );
+    overflow: scroll;
+  }
+
+  #aboutme {
+    font-size: 100%;
+    overflow: scroll;
+  }
+
+  #contact .container {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.1)
+    );
   }
 }

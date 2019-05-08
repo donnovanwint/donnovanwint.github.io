@@ -34,7 +34,6 @@ for (var i = 0; i < goBackButtons.length; i++) {
   });
 }
 
-
 // for (var i = 0; i < sliders.length; i++) {
 //   sliders[i].classList.add("right-panel-active");
 // }
