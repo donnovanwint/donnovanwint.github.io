@@ -20,8 +20,36 @@ section {
   padding: 80px 0;
 }
 
+section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 section h2 {
   text-align: center;
+  position: relative;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 110%;
+  border-bottom: 3px solid #017374;
 }
 
 h1,
@@ -77,15 +105,15 @@ a {
   border-radius: 5px;
   display: inline-block;
   letter-spacing: 2px;
-  -webkit-filter: drop-shadow(0.1em 0.1em 0.2em);
-          filter: drop-shadow(0.1em 0.1em 0.2em);
+  -webkit-filter: drop-shadow(0.05em 0.05em 0.1em);
+          filter: drop-shadow(0.05em 0.05em 0.1em);
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
 }
 
 .btn:hover {
   color: #1f3b4d;
-  background: #d0fefe;
+  background: #5dd7da;
 }
 
 nav {
@@ -205,6 +233,7 @@ nav .navbar .nav-item + .nav-item {
 
 .hero .resume {
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .hero .social-icons {
@@ -271,6 +300,8 @@ nav .navbar .nav-item + .nav-item {
   font-weight: 700;
   border-radius: 5px;
   letter-spacing: 1px;
+  -webkit-filter: drop-shadow(0.02em 0.02em 0.05em);
+          filter: drop-shadow(0.02em 0.02em 0.05em);
 }
 
 .experience .flex .left {
@@ -280,6 +311,15 @@ nav .navbar .nav-item + .nav-item {
 .experience .flex .left .company-name {
   font-size: 20px;
   letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1f3b4d;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.experience .flex .left .company-name:hover {
+  color: #017374;
 }
 
 .experience .flex .left .company-name + .company-name {
@@ -295,9 +335,7 @@ nav .navbar .nav-item + .nav-item {
 .experience .flex .right .company-title {
   margin-top: 1rem;
   color: #1f3b4d;
-  background: lightgrey;
   display: inline-block;
-  padding: 0.3em 0.5em;
   border-radius: 5px;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -309,8 +347,13 @@ nav .navbar .nav-item + .nav-item {
 
 .experience .flex .right .years-worked {
   letter-spacing: 5px;
+  color: #1f3b4d;
   opacity: 0.8;
   margin-bottom: 2rem;
+}
+
+.experience .flex .right .experience-list-item {
+  color: #1f3b4d;
 }
 
 .experience .flex .right .experience-list-item + .experience-list-item {
@@ -346,21 +389,57 @@ nav .navbar .nav-item + .nav-item {
           align-items: center;
   -webkit-filter: drop-shadow(0.3em 0.3em 0.5em rgba(0, 0, 0, 0.5));
           filter: drop-shadow(0.3em 0.3em 0.5em rgba(0, 0, 0, 0.5));
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
 .services .cards .flex .card .card-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .services .cards .flex .card .card-title {
   letter-spacing: 5px;
   font-size: 16px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .services .cards .flex .card .card-text {
   width: 80%;
   opacity: 0.8;
+}
+
+.services .cards .flex .card:hover {
+  background-color: #017374;
+  color: white;
+}
+
+.services .cards .flex .card:hover .card-title {
+  color: white;
+}
+
+.projects {
+  background: #e8e8e8;
+}
+
+.projects .project-container .project + .project {
+  margin-top: 4rem;
+}
+
+.projects .project-container .project .flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project-container .project:nth-child(even) .flex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.projects .project-container .project .left {
+  width: 60%;
 }
 
 footer {

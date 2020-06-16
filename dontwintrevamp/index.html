@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script
-  defer
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
@@ -59,10 +58,20 @@
             <p class="skill">html</p>
             <p class="skill">css</p>
             <p class="skill">Javascript</p>
+            <p class="skill">JQuery</p>
             <p class="skill">wordpress</p>
             <p class="skill">node</p>
             <p class="skill">php</p>
             <p class="skill">seo</p>
+            <p class="skill">mysql</p>
+          </div>
+        </div>
+        <div class="about-skills">
+          <div class="flex" style="align-items:center">
+            <h3 class="about-learning">Learning:</h3>
+            <p class="skill">React</p>
+            <p class="skill">Vue</p>
+            <p class="skill">ASP.NET</p>
           </div>
         </div>
       </div>
@@ -83,9 +92,9 @@
       </div>
       <div class="right">
         <div class="experience-text">
-          <div class="sagefrog">
+          <div class=" exp-bio active" id="sagefrog">
             <h3 class="position">Full Stack Web Developer</h3>
-            <h4 class="company-title"><a href="https://www.sagefrog.com" target="_blank">SageFrog</a></h4>
+            <h4 class="company-title">SageFrog</h4>
             <p class="years-worked">June 2019 - Present</p>
             <ul class="experience-list">
               <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
@@ -93,6 +102,28 @@
               <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
             </ul>
           </div>
+          <div class="exp-bio" id="imexsys">
+            <h3 class="position">Full Stack Web Developer</h3>
+            <h4 class="company-title">Imexsys</h4>
+            <p class="years-worked">March 2016 - January 2020</p>
+            <ul class="experience-list">
+              <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
+              <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
+              <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
+            </ul>
+          </div>
+          <div class="exp-bio" id="freelance">
+            <h3 class="position">Full Stack Web Developer</h3>
+            <h4 class="company-title">Freelance</h4>
+            <p class="years-worked">September 2016 - Present</p>
+            <ul class="experience-list">
+              <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
+              <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
+              <p class="experience-list-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolore quam nam ut odio, commodi illum nemo eos doloremque amet laborum similique velit. Quidem perferendis fugiat esse possimus. Doloribus, delectus.</p>
+            </ul>
+          </div>
+
+
           <div class="imexsys"></div>
           <div class="freelance"></div>
         </div>
@@ -111,13 +142,13 @@
           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quisquam recusandae ducimus esse quidem culpa, possimus vero eligendi molestias consectetur quia fugit. Hic ipsum voluptatum ea, veniam deleniti totam ad.</p>
         </div>
         <div class="card">
-            <p class="card-icon"><i class="fas fa-code"></i></p>
-          <h5 class="card-title">Web Development</h5>
+            <p class="card-icon"><i class="fas fa-phone-laptop"></i></p>
+          <h5 class="card-title">UI / UX</h5>
           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quisquam recusandae ducimus esse quidem culpa, possimus vero eligendi molestias consectetur quia fugit. Hic ipsum voluptatum ea, veniam deleniti totam ad.</p>
         </div>
         <div class="card">
-            <p class="card-icon"><i class="fas fa-code"></i></p>
-          <h5 class="card-title">Web Development</h5>
+            <p class="card-icon"><i class="fas fa-tachometer-alt-fastest"></i></p>
+          <h5 class="card-title">Page Speed<br />Optimization</h5>
           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quisquam recusandae ducimus esse quidem culpa, possimus vero eligendi molestias consectetur quia fugit. Hic ipsum voluptatum ea, veniam deleniti totam ad.</p>
         </div>
       </div>
@@ -130,10 +161,45 @@
     <div class="project-container">
       <div class="project">
         <div class="flex">
-          <img src="" alt="" class="project-background">
-          <div class="project-overlay">
-            <p class="project-index"></p>
+          <div class="left">
             <h3 class="project-title">Brewsavor</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum voluptatem aspernatur iste sint corporis aliquid, totam adipisci doloremque vitae rem perferendis. Commodi amet ea facere blanditiis eos voluptatum minus.</p>
+          </div>
+          <div class="right">
+            <img src="images/brewsavorresponsive.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="flex">
+          <div class="left">
+            <h3 class="project-title">Brewsavor</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum voluptatem aspernatur iste sint corporis aliquid, totam adipisci doloremque vitae rem perferendis. Commodi amet ea facere blanditiis eos voluptatum minus.</p>
+          </div>
+          <div class="right">
+            <img src="images/brewsavorresponsive.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="flex">
+          <div class="left">
+            <h3 class="project-title">Brewsavor</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum voluptatem aspernatur iste sint corporis aliquid, totam adipisci doloremque vitae rem perferendis. Commodi amet ea facere blanditiis eos voluptatum minus.</p>
+          </div>
+          <div class="right">
+            <img src="images/brewsavorresponsive.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="flex">
+          <div class="left">
+            <h3 class="project-title">Brewsavor</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum voluptatem aspernatur iste sint corporis aliquid, totam adipisci doloremque vitae rem perferendis. Commodi amet ea facere blanditiis eos voluptatum minus.</p>
+          </div>
+          <div class="right">
+            <img src="images/brewsavorresponsive.png" alt="">
           </div>
         </div>
       </div>
@@ -150,6 +216,23 @@
 </footer>
 
 <script>
+  const date = new Date()
+  let bios = document.querySelectorAll('.exp-bio')
+  let companies = document.querySelectorAll('.company-name')
+  $('.footer-date').text(date.getFullYear())
+
+ $('.exp-bio:not(.active)').hide()
+
+companies.forEach(company => {
+  company.addEventListener('click', () => {
+   bios.forEach(bio => {
+     bio.style.display = 'none'
+     if(company.classList.contains(bio.id)) {
+       bio.style.display = 'block'
+     }
+   })
+  })
+})
 
 </script>
 </body>

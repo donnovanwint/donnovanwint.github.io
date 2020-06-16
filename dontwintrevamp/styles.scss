@@ -29,8 +29,27 @@ html {
 section {
   padding: 80px 0;
 
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
   h2 {
     text-align: center;
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    align-self: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 110%;
+      border-bottom: 3px solid $color-primary;
+    }
   }
 }
 
@@ -87,12 +106,12 @@ a {
   border-radius: 5px;
   display: inline-block;
   letter-spacing: 2px;
-  filter: drop-shadow(0.1em 0.1em 0.2em);
+  filter: drop-shadow(0.05em 0.05em 0.1em);
   transition: 300ms ease;
 
   &:hover {
     color: $color-dark;
-    background: $color-light;
+    background: #5dd7da;
   }
 }
 
@@ -195,6 +214,7 @@ nav {
 
   .resume {
     text-transform: uppercase;
+    margin-bottom: 1rem;
   }
 
   .social-icons {
@@ -252,6 +272,7 @@ nav {
           font-weight: 700;
           border-radius: 5px;
           letter-spacing: 1px;
+          filter: drop-shadow(0.02em 0.02em 0.05em);
         }
       }
     }
@@ -267,6 +288,14 @@ nav {
       .company-name {
         font-size: 20px;
         letter-spacing: 1px;
+        cursor: pointer;
+        font-weight: 700;
+        color: $color-dark;
+        transition: 300ms ease;
+
+        &:hover {
+          color: $color-primary;
+        }
 
         + .company-name {
           margin-top: 2rem;
@@ -283,9 +312,7 @@ nav {
       .company-title {
         margin-top: 1rem;
         color: $color-dark;
-        background: lightgrey;
         display: inline-block;
-        padding: 0.3em 0.5em;
         border-radius: 5px;
         margin-bottom: 1rem;
         text-transform: uppercase;
@@ -297,11 +324,13 @@ nav {
 
       .years-worked {
         letter-spacing: 5px;
+        color: $color-dark;
         opacity: 0.8;
         margin-bottom: 2rem;
       }
 
       .experience-list-item {
+        color: $color-dark;
         + .experience-list-item {
           margin-top: 2rem;
         }
@@ -329,21 +358,56 @@ nav {
         flex-direction: column;
         align-items: center;
         filter: drop-shadow(0.3em 0.3em 0.5em rgba(0, 0, 0, 0.5));
+        transition: 300ms ease;
 
         .card-icon {
-          font-size: 2rem;
+          font-size: 2.5rem;
         }
 
         .card-title {
           letter-spacing: 5px;
           font-size: 16px;
-          margin: 2rem 0;
+          margin: 1rem 0;
         }
 
         .card-text {
           width: 80%;
           opacity: 0.8;
         }
+
+        &:hover {
+          background-color: $color-primary;
+          color: white;
+
+          .card-title {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// PROJECTS
+.projects {
+  background: #e8e8e8;
+
+  .project-container {
+    .project {
+      + .project {
+        margin-top: 4rem;
+      }
+      .flex {
+        align-items: center;
+      }
+      &:nth-child(even) {
+        .flex {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .left {
+        width: 60%;
       }
     }
   }
