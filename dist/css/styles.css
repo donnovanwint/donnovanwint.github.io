@@ -364,6 +364,7 @@ nav .navbar .nav-item + .nav-item {
   transition: 200ms ease;
   font-family: Roboto, sans-serif;
   font-weight: bold;
+  opacity: 0;
 }
 
 .hero .hero-blurb:hover {
@@ -375,6 +376,7 @@ nav .navbar .nav-item + .nav-item {
 .hero .resume {
   text-transform: uppercase;
   margin-bottom: 1rem;
+  opacity: 0;
 }
 
 .hero img {
@@ -385,6 +387,7 @@ nav .navbar .nav-item + .nav-item {
 
 .hero .social-icons {
   font-size: 3rem;
+  opacity: 0;
 }
 
 .hero .social-icons i {
