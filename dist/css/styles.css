@@ -111,7 +111,7 @@ a {
 
 .btn {
   color: #d0fefe;
-  background-color: transparent;
+  background-color: #017374;
   padding: 0.2em 0.8em;
   border-radius: 5px;
   display: inline-block;
@@ -379,17 +379,16 @@ nav .navbar .nav-item + .nav-item {
   opacity: 0;
 }
 
-.hero a {
-  position: relative;
-  z-index: 10;
-}
-
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: fixed;
-  z-index: -5;
+}
+
+@media (min-width: 1025px) {
+  .hero img {
+    position: fixed;
+  }
 }
 
 .hero .social-icons {
