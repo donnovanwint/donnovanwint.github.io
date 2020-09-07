@@ -284,6 +284,8 @@ nav .navbar .nav-item + .nav-item {
   display: grid;
   place-items: center;
   margin-top: 25rem;
+  position: relative;
+  z-index: 10;
 }
 
 .hero .hero-video-overlay {
