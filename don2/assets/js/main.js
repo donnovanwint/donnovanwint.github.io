@@ -134,3 +134,15 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme())
   localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// PORTFOLIO
+let portfolioBtns = document.querySelectorAll('.portfolio__button')
+portfolioBtns.forEach(function(btn) {
+  btn.addEventListener('mouseenter', function() {
+    this.parentElement.parentElement.querySelector('.portfolio__img-link').classList.add('removeShadow')
+  })
+
+  btn.addEventListener('mouseleave', function() {
+    this.parentElement.parentElement.querySelector('.portfolio__img-link').classList.remove('removeShadow')
+  })
+})
