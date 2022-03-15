@@ -3,7 +3,6 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  /* Change favorite color */
   --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
@@ -755,7 +754,7 @@ img {
 .portfolio__img {
   border-radius: 0.5rem;
   justify-self: center;
-  max-height: 330px;
+  height: clamp(200px, 20vw, 330px);
   width: 100%;
   object-fit: cover;
   filter: drop-shadow(0 0 5px var(--first-color));
