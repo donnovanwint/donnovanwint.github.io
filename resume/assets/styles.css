@@ -1,0 +1,176 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #b6b3b3;
+  font-size: 1rem;
+  color: black;
+}
+
+.resume {
+  width: min(26cm, 100%);
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+  'main'
+  'sidebar';
+  grid-template-columns: 1fr;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  font-size: 0.875rem;
+  border-top: 1px solid #b6b3b3;
+  padding-top: 1rem;
+}
+
+.sidebar > * + * {
+  margin-top: 1rem;
+  border-top: 1px solid #b6b3b3;
+  padding-top: 1rem;
+}
+
+.sidebar .contact h2 ~ * + * {
+  margin-top: 0.1em;
+}
+
+.sidebar h2 {
+  font-size: 1.225rem;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  display: block;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar p {
+  font-weight: 500;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  font-weight: 500;
+}
+
+.sidebar ul li + li {
+  margin-top: 0.1em;
+}
+
+.main {
+  grid-area: main;
+}
+
+.main > * + * {
+  margin-top: 1rem;
+  border-top: 1px solid #b6b3b3;
+  padding-top: 1rem;
+}
+
+.main h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.main h2 {
+  font-size: 1.325rem;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+}
+
+.project + .project {
+  margin-top: 0.7em;
+}
+
+.project h3 {
+  font-size: 1rem;
+}
+
+.project h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-stack {
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+  font-size: 0.875rem;
+}
+
+.work-item + .work-item {
+  margin-top: 1rem;
+}
+
+.work .position {
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.work .company {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work .company-name {
+  font-size: 0.875rem;
+}
+
+.work .company-date {
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.work ul {
+  padding: 0.5rem 1rem;
+}
+
+.work .description {
+  font-size: 0.875rem;
+  margin-top: 0.2em;
+}
+
+.work .description + .description {
+  margin-top: 0.5em;
+}
+
+.cert-item {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+
+.cert-company::before {
+  content: "-";
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
+@media (min-width: 768px) {
+  .resume {
+    grid-template-areas: 'sidebar main';
+    grid-template-columns: auto 1fr;
+  }
+
+  .sidebar {
+    padding-right: 1rem;
+    padding-top: 0;
+    border-top: none;
+    border-right: 1px solid #b6b3b3;
+  }
+
+  .work .company-name {
+    font-size: 1rem;
+  }
+}
