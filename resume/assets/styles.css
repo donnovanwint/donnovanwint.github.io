@@ -88,6 +88,26 @@ body {
   text-transform: uppercase;
 }
 
+.education .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.education-date {
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.education h3 {
+  line-height: 1;
+}
+
+.education small {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
 .project + .project {
   margin-top: 0.7em;
 }
