@@ -129,6 +129,10 @@ body {
   font-size: 0.875rem;
 }
 
+.side-projects {
+  margin-top: 1.5rem;
+}
+
 .work-item + .work-item {
   margin-top: 1rem;
 }
