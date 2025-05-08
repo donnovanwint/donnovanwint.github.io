@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Landing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Kenny Catering</div>
+      <button class="mobile-nav-toggle">☰</button>
+      <div class="nav-links">
+        <a href="/kennydemo/">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Menu Page Hero -->
+    <section class="menu-page-hero">
+      <div class="hero-content">
+        <h1>Our Menu</h1>
+        <p>Crafted with passion, served with excellence</p>
+      </div>
+    </section>
+
+    <script>
+      // Mobile Navigation Toggle
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      mobileNavToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navLinks.classList.toggle('fade-in');
+        mobileNavToggle.textContent = navLinks.classList.contains('active')
+          ? '✕'
+          : '☰';
+      });
+
+      // Close mobile nav when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+          navLinks.classList.remove('active', 'fade-in');
+          mobileNavToggle.textContent = '☰';
+        }
+      });
+
+      // Scroll effect for navbar
+      window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        } else {
+          navbar.style.boxShadow = 'none';
+        }
+      });
+    </script>
+    <!-- Menu Categories Navigation -->
+    <nav class="menu-categories">
+      <div class="category-links">
+        <a href="#appetizers" class="active">Appetizers</a>
+        <a href="#main-courses">Main Courses</a>
+        <a href="#pasta">Pasta</a>
+        <a href="#seafood">Seafood</a>
+        <a href="#desserts">Desserts</a>
+        <a href="#beverages">Beverages</a>
+      </div>
+    </nav>
+
+    <!-- Menu Sections -->
+    <section class="menu-content">
+      <!-- Appetizers -->
+      <div class="menu-section active" id="appetizers">
+        <h2 class="section-title">Appetizers</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?q=80&w=800"
+                alt="Bruschetta"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Classic Bruschetta</h3>
+                <span class="price">$12</span>
+              </div>
+              <p>Fresh tomatoes, garlic, basil on toasted artisan bread</p>
+              <span class="dietary">Vegetarian</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1541014741259-de529411b96a?q=80&w=800"
+                alt="Calamari"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Crispy Calamari</h3>
+                <span class="price">$16</span>
+              </div>
+              <p>Lightly breaded calamari served with marinara sauce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Courses -->
+      <div class="menu-section" id="main-courses">
+        <h2 class="section-title">Main Courses</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800"
+                alt="Ribeye"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Prime Ribeye Steak</h3>
+                <span class="price">$38</span>
+              </div>
+              <p>12oz aged ribeye with roasted vegetables and red wine sauce</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800"
+                alt="Chicken"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Herb Roasted Chicken</h3>
+                <span class="price">$28</span>
+              </div>
+              <p>Free-range chicken with herbs, seasonal vegetables</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pasta -->
+      <div class="menu-section" id="pasta">
+        <h2 class="section-title">Pasta</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1608219992759-8d74ed8d76eb?q=80&w=800"
+                alt="Carbonara"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Classic Carbonara</h3>
+                <span class="price">$24</span>
+              </div>
+              <p>Spaghetti with pancetta, egg, pecorino romano</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=800"
+                alt="Bolognese"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Fettuccine Bolognese</h3>
+                <span class="price">$26</span>
+              </div>
+              <p>Hand-made fettuccine with traditional meat sauce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seafood -->
+      <div class="menu-section" id="seafood">
+        <h2 class="section-title">Seafood</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1551248429-40975aa4de74?q=80&w=800"
+                alt="Grilled Salmon"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Grilled Atlantic Salmon</h3>
+                <span class="price">$32</span>
+              </div>
+              <p>
+                Fresh salmon with lemon butter sauce, asparagus, and herb
+                roasted potatoes
+              </p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?q=80&w=800"
+                alt="Sea Bass"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Pan-Seared Sea Bass</h3>
+                <span class="price">$36</span>
+              </div>
+              <p>
+                Chilean sea bass with saffron risotto and roasted vegetables
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-section" id="desserts">
+        <h2 class="section-title">Desserts</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1574085733277-851d9d856a3a?q=80&w=800"
+                alt="Tiramisu"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Classic Tiramisu</h3>
+                <span class="price">$12</span>
+              </div>
+              <p>
+                Layers of coffee-soaked ladyfingers and mascarpone cream, dusted
+                with cocoa
+              </p>
+              <span class="dietary">Contains Alcohol</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800"
+                alt="Crème Brûlée"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Vanilla Bean Crème Brûlée</h3>
+                <span class="price">$14</span>
+              </div>
+              <p>Rich vanilla custard topped with caramelized sugar</p>
+              <span class="dietary">Gluten Free</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beverages -->
+      <div class="menu-section" id="beverages">
+        <h2 class="section-title">Beverages</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800"
+                alt="Wine Selection"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Premium Wine Selection</h3>
+                <span class="price">Market Price</span>
+              </div>
+              <p>
+                Curated selection of red and white wines from renowned vineyards
+              </p>
+              <span class="dietary">21+ Only</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-image">
+              <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=800"
+                alt="Craft Cocktails"
+              />
+            </div>
+            <div class="item-content">
+              <div class="item-header">
+                <h3>Signature Cocktails</h3>
+                <span class="price">$14</span>
+              </div>
+              <p>
+                House-crafted cocktails featuring premium spirits and fresh
+                ingredients
+              </p>
+              <span class="dietary">21+ Only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Wayne Leron Caterers</h3>
+          <p>
+            Bringing exceptional dining experiences to your special events.
+            Quality ingredients, expert preparation, and impeccable service.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fas fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fas fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fas fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/kennydemo/">Home</a></li>
+            <li><a href="menu">Our Menu</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/wedding">Wedding Catering</a></li>
+            <li><a href="/corporate">Corporate Events</a></li>
+            <li><a href="/private">Private Parties</a></li>
+            <li><a href="/special">Special Occasions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-phone"></i> (267) 978-0170</li>
+            <li><i class="fas fa-envelope"></i> info@wayneleron.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Philadelphia, PA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Wayne Leron Caterers. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
