@@ -747,6 +747,10 @@
     .hero-title {
       font-size: 2.5rem;
     }
+
+    .scroll-down {
+        display: none;
+    }
     
     .portfolio-grid {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
