@@ -1,362 +1,1000 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donnovan Wint – Senior Web Developer & Development Manager</title>
+    <meta
+      name="description"
+      content="Portfolio of Donnovan Wint — Senior development manager and full-stack engineer building fast, high-quality web applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Don Wint | Web Developer</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <a href="#" class="logo">
-          <img src="assets/img/logo.png" alt="Don Wint Logo" class="nav-logo">
-        </a>
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        </ul>
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+  <body>
+    <header class="site-header" id="site-header">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 class="hero-title">Hi, I'm Donnovan</h1>
-            <p class="hero-description">
-              As a seasoned web developer, I specialize in crafting high-quality, efficient websites and applications.
-              My expertise ensures timely delivery and exceptional results, tailored to meet your unique needs.
-            </p>
-          </div>
-          <div class="hero-image">
-            <div class="blob-wrapper">
-              <div class="blob">
-                <img src="assets/img/headshot_2.avif" alt="Don Wint" class="profile-img">
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#" class="nav-brand" aria-label="Home">
+            <img
+              src="assets/img/logo.svg"
+              alt="Donnovan Wint"
+              class="nav-logo"
+            />
+          </a>
+          <ul class="nav-links" id="nav-links" role="list">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#portfolio" class="nav-link">Projects</a></li>
+          </ul>
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-hidden="true"
+        >
+          <source src="assets/video/code.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-orb hero-orb--1"></div>
+          <div class="hero-orb hero-orb--2"></div>
+          <div class="hero-orb hero-orb--3"></div>
+        </div>
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badges">
+                <span class="badge">Full-Stack Web Apps</span>
+                <span class="badge">Performance-Focused</span>
+                <span class="badge">UI-First Engineering</span>
+              </div>
+              <h1 class="hero-title">
+                Hi, I'm
+                <span class="hero-name">Donnovan.</span>
+              </h1>
+              <p class="hero-subtitle">
+                Senior development manager &amp; full-stack engineer crafting
+                fast, scalable web applications. Most recently led web
+                modernization at <strong>NASCAR</strong>.
+              </p>
+              <div class="hero-ctas">
+                <a href="#portfolio" class="btn btn--primary">
+                  View My Work
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="assets/resume.pdf" download class="btn btn--secondary">
+                  Download Resume
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="hero-photo-frame">
+                <img
+                  src="assets/img/headshot_2.avif"
+                  alt="Donnovan Wint"
+                  class="hero-photo"
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
         </div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/donnovan-wint-jr/" target="_blank" class="social-link"
-            aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <a href="https://github.com/donnovanwint" target="_blank" class="social-link" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-        </div>
-        <a href="#about" class="scroll-down">
-          <span>Scroll down</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <a
+          href="#about"
+          class="scroll-cue"
+          aria-label="Scroll to about section"
+        >
+          <span>Scroll</span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <polyline points="19 12 12 19 5 12"></polyline>
           </svg>
         </a>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Get to know more about me</p>
-
-        <div class="about-content">
-          <div class="about-image">
-            <img src="assets/img/about.jpeg" alt="Don Wint" class="about-img">
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="about-bg" aria-hidden="true">
+          <div class="about-orb about-orb--1"></div>
+          <div class="about-orb about-orb--2"></div>
+        </div>
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">
+              Building digital<br />experiences that matter.
+            </h2>
           </div>
-          <div class="about-text">
-            <p>
-              With extensive knowledge and years of experience in various web technologies and UI/UX design, I take
-              pride
-              in delivering exceptional work that consistently exceeds expectations. My dedication to staying up-to-date
-              with the latest web development trends and technologies enables me to create modern, innovative solutions
-              that seamlessly blend form and function. Committed to delivering projects on time and to the highest
-              standards, I am confident in my ability to help you achieve your business goals with expertise and
-              passion.
+          <div class="about-content">
+            <p class="about-text reveal">
+              With over a decade of experience across the full web stack, I
+              specialize in turning complex requirements into clean, performant
+              solutions. From headless CMS architectures serving millions of
+              users to AI-integrated content platforms, I bring a product-minded
+              approach to every project — obsessing over performance,
+              accessibility, and user experience.
             </p>
-            <a href="assets/resume.pdf" download class="btn btn-primary">
-              Download Resume
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
+            <div class="about-highlights reveal">
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <h4 class="highlight-title">Product-Minded</h4>
+                <p class="highlight-desc">
+                  I approach every project with a product lens, obsessing over
+                  user experience as much as the code.
+                </p>
+              </div>
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                    ></polygon>
+                  </svg>
+                </div>
+                <h4 class="highlight-title">Performance-First</h4>
+                <p class="highlight-desc">
+                  From Core Web Vitals to architecture decisions, I optimize for
+                  speed at every layer of the stack.
+                </p>
+              </div>
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <h4 class="highlight-title">Scalable Solutions</h4>
+                <p class="highlight-desc">
+                  I build systems that grow gracefully — from startup MVPs to
+                  enterprise platforms serving millions.
+                </p>
+              </div>
+            </div>
+            <div class="tech-stack reveal">
+              <h3 class="tech-stack-title">Tech Stack</h3>
+              <div class="tech-chips">
+                <span class="chip">React</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Vue.js</span>
+                <span class="chip">Nuxt.js</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">PHP</span>
+                <span class="chip">WordPress</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">Tailwind CSS</span>
+                <span class="chip">GraphQL</span>
+              </div>
+            </div>
+            <div class="about-actions reveal">
+              <a
+                href="assets/resume.pdf"
+                download
+                class="btn btn--primary btn--sm"
+              >
+                Download Resume
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </a>
+              <a
+                href="resume/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--ghost btn--sm"
+              >
+                View Full Resume
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="experience">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-label">Experience</span>
+            <h2 class="section-title">My professional journey.</h2>
+          </div>
+          <div class="exp-tabs reveal">
+            <div class="tab-pills" role="tablist">
+              <button
+                class="pill active"
+                data-tab="work"
+                role="tab"
+                aria-selected="true"
+              >
+                Work Experience
+              </button>
+              <button
+                class="pill"
+                data-tab="education"
+                role="tab"
+                aria-selected="false"
+              >
+                Education
+              </button>
+            </div>
+          </div>
+          <div class="exp-panels">
+            <div class="exp-panel active" id="work-panel" role="tabpanel">
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">Development Manager</h3>
+                    <p class="exp-company">NASCAR</p>
+                  </div>
+                  <span class="exp-dates">2023 – 2025</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Lead modernization of web ecosystem serving millions of
+                    monthly visitors with headless WordPress + React
+                    architectures
+                  </li>
+                  <li>
+                    Architected AI-integrated content workflows with Adobe
+                    Experience Platform, improving personalization delivery by
+                    40%
+                  </li>
+                </ul>
+              </div>
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">Senior Web Developer</h3>
+                    <p class="exp-company">AlphaSense</p>
+                  </div>
+                  <span class="exp-dates">2022 – 2023</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Spearheaded full website rebrand, resulting in faster
+                    performance and increased lead generation
+                  </li>
+                  <li>
+                    Improved Core Web Vitals scores by 35% across the enterprise
+                    SaaS platform
+                  </li>
+                </ul>
+              </div>
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">Senior Web Developer</h3>
+                    <p class="exp-company">PriceWeber</p>
+                  </div>
+                  <span class="exp-dates">2022</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Built responsive WordPress sites for Fortune 500 marketing
+                    campaigns
+                  </li>
+                  <li>
+                    Automated marketing data pipelines, reducing manual
+                    reporting effort by 50%
+                  </li>
+                </ul>
+              </div>
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">Web Developer</h3>
+                    <p class="exp-company">Sagefrog Marketing Group</p>
+                  </div>
+                  <span class="exp-dates">2019 – 2022</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Led development of 30+ WordPress sites achieving 90+
+                    Lighthouse performance scores
+                  </li>
+                  <li>
+                    Built headless WordPress + Vue.js architecture, improving
+                    load times by 70%
+                  </li>
+                </ul>
+              </div>
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">Full Stack Web Developer</h3>
+                    <p class="exp-company">Freelance</p>
+                  </div>
+                  <span class="exp-dates">2012 – 2019</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Delivered 50+ custom WordPress solutions across healthcare,
+                    finance, and e-commerce verticals
+                  </li>
+                  <li>
+                    Executed technical audits consistently achieving 90+
+                    Lighthouse scores
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exp-panel" id="edu-panel" role="tabpanel">
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">B.S. Information Technology</h3>
+                    <p class="exp-company">Penn State Abington</p>
+                  </div>
+                  <span class="exp-dates">2012 – 2019</span>
+                </div>
+              </div>
+              <div class="exp-card reveal">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="exp-role">
+                      Web Development &amp; Design Certifications
+                    </h3>
+                    <p class="exp-company">freeCodeCamp</p>
+                  </div>
+                  <span class="exp-dates">2012 – 2014</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>Responsive Web Design Certification</li>
+                  <li>Front-End Development Libraries Certification</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-label">Projects</span>
+            <h2 class="section-title">Selected work.</h2>
+          </div>
+          <div class="portfolio-filters reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="saas">SaaS</button>
+            <button class="filter-btn" data-filter="corporate">
+              Corporate
+            </button>
+          </div>
+          <div class="portfolio-grid">
+            <article class="project-card reveal" data-category="corporate">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/nascar_myprofile_thumb.png"
+                  alt="NASCAR MyProfile Rewards"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://www.nascar.com/myprofile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">NASCAR MyProfile</h3>
+                <p class="project-desc">
+                  Rewards onboarding &amp; member dashboard enhancement for
+                  NASCAR's loyalty platform
+                </p>
+                <div class="project-tags">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">REST APIs</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="saas">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/alphasense-screenshot.png"
+                  alt="AlphaSense website"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://www.alpha-sense.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">AlphaSense</h3>
+                <p class="project-desc">
+                  AI-powered market intelligence platform for enterprise
+                  research
+                </p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">WordPress</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">REST APIs</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="corporate">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/reynolds-american-screenshot.png"
+                  alt="Reynolds American website"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://www.reynoldsamerican.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Reynolds American</h3>
+                <p class="project-desc">
+                  Corporate digital presence for Fortune 500 tobacco
+                  manufacturer
+                </p>
+                <div class="project-tags">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">CSS</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="saas">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/tradecentric-screenshot.jpg"
+                  alt="TradeCentric website"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://tradecentric.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">TradeCentric</h3>
+                <p class="project-desc">
+                  B2B commerce platform integrating procurement &amp; supply
+                  chain systems
+                </p>
+                <div class="project-tags">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">HubSpot</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="corporate">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/aes-screen.jpeg"
+                  alt="Advanced Equipment Sales website"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://advancedequipmentsales.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Advanced Equipment Sales</h3>
+                <p class="project-desc">
+                  Full-service sales platform for industrial &amp; commercial
+                  equipment
+                </p>
+                <div class="project-tags">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">WooCommerce</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="corporate">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/greenwald.jpeg"
+                  alt="Greenwald Research website"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://greenwaldresearch.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Greenwald Research</h3>
+                <p class="project-desc">
+                  Data-driven web platform for market research &amp; financial
+                  consulting
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">WordPress</span>
+                  <span class="tag">PHP</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="corporate">
+              <div class="project-thumbnail">
+                <img
+                  src="assets/img/vena.jpeg"
+                  alt="John Vena Inc. website"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <a
+                    href="https://www.johnvenaproduce.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    View Project
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">John Vena Inc.</h3>
+                <p class="project-desc">
+                  Modern headless commerce solution for wholesale produce
+                  distribution
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">Nuxt.js</span>
+                  <span class="tag">WordPress</span>
+                  <span class="tag">PHP</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-credit">Designed &amp; built by Donnovan Wint</p>
+          <div class="footer-links">
+            <a
+              href="https://www.linkedin.com/in/donnovan-wint-jr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/donnovanwint"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
               </svg>
             </a>
           </div>
         </div>
+        <p class="footer-copyright">
+          &copy; <span id="year"></span> Donnovan Wint. All rights reserved.
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <!-- Qualification Section -->
-    <section class="qualification">
-      <div class="container">
-        <h2 class="section-title">Qualification</h2>
-        <p class="section-subtitle">My personal journey</p>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-        <div class="tabs">
-          <button class="tab active" data-target="education">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-            </svg>
-            Education
-          </button>
-          <button class="tab" data-target="work">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-            </svg>
-            Work
-          </button>
-        </div>
+        const toggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-        <div class="tab-content">
-          <!-- Education -->
-          <div class="timeline active" id="education">
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Information Sciences & Technology Degree</h3>
-                <p class="timeline-place">Penn State Abington</p>
-                <p class="timeline-year">2012 - 2019</p>
-              </div>
-            </div>
-            <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Web Development and Design</h3>
-                <p class="timeline-place">FreeCode Camp</p>
-                <p class="timeline-year">2012 - 2014</p>
-              </div>
-            </div>
-          </div>
+        toggle.addEventListener('click', () => {
+          const isOpen = navLinks.classList.toggle('open');
+          toggle.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
 
-          <!-- Work -->
-          <div class="timeline" id="work">
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Development Manager</h3>
-                <p class="timeline-place">NASCAR</p>
-                <p class="timeline-year">2023 - Present</p>
-              </div>
-            </div>
-            <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Sr Web Developer</h3>
-                <p class="timeline-place">AlphaSense</p>
-                <p class="timeline-year">2022 - 2023</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Sr Web Developer</h3>
-                <p class="timeline-place">PriceWeber</p>
-                <p class="timeline-year">2022 - 2022</p>
-              </div>
-            </div>
-            <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Web Developer</h3>
-                <p class="timeline-place">Sagefrog Marketing Group</p>
-                <p class="timeline-year">2019 - 2022</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-content">
-                <h3 class="timeline-title">Web Developer</h3>
-                <p class="timeline-place">Freelance</p>
-                <p class="timeline-year">2012 - 2019</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        navLinks.querySelectorAll('.nav-link').forEach((link) => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          });
+        });
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2 class="section-title">Portfolio</h2>
-        <p class="section-subtitle">Most recent work</p>
+        const header = document.getElementById('site-header');
+        window.addEventListener(
+          'scroll',
+          () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+          },
+          { passive: true },
+        );
 
-        <div class="portfolio-grid">
-          <!-- Portfolio Item 1 -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="assets/img/alphasense-screenshot.png" alt="AlphaSense Website">
-              <div class="portfolio-overlay">
-                <a href="https://www.alpha-sense.com/" target="_blank" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>AlphaSense</h3>
-              <p>HTML, CSS, PHP, JavaScript</p>
-            </div>
-          </div>
+        const pills = document.querySelectorAll('.pill[data-tab]');
+        const panels = document.querySelectorAll('.exp-panel');
 
-          <!-- Portfolio Item 2 -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="assets/img/reynolds-american-screenshot.png" alt="Reynolds American Website">
-              <div class="portfolio-overlay">
-                <a href="https://www.reynoldsamerican.com/" target="_blank" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Reynolds American</h3>
-              <p>HTML, CSS, PHP, JavaScript</p>
-            </div>
-          </div>
+        pills.forEach((pill) => {
+          pill.addEventListener('click', () => {
+            pills.forEach((p) => {
+              p.classList.remove('active');
+              p.setAttribute('aria-selected', 'false');
+            });
+            panels.forEach((p) => p.classList.remove('active'));
+            pill.classList.add('active');
+            pill.setAttribute('aria-selected', 'true');
+            document
+              .getElementById(
+                pill.dataset.tab === 'work' ? 'work-panel' : 'edu-panel',
+              )
+              .classList.add('active');
+          });
+        });
 
-          <!-- Portfolio Item 3 -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="assets/img/tradecentric-screenshot.jpg" alt="TradeCentric Website">
-              <div class="portfolio-overlay">
-                <a href="https://tradecentric.com/" target="_blank" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>TradeCentric</h3>
-              <p>HTML, CSS, PHP, JavaScript</p>
-            </div>
-          </div>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
 
-          <!-- Portfolio Item 4 -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="assets/img/aes-screen.jpeg" alt="Advanced Equipment Sales Website">
-              <div class="portfolio-overlay">
-                <a href="https://advancedequipmentsales.com/" target="_blank" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Advanced Equipment Sales</h3>
-              <p>HTML, CSS, PHP, JavaScript</p>
-            </div>
-          </div>
+        filterBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            projectCards.forEach((card) => {
+              const show = filter === 'all' || card.dataset.category === filter;
+              card.style.display = show ? '' : 'none';
+            });
+          });
+        });
 
-          <!-- Portfolio Item 5 -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="assets/img/greenwald.jpeg" alt="Greenwald Research Website">
-              <div class="portfolio-overlay">
-                <a href="https://greenwaldresearch.com/" target="_blank" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Greenwald Research</h3>
-              <p>HTML, CSS, PHP, JavaScript, Vue</p>
-            </div>
-          </div>
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' },
+        );
 
-          <!-- Portfolio Item 6 -->
-          <div class="portfolio-item">
-            <div class="portfolio-img">
-              <img src="assets/img/vena.jpeg" alt="John Vena Inc. Website">
-              <div class="portfolio-overlay">
-                <a href="https://www.johnvenaproduce.com/" target="_blank" class="portfolio-link">View Project</a>
-              </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>John Vena Inc.</h3>
-              <p>HTML, CSS, PHP, JavaScript, Vue, Nuxt</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+        document
+          .querySelectorAll('.reveal')
+          .forEach((el) => revealObserver.observe(el));
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-info">
-          <h2 class="footer-title">Don Wint</h2>
-          <p class="footer-subtitle">Sr Web Developer<br>Philadelphia, PA</p>
-        </div>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/donnovan-wint-jr/" target="_blank" class="social-link"
-            aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <a href="https://github.com/donnovanwint" target="_blank" class="social-link" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <p class="copyright">donwint.com &copy; 2025</p>
-    </div>
-  </footer>
+        const sections = document.querySelectorAll('section[id]');
+        const allNavLinks = document.querySelectorAll('.nav-link');
 
-  <script>
-    // Mobile menu functionality
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navList = document.querySelector('.nav-list');
+        window.addEventListener(
+          'scroll',
+          () => {
+            let current = '';
+            sections.forEach((section) => {
+              if (window.scrollY >= section.offsetTop - 100) {
+                current = section.id;
+              }
+            });
+            allNavLinks.forEach((link) => {
+              link.classList.toggle(
+                'active',
+                link.getAttribute('href') === `#${current}`,
+              );
+            });
+          },
+          { passive: true },
+        );
 
-    mobileMenuToggle.addEventListener('click', () => {
-      navList.classList.toggle('active');
-      mobileMenuToggle.classList.toggle('active');
-    });
-
-    // Ensure mobile menu closes when a link is clicked
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navList.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener('click', (e) => {
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
       });
-    });
-
-    // Tab functionality for qualification section
-    const tabs = document.querySelectorAll('.tab');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.target;
-
-        // Remove active class from all tabs and timelines
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.timeline').forEach(tc => tc.classList.remove('active'));
-
-        // Add active class to clicked tab and corresponding timeline
-        tab.classList.add('active');
-        document.getElementById(target).classList.add('active');
-      });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

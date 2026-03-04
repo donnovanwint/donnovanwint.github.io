@@ -1,279 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Don Wint's Resume</title>
-    <!--==================== GOOGLE FONTS ====================-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donnovan Wint Jr. – Senior WordPress &amp; Front-End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2744;
+            --blue: #3572b0;
+            --text: #2d3436;
+            --text-light: #555e68;
+            --border: #c5ced8;
+            --bg: #ffffff;
+            --font: 'DM Sans', Calibri, 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
 
-    <link rel="stylesheet" href="assets/reset.css" />
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body>
-    <div class="resume">
-      <div class="sidebar">
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font);
+            color: var(--text);
+            background: #e8ecf1;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .resume {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 1.5rem auto;
+            background: var(--bg);
+            padding: 0.42in 0.52in 0.35in;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+            position: relative;
+        }
+
+        .resume::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3.5px;
+            background: linear-gradient(90deg, var(--navy), var(--blue));
+        }
+
+        /* ── Header ── */
+        .header {
+            text-align: center;
+            padding-bottom: 0.32rem;
+            margin-bottom: 0.28rem;
+            border-bottom: 1.5px solid var(--border);
+        }
+
+        .header h1 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 0.07em;
+            margin-bottom: 0.1rem;
+        }
+
+        .subtitle {
+            font-size: 0.74rem;
+            font-weight: 500;
+            color: var(--blue);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.28rem;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0rem 0.45rem;
+            font-size: 0.69rem;
+            color: var(--text-light);
+        }
+
+        .contact a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact span + span::before {
+            content: '|';
+            margin-right: 0.45rem;
+            color: var(--border);
+        }
+
+        /* ── Sections ── */
+        section { margin-bottom: 0.3rem; }
+
+        .section-title {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.13em;
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 0.12rem;
+            margin-bottom: 0.2rem;
+        }
+
+        /* ── Summary ── */
+        .summary p {
+            font-size: 0.675rem;
+            line-height: 1.5;
+            color: var(--text);
+        }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.1rem 0.55rem;
+            font-size: 0.67rem;
+        }
+
+        .sk-cat {
+            font-weight: 600;
+            color: var(--navy);
+            white-space: nowrap;
+        }
+
+        .sk-list { color: var(--text); }
+
+        /* ── Experience ── */
+        .job { margin-bottom: 0.24rem; }
+        .job:last-child { margin-bottom: 0; }
+
+        .job-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.06rem;
+        }
+
+        .job-title { font-size: 0.69rem; }
+        .company { font-weight: 700; color: var(--navy); }
+        .role { font-weight: 500; color: var(--text); }
+
+        .dates {
+            font-size: 0.62rem;
+            color: var(--text-light);
+            white-space: nowrap;
+        }
+
+        .job ul { list-style: none; }
+
+        .job li {
+            font-size: 0.655rem;
+            line-height: 1.42;
+            padding-left: 0.72rem;
+            position: relative;
+            margin-bottom: 0.03rem;
+        }
+
+        .job li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--blue);
+            font-size: 0.55rem;
+            top: 0.04rem;
+        }
+
+        /* ── Education ── */
+        .edu { font-size: 0.67rem; }
+        .edu-degree { font-weight: 600; color: var(--navy); }
+        .edu-certs { font-size: 0.62rem; color: var(--text-light); }
+
+        /* ── Print ── */
+        @page {
+            size: letter;
+            margin: 0.38in 0.48in;
+        }
+
+        @media print {
+            body { background: white; }
+
+            .resume {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                min-height: auto;
+            }
+
+            .resume::before { 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section-title {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .job li::before {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            a { color: var(--text-light) !important; }
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+
+    <header class="header">
+        <h1>DONNOVAN WINT JR.</h1>
+        <div class="subtitle">Senior WordPress &amp; Front-End Developer</div>
         <div class="contact">
-          <h2>Contact</h2>
-          <a href="https://donwint.com/" class="website">donwint.com</a>
-          <a
-            target="_blank"
-            href="https://github.com/donnovanwint"
-            class="github"
-            >github.com/donnovanwint</a
-          >
-          <a target="_blank" href="mailto:donnovanwint@gmail.com" class="email"
-            >donnovanwint@gmail.com</a
-          >
-          <a target="_blank" href="tel:4848881308" class="phone"
-            >484-888-1308</a
-          >
-          <p class="location">Philadelphia, PA</p>
+            <span>Philadelphia, PA</span>
+            <span><a href="mailto:donnovanwint@gmail.com">donnovanwint@gmail.com</a></span>
+            <span>484-888-1308</span>
+            <span><a href="https://donwint.com">donwint.com</a></span>
+            <span><a href="https://github.com/donnovanwint">github.com/donnovanwint</a></span>
         </div>
-        <div class="key-skills">
-          <h2>Key Skills</h2>
-          <ul>
-            <li>HTML5, CSS3</li>
-            <li>JavaScript, Jquery</li>
-            <li>PHP, WordPress</li>
-            <li>React, Next JS</li>
-            <li>Responsive Web Design</li>
-          </ul>
+    </header>
+
+    <section>
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="summary">
+            <p>Results-driven developer with 10+ years of experience specializing in WordPress development, PHP engineering, and modern front-end architectures. Expert in building custom themes, plugins, and headless CMS solutions using React, Vue.js, and Next.js. Proven track record leading cross-functional teams, optimizing Core Web Vitals, and delivering scalable, high-traffic web applications that drive measurable business growth.</p>
         </div>
-        <div class="additional-skills">
-          <h2>Additional Skills</h2>
-          <ul>
-            <li>Vue, Nuxt JS</li>
-            <li>CMS, HubSpot</li>
-            <li>HTML Emails</li>
-          </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="sk-cat">Front-End:</span>
+            <span class="sk-list">HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Next.js, Vue.js, Nuxt.js, jQuery, Sass/SCSS, Tailwind CSS</span>
+
+            <span class="sk-cat">Back-End &amp; CMS:</span>
+            <span class="sk-list">PHP, WordPress (Custom Themes, Plugins, ACF, Gutenberg, WooCommerce), Node.js, Headless CMS, HubSpot CMS</span>
+
+            <span class="sk-cat">Databases &amp; APIs:</span>
+            <span class="sk-list">MySQL, PostgreSQL, MongoDB, Redis, REST APIs, GraphQL</span>
+
+            <span class="sk-cat">DevOps &amp; Tools:</span>
+            <span class="sk-list">Git, GitHub, CI/CD, AWS (S3, Lambda, CloudFront), Docker, Webpack, Vite, Figma, SEO, WCAG Accessibility</span>
         </div>
-      </div>
-      <div class="main">
-        <section class="header">
-          <h1>Donnovan Wint Jr</h1>
-        </section>
-        <section class="education">
-          <h2>Education</h2>
-          <div class="flex">
-            <div>
-              <h3>Penn State Abington</h3>
-              <small>Information Technology</small>
-            </div>
-            <p class="education-date">2019</p>
-          </div>
-        </section>
-        <section class="projects">
-          <h2>Projects</h2>
-          <div class="project">
-            <h3 class="project-name">
-              <a target="_blank" href="https://www.alpha-sense.com/"
-                >AlphaSense</a
-              >
-            </h3>
-            <div class="project-summary">
-              Website rebrand, incorporating an intuitive user interface with
-              custom solutions that cut plugin dependencies by 40%, boosting
-              performance and user experience.
-            </div>
-          </div>
-          <div class="project">
-            <h3 class="project-name">
-              <a target="_blank" href="https://tradecentric.com/"
-                >TradeCentric</a
-              >
-            </h3>
-            <div class="project-summary">
-              Modern rebrand of the former PunchOut2Go client website, featuring
-              an enhanced look and user interface for superior user experience.
-            </div>
-          </div>
-          <div class="project">
-            <h3 class="project-name">
-              <a target="_blank" href="https://advancedequipmentsales.com/"
-                >Advanced Equipment Sales</a
-              >
-            </h3>
-            <div class="project-summary">
-              Strategic client website redesign that enhanced user navigation,
-              leading to a substantial 30% increase in lead generation and
-              conversions.
-            </div>
-          </div>
-          <div class="project">
-            <h3 class="project-name">
-              <a target="_blank" href="https://greenwaldresearch.com/"
-                >Greenwald Research</a
-              >
-            </h3>
-            <div class="project-summary">
-              Client site designed with a clean, minimalist aesthetic, resulting
-              in a noteworthy 25% increase in user engagement and positive user
-              feedback.
-            </div>
-          </div>
-          <div class="project">
-            <h3 class="project-name">
-              <a target="_blank" href="https://www.johnvenaproduce.com/"
-                >John Vena Inc.</a
-              >
-            </h3>
-            <div class="project-summary">
-              Client website rebuild, emphasizing service offerings and
-              enhancing product search experience, achieved through a powerful
-              combination of Headless WordPress and Vue.js, resulting in a 30%
-              increase in user engagement.
-            </div>
-          </div>
-          <div class="side-projects">
-            <h2>Side Projects</h2>
-            <div class="project">
-              <h3 class="project-name">
-                <a
-                  target="_blank"
-                  href="https://donwint.com/mathquiz/index.html"
-                  >React Math Quiz</a
-                >
-              </h3>
-              <div class="project-summary">
-                Dynamic, randomized math quiz, strategically built using React
-                JS as a tool to deepen understanding and proficiency in this
-                JavaScript library.
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="work">
-          <h2>Work Experience</h2>
-          <div class="work-item">
-            <div class="company">
-              <div>
-                <h4 class="company-name">AlphaSense</h4>
-                <span class="position">Sr Web Developer</span>
-              </div>
-              <p class="company-date">August 2022 - Present</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="job">
+            <div class="job-head">
+                <div class="job-title"><span class="company">NASCAR</span> <span class="role">&middot; Development Manager</span></div>
+                <div class="dates">May 2023 – Present</div>
             </div>
             <ul>
-              <li class="description">
-                Spearheaded the rebranding and redevelopment of complex web
-                applications, resulting in significant performance improvements.
-              </li>
-              <li class="description">
-                Established coding standards and best practices across the
-                company to ensure code quality and maintainability
-              </li>
-              <li class="description">
-                Collaborated with design and product teams to create optimized
-                user interfaces that enhance overall user experience.
-              </li>
-              <li class="description">
-                Introduced innovative solutions that reduced loading times and
-                improved site responsiveness.
-              </li>
+                <li>Lead modernization of NASCAR's web ecosystem serving millions of monthly visitors, architecting headless WordPress solutions with React front-ends and PHP-driven APIs for high-performance content delivery</li>
+                <li>Architected AI-integrated content workflows with Adobe Experience Platform, improving personalization delivery by 40% and automating fan engagement across multiple brand properties</li>
+                <li>Integrated Adobe Journey Optimizer API with a headless CMS architecture to automate real-time data feeds for email content, accelerating the email team's campaign rollout speed and reducing manual content assembly</li>
+                <li>Redesigned the MyProfile Rewards onboarding experience end-to-end — registration, login/logout flows, user dashboard, and points tracking system — improving UX consistency and streamlining member engagement across the rewards platform</li>
             </ul>
-          </div>
-          <div class="work-item">
-            <div class="company">
-              <div>
-                <h4 class="company-name">PriceWeber</h4>
-                <span class="position">Sr Web Developer</span>
-              </div>
-              <p class="company-date">April 2022 - August 2022</p>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <div class="job-title"><span class="company">AlphaSense</span> <span class="role">&middot; Senior Web Developer</span></div>
+                <div class="dates">Aug 2022 – May 2023</div>
             </div>
             <ul>
-              <li class="description">
-                Implemented best practices in mobile-first and responsive
-                design, improving website performance across devices.
-              </li>
-              <li class="description">
-                Integrated data between back-end systems and front-end
-                interfaces efficiently using MySQL.
-              </li>
-              <li class="description">
-                Enhanced client satisfaction by delivering timely, innovative
-                solutions tailored to specific project needs.
-              </li>
-              <li class="description">
-                Performed routine audits to identify and resolve performance
-                bottlenecks.
-              </li>
+                <li>Spearheaded a full website rebrand — eliminating plugin bloat, resolving broken third-party API integrations, and overhauling UI/UX — resulting in faster page performance and increased lead generation and product conversions</li>
+                <li>Engineered responsive front-end interfaces using React and JavaScript, improving Core Web Vitals scores by 35% across the enterprise SaaS platform</li>
+                <li>Built RESTful APIs powering LLM-based search tools handling 10K+ daily queries with sub-200ms response times, enhancing data intelligence workflows</li>
+                <li>Partnered with ML and product teams to integrate intelligent content recommendations, increasing user engagement by 25%</li>
             </ul>
-          </div>
-          <div class="work-item">
-            <div class="company">
-              <div>
-                <h4 class="company-name">Sagefrog Marketing Group</h4>
-                <span class="position">Sr Web Developer</span>
-              </div>
-              <p class="company-date">June 2019 - May 2022</p>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <div class="job-title"><span class="company">PriceWeber</span> <span class="role">&middot; Senior Web Developer</span></div>
+                <div class="dates">Apr 2022 – Aug 2022</div>
             </div>
             <ul>
-              <li class="description">
-                Led development of advanced client websites utilizing WordPress,
-                PHP, and JavaScript.
-              </li>
-              <li class="description">
-                Mentored junior developers, promoting a culture of continuous
-                learning and development.
-              </li>
-              <li class="description">
-                Optimized web performance, leading to improved SEO results and
-                higher conversion rates for clients.
-              </li>
-              <li class="description">
-                Integrated robust security features to safeguard client websites
-                against vulnerabilities.
-              </li>
+                <li>Developed responsive WordPress sites with custom PHP backends for Fortune 500 marketing campaigns, delivering pixel-perfect implementations with full cross-device compatibility</li>
+                <li>Engineered automated marketing data pipelines using PHP and REST APIs, reducing manual reporting effort by 50%</li>
             </ul>
-          </div>
-          <div class="work-item">
-            <div class="company">
-              <div>
-                <h4 class="company-name">Freelance</h4>
-                <span class="position">Web Developer</span>
-              </div>
-              <p class="company-date">January 2012 - January 2022</p>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <div class="job-title"><span class="company">Sagefrog Marketing Group</span> <span class="role">&middot; Senior Web Developer</span></div>
+                <div class="dates">Jun 2019 – May 2022</div>
             </div>
             <ul>
-              <li class="description">
-                Redesigned and optimized numerous WordPress sites to enhance
-                user experience and search rankings.
-              </li>
-              <li class="description">
-                Developed scalable web applications to accommodate growing site
-                traffic and improve functionality.
-              </li>
-              <li class="description">
-                Conducted comprehensive code reviews to ensure security,
-                performance, and crossbrowser compatibility
-              </li>
-              <li class="description">
-                Provided long-term support and maintenance for various client
-                websites.
-              </li>
+                <li>Led development of 30+ WordPress sites with custom themes, plugins, and ACF-powered content management for enterprise B2B clients, achieving 90+ Lighthouse performance scores</li>
+                <li>Built decoupled WordPress + Vue.js headless architecture that improved page load times by 70% and enabled flexible, API-driven content delivery</li>
+                <li>Mentored junior developers and established PHP/JavaScript coding standards, improving team velocity and code quality across all projects</li>
             </ul>
-          </div>
-        </section>
-        <section class="certs">
-          <h2>Certifications</h2>
-          <div class="cert-item">
-            <h4 class="cert-name">Responsive Web Design Certification</h4>
-            <p class="cert-company">freeCodeCamp</p>
-          </div>
-          <div class="cert-item">
-            <h4 class="cert-name">
-              Front End Development Libraries Certification
-            </h4>
-            <p class="cert-company">freeCodeCamp</p>
-          </div>
-        </section>
-      </div>
-    </div>
-  </body>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <div class="job-title"><span class="company">Freelance</span> <span class="role">&middot; Full Stack Web Developer</span></div>
+                <div class="dates">Jan 2012 – Jan 2022</div>
+            </div>
+            <ul>
+                <li>Delivered 50+ custom WordPress themes, plugins, and PHP applications for clients across healthcare, finance, and e-commerce verticals</li>
+                <li>Executed technical audits for SEO, WCAG accessibility, and performance optimization, consistently achieving 90+ Lighthouse scores</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <div class="edu">
+            <span class="edu-degree">B.S. Information Technology</span> – Penn State Abington<br>
+            <span class="edu-certs">Certifications: Responsive Web Design &middot; Front-End Development Libraries (freeCodeCamp)</span>
+        </div>
+    </section>
+
+</div>
+</body>
 </html>
