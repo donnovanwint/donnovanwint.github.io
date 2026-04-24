@@ -9,6 +9,7 @@
   --bg-card-hover: rgba(255, 255, 255, 0.95);
   --border-subtle: rgba(0, 0, 0, 0.06);
   --border-hover: rgba(0, 0, 0, 0.12);
+  --border-secondary-btn: rgba(26, 26, 46, 0.22);
 
   --text-primary: #1a1a2e;
   --text-secondary: #555770;
@@ -167,7 +168,7 @@ button {
 .btn--secondary {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-hover);
+  border: 1px solid var(--border-secondary-btn);
 }
 
 .btn--secondary:hover {
