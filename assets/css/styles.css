@@ -1123,6 +1123,38 @@ button {
 }
 
 /* ===========================================
+   Contact
+   =========================================== */
+
+.contact {
+  padding: var(--section-pad) 0;
+  background: var(--bg-elevated);
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.contact-text {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* ===========================================
    Reduced Motion
    =========================================== */
 
