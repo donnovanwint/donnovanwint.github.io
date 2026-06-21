@@ -442,8 +442,8 @@ button {
 }
 
 .hero-badges {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
   gap: 10px;
   margin-bottom: 28px;
   animation: fadeUp 0.7s var(--ease) 0.15s both;
@@ -452,6 +452,7 @@ button {
 .badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 7px 16px;
   border-radius: var(--radius-pill);
   font-size: 1rem;
@@ -664,7 +665,7 @@ button {
 
 .about-highlights {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 56px;
 }
@@ -1234,6 +1235,11 @@ button {
 @media (max-width: 768px) {
   :root {
     --section-pad: 72px;
+  }
+
+  .hero-badges {
+    grid-template-columns: max-content;
+    justify-content: center;
   }
 
   .about,
