@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://donwint.com/sitemap.xml

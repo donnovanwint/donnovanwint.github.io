@@ -1,1068 +1,829 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donnovan Wint — Systems & Infrastructure Engineer | Cloud · DevSecOps · Data</title>
-    <meta
-      name="description"
-      content="Systems & Infrastructure Engineer with 7+ years of AWS cloud architecture, DevSecOps, data engineering, and quality engineering experience. Available for Platform, Data, and Security roles."
-    />
-    <meta property="og:title" content="Donnovan Wint — Systems & Infrastructure Engineer | Cloud · DevSecOps · Data" />
-    <meta property="og:description" content="Systems & Infrastructure Engineer with 7+ years of AWS cloud architecture, DevSecOps, data engineering, and quality engineering experience. Available for Platform, Data, and Security roles." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://donwint.com" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Donnovan Wint — Systems & Infrastructure Engineer | Cloud · DevSecOps · Data" />
-    <meta name="twitter:description" content="Systems & Infrastructure Engineer with 7+ years of AWS cloud architecture, DevSecOps, data engineering, and quality engineering experience. Available for Platform, Data, and Security roles." />
-    <meta property="og:image" content="https://donwint.com/assets/img/headshot_2.jpg" />
-    <meta name="twitter:image" content="https://donwint.com/assets/img/headshot_2.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
 
-  <body>
-    <header class="site-header" id="site-header">
-      <div class="container">
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#" class="nav-brand" aria-label="Home">
-            <img
-              src="assets/img/logo.svg"
-              alt="Donnovan Wint"
-              class="nav-logo"
-            />
-          </a>
-          <ul class="nav-links" id="nav-links" role="list">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#portfolio" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-          <button
-            class="nav-toggle"
-            id="nav-toggle"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main>
-      <!-- Hero -->
-      <section id="hero" class="hero">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          aria-hidden="true"
-        >
-          <source src="assets/video/code.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-bg" aria-hidden="true">
-          <div class="hero-orb hero-orb--1"></div>
-          <div class="hero-orb hero-orb--2"></div>
-          <div class="hero-orb hero-orb--3"></div>
-        </div>
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-content">
-              <div class="hero-badges">
-                <span class="badge">Cloud Infrastructure</span>
-                <span class="badge">DevSecOps</span>
-                <span class="badge">Data Engineering</span>
-                <span class="badge">Quality Engineering</span>
-              </div>
-              <h1 class="hero-title">
-                Hi, I'm
-                <span class="hero-name">Donnovan.</span>
-              </h1>
-              <p class="hero-subtitle">
-                Systems &amp; Infrastructure Engineer — architecting reliable,
-                secure, and automated cloud platforms — most recently at
-                <strong>AlphaSense</strong> and <strong>NASCAR</strong>.
-              </p>
-              <div class="hero-ctas">
-                <a href="#portfolio" class="btn btn--primary">
-                  View My Work
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-                <a href="assets/resume.pdf" download class="btn btn--secondary">
-                  Download Resume
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="hero-visual">
-              <div class="hero-photo-frame">
-                <img
-                  src="assets/img/headshot_2.avif"
-                  alt="Donnovan Wint"
-                  class="hero-photo"
-                  loading="eager"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <a
-          href="#about"
-          class="scroll-cue"
-          aria-label="Scroll to about section"
-        >
-          <span>Scroll</span>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <polyline points="19 12 12 19 5 12"></polyline>
+  <title>Donnovan Wint Jr. — Senior Full Stack Software Engineer</title>
+  <meta name="description"
+    content="Donnovan Wint Jr. — Senior Full Stack Software Engineer with 7+ years building enterprise web platforms end to end: React, Next.js, Vue &amp; Nuxt front-ends, PHP, Node &amp; Java APIs, headless WordPress, and the testing and observability that keep releases reliable." />
+  <meta name="author" content="Donnovan Wint Jr." />
+  <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0d1013" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://donwint.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://donwint.com/" />
+  <meta property="og:site_name" content="Donnovan Wint Jr." />
+  <meta property="og:title" content="Donnovan Wint Jr. — Senior Full Stack Software Engineer" />
+  <meta property="og:description"
+    content="7+ years building enterprise web platforms end to end — React, Next.js, Vue &amp; Nuxt, PHP, Node &amp; Java APIs, headless WordPress, testing &amp; observability." />
+  <meta property="og:image" content="https://donwint.com/assets/img/og-card.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Donnovan Wint Jr., Senior Full Stack Software Engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Donnovan Wint Jr. — Senior Full Stack Software Engineer" />
+  <meta name="twitter:description"
+    content="7+ years building enterprise web platforms end to end — React, Next.js, Vue &amp; Nuxt, PHP, Node &amp; Java APIs, headless WordPress, testing &amp; observability." />
+  <meta name="twitter:image" content="https://donwint.com/assets/img/og-card.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) { }
+      document.documentElement.classList.add('has-js');
+    })();
+  </script>
+
+  <!-- Preload critical fonts + hero image -->
+  <link rel="preload" href="assets/fonts/fraunces-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" type="image/avif"
+    imagesrcset="assets/img/opt/headshot-480.avif 480w, assets/img/opt/headshot-960.avif 960w"
+    imagesizes="(max-width: 640px) 68vw, 420px" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Donnovan Wint Jr.",
+        "url": "https://donwint.com/",
+        "jobTitle": "Senior Full Stack Software Engineer",
+        "email": "mailto:donnovanwint@gmail.com",
+        "address": {
+          "@type": "PostalPlace",
+          "addressLocality": "Philadelphia",
+          "addressRegion": "PA",
+          "addressCountry": "US"
+        },
+        "sameAs": ["https://www.linkedin.com/in/donnovan-wint-jr/"],
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "Vue.js",
+          "Nuxt.js",
+          "TypeScript",
+          "PHP",
+          "Node.js",
+          "Java",
+          "REST APIs",
+          "GraphQL",
+          "Headless WordPress",
+          "PostgreSQL",
+          "Test Automation",
+          "Playwright"
+        ]
+      }
+    </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Donnovan Wint — home">
+        Donnovan Wint<span class="brand-dot">.</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul role="list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme"
+          title="Switch color theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+            </path>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="assets/resume.pdf" download class="btn btn--primary btn--sm resume-btn">
+          Resume
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
         </a>
-      </section>
 
-      <!-- About -->
-      <section id="about" class="about">
-        <div class="about-bg" aria-hidden="true">
-          <div class="about-orb about-orb--1"></div>
-          <div class="about-orb about-orb--2"></div>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="primary-nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="hero-eyebrow" data-hero>
+            <span class="status-dot" aria-hidden="true"></span>
+            Senior Full Stack Software Engineer
+          </p>
+          <h1 class="hero-title">
+            <span class="line" data-hero>Donnovan</span>
+            <span class="line" data-hero>Wint<span class="accent-dot">.</span></span>
+          </h1>
+          <p class="hero-lede" data-hero>
+            Seven years building enterprise web platforms end to end —
+            <strong>React &amp; Vue</strong> front-ends,
+            <strong>PHP, Node &amp; Java</strong> APIs, headless WordPress, and the
+            testing that keeps releases reliable. Recently at
+            <strong>NASCAR</strong> and <strong>AlphaSense</strong>.
+          </p>
+          <div class="hero-ctas" data-hero>
+            <a href="#work" class="btn btn--primary" data-magnetic>
+              View selected work
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="assets/resume.pdf" download class="btn btn--ghost" data-magnetic>
+              Download résumé
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-label">About Me</span>
-            <h2 class="section-title">
-              Building secure, reliable<br />cloud infrastructure.
+
+        <div class="hero-visual" data-hero>
+          <div class="hero-photo">
+            <picture>
+              <source type="image/avif"
+                srcset="assets/img/opt/headshot-480.avif 480w, assets/img/opt/headshot-960.avif 960w"
+                sizes="(max-width: 640px) 68vw, 420px" />
+              <source type="image/webp"
+                srcset="assets/img/opt/headshot-480.webp 480w, assets/img/opt/headshot-960.webp 960w"
+                sizes="(max-width: 640px) 68vw, 420px" />
+              <img src="assets/img/opt/headshot-480.jpg" width="480" height="720" alt="Donnovan Wint Jr."
+                fetchpriority="high" decoding="async" />
+            </picture>
+          </div>
+          <div class="hero-badge" aria-hidden="true">
+            <span class="hero-badge-num">7+</span>
+            <span class="hero-badge-label">years shipping<br />production web</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+        <span>Scroll</span>
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-index">01</span>
+          <span class="section-kicker">About</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-lead">
+            <h2 class="display-h2 reveal">
+              I build web platforms<br />
+              <em>end to end.</em>
             </h2>
           </div>
-          <div class="about-content">
-            <p class="about-text reveal">
-              I architect and secure cloud infrastructure on AWS. I build
-              reliable, automated platforms using infrastructure-as-code
-              (Terraform), enforce security guardrails (IAM/OAuth), and design
-              high-throughput data pipelines (ETL/SQL). My focus is on the
-              reliability, security, and observability of production
-              systems — from CI/CD quality gates to Datadog-driven incident
-              response.
+          <div class="about-body">
+            <p class="lead-text reveal">
+              I'm a senior software engineer with 7+ years building and
+              maintaining enterprise web platforms across frontend, backend,
+              and content-management systems — from architecture through
+              production support.
             </p>
-            <p class="about-text reveal">
-              Seven-plus years of experience across cloud infrastructure,
-              DevSecOps, data engineering, and quality engineering — with the
-              production instincts that Platform, Data, and Security roles
-              require.
+            <p class="reveal">
+              I've shipped production work in React, Next.js, Vue, and Nuxt on
+              the front end; PHP, Node, Python, and Java on the back end; and
+              headless WordPress in between. Recent work spans NASCAR's fan
+              profile and rewards platform, headless CMS implementations,
+              authentication and profile systems, mobile-app content APIs, and
+              an LLM-powered product demo at AlphaSense.
             </p>
-            <div class="about-highlights reveal">
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                  </svg>
-                </div>
-                <h4 class="highlight-title">Cloud Infrastructure & Automation</h4>
-                <p class="highlight-desc">
-                  AWS (Lambda, EKS, S3, RDS, SQS), Terraform, Kubernetes,
-                  serverless architectures, and infrastructure-as-code that
-                  scales under real load.
-                </p>
+            <p class="reveal">
+              I care about clear API contracts, reliable integrations, and the
+              testing and observability that keep releases shipping — without
+              losing sight of the accessibility, performance, and craft that
+              make software feel good to use.
+            </p>
+
+            <dl class="about-stats reveal">
+              <div class="stat">
+                <dt>Experience</dt>
+                <dd><span class="stat-num">7+</span> years</dd>
               </div>
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                  </svg>
-                </div>
-                <h4 class="highlight-title">Security & DevSecOps</h4>
-                <p class="highlight-desc">
-                  IAM least-privilege design, OAuth/OIDC (Auth0) integration,
-                  secrets management, dependency scanning, and code review
-                  enforcement for secure systems.
-                </p>
+              <div class="stat">
+                <dt>Platforms shipped</dt>
+                <dd><span class="stat-num">30+</span> B2B &amp; enterprise</dd>
               </div>
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                  </svg>
-                </div>
-                <h4 class="highlight-title">Data Engineering & ETL</h4>
-                <p class="highlight-desc">
-                  PostgreSQL, MySQL, MongoDB, and Redis schema design, query
-                  optimization, high-throughput ETL pipelines, and data
-                  modeling for analytics platforms.
-                </p>
+              <div class="stat">
+                <dt>Based in</dt>
+                <dd>Philadelphia, PA</dd>
               </div>
-              <div class="highlight-card">
-                <div class="highlight-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
-                <h4 class="highlight-title">Quality Engineering & Observability</h4>
-                <p class="highlight-desc">
-                  CI/CD quality gates, API contract validation (Postman/Newman),
-                  Datadog dashboards and alerting, SLO/SLI definition, and
-                  regression testing that keeps releases reliable.
-                </p>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Skills / stack -->
+        <div class="skills" id="skills">
+          <div class="skills-head reveal">
+            <h3 class="display-h3">The stack</h3>
+            <p class="skills-sub">
+              Full-stack by default — weighted toward the front, deep enough on
+              the back and in test to own a feature from contract to release.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <h4>Frontend</h4>
+              <ul role="list">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Vue.js</li>
+                <li>Nuxt.js</li>
+                <li>React Native</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Responsive UI</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h4>Backend &amp; APIs</h4>
+              <ul role="list">
+                <li>PHP</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>REST</li>
+                <li>GraphQL</li>
+                <li>Webhooks</li>
+                <li>OAuth / OIDC</li>
+                <li>Auth0</li>
+                <li>Sessions</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h4>CMS &amp; Platforms</h4>
+              <ul role="list">
+                <li>WordPress</li>
+                <li>Headless WordPress</li>
+                <li>HubSpot</li>
+                <li>Adobe Experience Platform</li>
+                <li>Adobe Journey Optimizer</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h4>Data</h4>
+              <ul role="list">
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>Schema design</li>
+                <li>Query optimization</li>
+                <li>ETL pipelines</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h4>Testing &amp; QA</h4>
+              <ul role="list">
+                <li>Playwright</li>
+                <li>Selenium</li>
+                <li>Postman / Newman</li>
+                <li>Integration &amp; E2E</li>
+                <li>Regression</li>
+                <li>Accessibility</li>
+                <li>Cross-browser</li>
+                <li>Core Web Vitals</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <h4>DevOps &amp; Monitoring</h4>
+              <ul role="list">
+                <li>Git</li>
+                <li>GitHub Actions</li>
+                <li>AWS (CloudFront, S3, Lambda)</li>
+                <li>RDS · IAM · CloudWatch</li>
+                <li>Datadog</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section work" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-index">02</span>
+          <span class="section-kicker">Selected work</span>
+        </div>
+        <h2 class="display-h2 work-title reveal">
+          Platforms I've<br /><em>built &amp; shipped.</em>
+        </h2>
+
+        <div class="work-grid">
+          <!-- NASCAR -->
+          <article class="project reveal" data-tilt>
+            <a class="project-media" href="https://www.nascar.com/myprofile" target="_blank" rel="noopener noreferrer"
+              tabindex="-1" aria-hidden="true">
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/opt/nascar-640.avif 640w, assets/img/opt/nascar-1280.avif 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/opt/nascar-640.webp 640w, assets/img/opt/nascar-1280.webp 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <img src="assets/img/opt/nascar-640.webp" width="640" height="400"
+                  alt="NASCAR My Profile and Fan Rewards" loading="lazy" decoding="async" />
+              </picture>
+            </a>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="project-role">Senior Software Engineer · NASCAR</span>
+                <span class="project-year">2023–2025</span>
               </div>
+              <h3 class="project-title">
+                <a href="https://www.nascar.com/myprofile" target="_blank" rel="noopener noreferrer">
+                  My Profile &amp; Fan Rewards
+                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                Rebuilt the fan profile and rewards experiences across
+                WordPress, React, and PHP REST APIs — with Auth0/OIDC
+                authentication, session handling, driver preferences,
+                subscriptions, and loyalty data. Maintained WordPress as a
+                shared content backend for web and React Native, and validated
+                critical account flows through automated and manual regression
+                testing, with Datadog for production monitoring.
+              </p>
+              <ul class="project-tags" role="list">
+                <li>WordPress</li>
+                <li>PHP REST APIs</li>
+                <li>React</li>
+                <li>Auth0 / OIDC</li>
+                <li>Datadog</li>
+              </ul>
             </div>
-            <div class="tech-stack reveal">
-              <h3 class="tech-stack-title">Tech Stack</h3>
-              <div class="tech-chips">
-                <span class="chip">AWS (EKS, Lambda, S3, RDS, SQS, CloudFront)</span>
-                <span class="chip">Terraform</span>
-                <span class="chip">Docker</span>
-                <span class="chip">Kubernetes</span>
-                <span class="chip">GitHub Actions</span>
-                <span class="chip">Datadog</span>
-                <span class="chip">PostgreSQL</span>
-                <span class="chip">MySQL</span>
-                <span class="chip">MongoDB</span>
-                <span class="chip">Python</span>
-                <span class="chip">Java (Spring Boot)</span>
-                <span class="chip">Node.js</span>
-                <span class="chip">PHP</span>
-                <span class="chip">IAM</span>
-                <span class="chip">OAuth/OIDC</span>
-                <span class="chip">REST APIs</span>
-                <span class="chip">GraphQL</span>
+          </article>
+
+          <!-- AlphaSense -->
+          <article class="project reveal" data-tilt>
+            <a class="project-media" href="https://www.alpha-sense.com/" target="_blank" rel="noopener noreferrer"
+              tabindex="-1" aria-hidden="true">
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/opt/alphasense-640.avif 640w, assets/img/opt/alphasense-1280.avif 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/opt/alphasense-640.webp 640w, assets/img/opt/alphasense-1280.webp 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <img src="assets/img/opt/alphasense-640.webp" width="640" height="400"
+                  alt="AlphaSense enterprise financial-search platform" loading="lazy" decoding="async" />
+              </picture>
+            </a>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="project-role">Senior Software Engineer · AlphaSense</span>
+                <span class="project-year">2022–2023</span>
               </div>
+              <h3 class="project-title">
+                <a href="https://www.alpha-sense.com/" target="_blank" rel="noopener noreferrer">
+                  ALFred &amp; the search platform
+                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                A React/Next.js frontend on a WordPress content backend for an
+                enterprise financial-search platform. Built ALFred — a
+                lightweight LLM-driven conversational interface wired to
+                AlphaSense product APIs — plus REST integrations, reduced plugin
+                dependence in shared page components, and resolved Core Web
+                Vitals regressions across supported browsers.
+              </p>
+              <ul class="project-tags" role="list">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>WordPress backend</li>
+                <li>LLM · APIs</li>
+                <li>TypeScript</li>
+              </ul>
             </div>
-            <div class="about-actions reveal">
-              <a
-                href="assets/resume.pdf"
-                download
-                class="btn btn--primary btn--sm"
-              >
-                Download Resume
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
+          </article>
+
+          <!-- John Vena -->
+          <article class="project reveal" data-tilt>
+            <a class="project-media" href="https://www.johnvenaproduce.com/" target="_blank" rel="noopener noreferrer"
+              tabindex="-1" aria-hidden="true">
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/opt/johnvena-640.avif 640w, assets/img/opt/johnvena-1280.avif 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/opt/johnvena-640.webp 640w, assets/img/opt/johnvena-1280.webp 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <img src="assets/img/opt/johnvena-640.webp" width="640" height="400"
+                  alt="John Vena Inc. wholesale produce platform" loading="lazy" decoding="async" />
+              </picture>
+            </a>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="project-role">Software Engineer · Sagefrog</span>
+                <span class="project-year">2019–2022</span>
+              </div>
+              <h3 class="project-title">
+                <a href="https://www.johnvenaproduce.com/" target="_blank" rel="noopener noreferrer">
+                  John Vena Inc.
+                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                Architected a headless platform for a wholesale-produce
+                distributor: WordPress as the CMS/backend with defined content
+                models and REST endpoints, feeding a Vue.js / Nuxt front-end
+                that separated editorial workflows from the customer-facing
+                application.
+              </p>
+              <ul class="project-tags" role="list">
+                <li>Headless WordPress</li>
+                <li>Vue.js</li>
+                <li>Nuxt.js</li>
+                <li>REST APIs</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- TradeCentric -->
+          <article class="project reveal" data-tilt>
+            <a class="project-media" href="https://tradecentric.com/" target="_blank" rel="noopener noreferrer"
+              tabindex="-1" aria-hidden="true">
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/opt/tradecentric-640.avif 640w, assets/img/opt/tradecentric-1280.avif 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/opt/tradecentric-640.webp 640w, assets/img/opt/tradecentric-1280.webp 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <img src="assets/img/opt/tradecentric-640.webp" width="640" height="400"
+                  alt="TradeCentric marketing platform" loading="lazy" decoding="async" />
+              </picture>
+            </a>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="project-role">Senior Software Engineer · PriceWeber</span>
+                <span class="project-year">2022</span>
+              </div>
+              <h3 class="project-title">
+                <a href="https://tradecentric.com/" target="_blank" rel="noopener noreferrer">
+                  TradeCentric
+                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                A WordPress site with HubSpot-connected marketing features
+                supporting lead-generation and campaign workflows — built so
+                non-technical teams could manage content and campaigns without
+                editing code.
+              </p>
+              <ul class="project-tags" role="list">
+                <li>WordPress</li>
+                <li>PHP</li>
+                <li>HubSpot</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Greenwald -->
+          <article class="project reveal" data-tilt>
+            <a class="project-media" href="https://greenwaldresearch.com/" target="_blank" rel="noopener noreferrer"
+              tabindex="-1" aria-hidden="true">
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/opt/greenwald-640.avif 640w, assets/img/opt/greenwald-1280.avif 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/opt/greenwald-640.webp 640w, assets/img/opt/greenwald-1280.webp 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <img src="assets/img/opt/greenwald-640.webp" width="640" height="400" alt="Greenwald Research website"
+                  loading="lazy" decoding="async" />
+              </picture>
+            </a>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="project-role">Software Engineer · Sagefrog</span>
+                <span class="project-year">2019–2022</span>
+              </div>
+              <h3 class="project-title">
+                <a href="https://greenwaldresearch.com/" target="_blank" rel="noopener noreferrer">
+                  Greenwald Research
+                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                A custom WordPress site for a market-research and
+                financial-consulting firm, with reusable page components,
+                structured content, and responsive front-end behavior.
+              </p>
+              <ul class="project-tags" role="list">
+                <li>WordPress</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Reynolds American -->
+          <article class="project reveal" data-tilt>
+            <a class="project-media" href="https://www.reynoldsamerican.com/" target="_blank" rel="noopener noreferrer"
+              tabindex="-1" aria-hidden="true">
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/opt/reynolds-640.avif 640w, assets/img/opt/reynolds-1280.avif 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/opt/reynolds-640.webp 640w, assets/img/opt/reynolds-1280.webp 1280w"
+                  sizes="(max-width: 900px) 92vw, 560px" />
+                <img src="assets/img/opt/reynolds-640.webp" width="640" height="400"
+                  alt="Reynolds American corporate website" loading="lazy" decoding="async" />
+              </picture>
+            </a>
+            <div class="project-body">
+              <div class="project-topline">
+                <span class="project-role">Software Engineer · Sagefrog</span>
+                <span class="project-year">2019–2022</span>
+              </div>
+              <h3 class="project-title">
+                <a href="https://www.reynoldsamerican.com/" target="_blank" rel="noopener noreferrer">
+                  Reynolds American
+                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7M8 7h9v9"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="project-desc">
+                WordPress-based campaign and content experiences for a Fortune
+                500 — built with PHP, JavaScript, and CSS, with attention to
+                responsive behavior and repeatable content management.
+              </p>
+              <ul class="project-tags" role="list">
+                <li>WordPress</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section experience" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-index">03</span>
+          <span class="section-kicker">Experience</span>
+        </div>
+        <h2 class="display-h2 reveal">Where I've<br /><em>worked.</em></h2>
+
+        <ol class="timeline" role="list">
+          <li class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3 class="tl-role">Senior Software Engineer / Development Manager</h3>
+                <span class="tl-dates">May 2023 – Nov 2025</span>
+              </div>
+              <p class="tl-company">NASCAR</p>
+              <ul class="tl-points" role="list">
+                <li>Rebuilt My Profile and Fan Rewards across WordPress, React, and PHP APIs with Auth0/OIDC
+                  authentication, session handling, driver preferences, subscriptions, and loyalty data — defining API
+                  contracts and validating account flows with automated and manual regression testing.</li>
+                <li>Built API-driven content workflows that transformed race schedules, driver data, and editorial feeds
+                  into reusable Adobe Journey Optimizer email templates, replacing manual campaign assembly with
+                  structured, testable integrations.</li>
+                <li>Maintained WordPress as a shared content backend for web and React Native apps — developing REST
+                  endpoints, content models, and caching used by both traditional and React-based frontends.</li>
+                <li>Led delivery of responsive WordPress properties and internal publishing tools, balancing editor
+                  usability, component reuse, accessibility, performance, and reliable multi-environment deployment.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3 class="tl-role">Senior Software Engineer</h3>
+                <span class="tl-dates">Aug 2022 – May 2023</span>
+              </div>
+              <p class="tl-company">AlphaSense</p>
+              <ul class="tl-points" role="list">
+                <li>Worked on a WordPress-powered content platform with a React/Next.js frontend, reducing plugin
+                  dependence and improving the maintainability and performance of shared page components, content APIs,
+                  and publishing workflows.</li>
+                <li>Implemented the ALFred product demo — connecting an LLM-driven conversational interface to
+                  AlphaSense product APIs, building the web experience, request flow, and prompt behavior used to
+                  demonstrate capabilities to prospective customers.</li>
+                <li>Built and tested REST integrations, resolved Core Web Vitals issues, and verified responsive
+                  behavior, accessibility, and releases across supported environments.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3 class="tl-role">Senior Software Engineer</h3>
+                <span class="tl-dates">Apr 2022 – Aug 2022</span>
+              </div>
+              <p class="tl-company">PriceWeber</p>
+              <ul class="tl-points" role="list">
+                <li>Delivered custom WordPress, PHP, JavaScript, and CSS implementations for enterprise marketing
+                  programs, connecting frontend components to CMS content and external APIs.</li>
+                <li>Performed cross-browser, responsive, accessibility, SEO, and performance validation before
+                  production releases, translating audit findings into actionable engineering work.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3 class="tl-role">Software Engineer</h3>
+                <span class="tl-dates">Jun 2019 – May 2022</span>
+              </div>
+              <p class="tl-company">Sagefrog Marketing Group</p>
+              <ul class="tl-points" role="list">
+                <li>Built and maintained more than 30 B2B websites using custom WordPress themes, plugins, PHP,
+                  JavaScript, CSS, MySQL, and third-party integrations.</li>
+                <li>Architected a headless WordPress + Vue.js platform for John Vena Inc., defining content models and
+                  REST endpoints that separated editorial workflows from the customer-facing application.</li>
+                <li>Established reusable development patterns, code-review practices, and launch checklists covering
+                  responsive behavior, accessibility, SEO, and performance — and mentored developers.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="edu reveal">
+          <div class="edu-item">
+            <h3 class="edu-title">B.S. Information Technology</h3>
+            <p class="edu-sub">Penn State Abington · 2019</p>
+          </div>
+          <div class="edu-item">
+            <h3 class="edu-title">Certifications</h3>
+            <p class="edu-sub">Responsive Web Design · Front-End Development Libraries — freeCodeCamp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-index">04</span>
+          <span class="section-kicker">Contact</span>
+        </div>
+        <div class="contact-inner reveal">
+          <h2 class="display-h2 contact-title">
+            Let's build<br /><em>something solid.</em>
+          </h2>
+          <p class="contact-text">
+            Open to Senior Full Stack, Frontend, Backend, and SDET roles at
+            product-driven teams. The fastest way to reach me is email.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:donnovanwint@gmail.com" class="btn btn--primary btn--lg" data-magnetic>
+              donnovanwint@gmail.com
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,12 2,6"></polyline>
+              </svg>
+            </a>
+            <div class="contact-secondary">
+              <a href="https://www.linkedin.com/in/donnovan-wint-jr/" target="_blank" rel="noopener noreferrer"
+                class="btn btn--ghost">
+                LinkedIn
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9"></path>
+                </svg>
+              </a>
+              <a href="assets/resume.pdf" download class="btn btn--ghost">
+                Résumé (PDF)
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                   <polyline points="7 10 12 15 17 10"></polyline>
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
               </a>
-              <a
-                href="https://www.linkedin.com/in/donnovan-wint-jr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--secondary btn--sm"
-              >
-                View LinkedIn
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience" class="experience">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-label">Experience</span>
-            <h2 class="section-title">My professional journey.</h2>
-          </div>
-          <div class="exp-tabs reveal">
-            <div class="tab-pills" role="tablist">
-              <button
-                class="pill active"
-                data-tab="work"
-                role="tab"
-                aria-selected="true"
-              >
-                Work Experience
-              </button>
-              <button
-                class="pill"
-                data-tab="education"
-                role="tab"
-                aria-selected="false"
-              >
-                Education
-              </button>
-            </div>
-          </div>
-          <div class="exp-panels">
-            <div class="exp-panel active" id="work-panel" role="tabpanel">
-              <div class="exp-card reveal">
-                <div class="exp-card-header">
-                  <div>
-                    <h3 class="exp-role">Senior Software Engineer / Development Manager</h3>
-                    <p class="exp-company">NASCAR</p>
-                  </div>
-                  <span class="exp-dates">2023 – 2025</span>
-                </div>
-                <ul class="exp-bullets">
-                  <li>
-                    Hardened and secured containerized workloads on Amazon EKS
-                    by implementing IAM least-privilege policies, managing
-                    secrets, and enforcing dependency scanning within GitHub
-                    Actions CI/CD pipelines.
-                  </li>
-                  <li>
-                    Designed and deployed a comprehensive observability stack
-                    (Datadog dashboards, distributed tracing, and SLO-based
-                    alerting), reducing MTTD by approximately 40% and providing
-                    on-call engineers with high-signal incident data for rapid
-                    resolution.
-                  </li>
-                  <li>
-                    Architected CI/CD quality gates and automated API contract
-                    validation (Postman/Newman) across the SDLC, creating a
-                    repeatable regression testing framework that standardized
-                    release verification and rollback procedures.
-                  </li>
-                  <li>
-                    Provisioned and managed multi-environment AWS infrastructure
-                    using Terraform (Lambda, SQS/SNS, RDS, IAM), ensuring
-                    environment parity and reliable test/prod consistency through
-                    infrastructure-as-code practices.
-                  </li>
-                  <li>
-                    Engineered high-throughput ETL pipelines in Java to parse
-                    and extract structured race data (driver stats, finishing
-                    positions, lap data) from PDFs into PostgreSQL, implementing
-                    schema optimization and query indexing to feed downstream
-                    APIs and analytics platforms.
-                  </li>
-                  <li>
-                    Architected a decoupled headless WordPress platform serving
-                    millions of monthly visitors, implementing full API contract
-                    validation and cross-device compatibility testing for
-                    reliable content delivery.
-                  </li>
-                </ul>
-              </div>
-              <div class="exp-card reveal">
-                <div class="exp-card-header">
-                  <div>
-                    <h3 class="exp-role">Senior Software Engineer</h3>
-                    <p class="exp-company">AlphaSense</p>
-                  </div>
-                  <span class="exp-dates">2022 – 2023</span>
-                </div>
-                <ul class="exp-bullets">
-                  <li>
-                    Designed and validated database schemas and pipeline
-                    architecture supporting high-throughput, low-latency query
-                    workloads over structured and unstructured financial
-                    data — including indexing correctness verification and
-                    performance regression testing.
-                  </li>
-                  <li>
-                    Architected API contracts for cross-content search with
-                    strict permissioning and data isolation; authored and
-                    executed integration tests verifying data boundary
-                    enforcement.
-                  </li>
-                  <li>
-                    Performed systematic Core Web Vitals audits and resolved
-                    frontend performance bottlenecks, documenting findings and
-                    verifying fixes through structured retesting.
-                  </li>
-                </ul>
-              </div>
-              <div class="exp-card reveal">
-                <div class="exp-card-header">
-                  <div>
-                    <h3 class="exp-role">Senior Software Engineer</h3>
-                    <p class="exp-company">PriceWeber</p>
-                  </div>
-                  <span class="exp-dates">2022</span>
-                </div>
-                <ul class="exp-bullets">
-                  <li>
-                    Delivered custom backend and frontend implementations with
-                    full cross-device/cross-browser compatibility validation;
-                    performed technical audits across SEO, WCAG accessibility,
-                    and Core Web Vitals with prioritized remediation plans.
-                  </li>
-                </ul>
-              </div>
-              <div class="exp-card reveal">
-                <div class="exp-card-header">
-                  <div>
-                    <h3 class="exp-role">Software Engineer</h3>
-                    <p class="exp-company">Sagefrog Marketing Group</p>
-                  </div>
-                  <span class="exp-dates">2019 – 2022</span>
-                </div>
-                <ul class="exp-bullets">
-                  <li>
-                    Architected a decoupled WordPress + Vue.js headless platform
-                    with API-driven content delivery, consistently achieving 90+
-                    Lighthouse performance scores through structured performance
-                    and quality auditing.
-                  </li>
-                  <li>
-                    Established coding standards and structured code review
-                    practices; mentored junior and mid-level developers on
-                    testing discipline, security best practices, and quality
-                    ownership.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="exp-panel" id="edu-panel" role="tabpanel">
-              <div class="exp-card reveal">
-                <div class="exp-card-header">
-                  <div>
-                    <h3 class="exp-role">B.S. Information Technology</h3>
-                    <p class="exp-company">Penn State Abington</p>
-                  </div>
-                  <span class="exp-dates">2012 – 2019</span>
-                </div>
-              </div>
-              <div class="exp-card reveal">
-                <div class="exp-card-header">
-                  <div>
-                    <h3 class="exp-role">
-                      Web Development &amp; Design Certifications
-                    </h3>
-                    <p class="exp-company">freeCodeCamp</p>
-                  </div>
-                  <span class="exp-dates">2012 – 2014</span>
-                </div>
-                <ul class="exp-bullets">
-                  <li>Responsive Web Design Certification</li>
-                  <li>Front-End Development Libraries Certification</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio -->
-      <section id="portfolio" class="portfolio">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-label">Projects</span>
-            <h2 class="section-title">Selected work.</h2>
-          </div>
-          <div class="portfolio-filters reveal">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai">Infrastructure</button>
-            <button class="filter-btn" data-filter="platform">Platform</button>
-            <button class="filter-btn" data-filter="corporate">
-              Corporate
-            </button>
-          </div>
-          <div class="portfolio-grid">
-            <article class="project-card reveal" data-category="ai">
-              <div class="project-thumbnail">
-                <img
-                  src="assets/img/alphasense-screenshot.png"
-                  alt="AlphaSense — Alphred enterprise search platform"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://www.alpha-sense.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                  >
-                    View Project
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">AlphaSense — Alphred</h3>
-                <p class="project-desc">
-                  High-throughput search APIs over financial data with strict
-                  data isolation and permissioning, validated through integration
-                  testing and performance regression audits
-                </p>
-                <div class="project-tags">
-                  <span class="tag">REST APIs</span>
-                  <span class="tag">PostgreSQL</span>
-                  <span class="tag">Data Pipelines</span>
-                  <span class="tag">React</span>
-                  <span class="tag">TypeScript</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="ai">
-              <div class="project-thumbnail">
-                <img
-                  src="assets/img/nascar_myprofile_thumb.png"
-                  alt="NASCAR — AI-integrated fan platform"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://www.nascar.com/myprofile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                  >
-                    View Project
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">NASCAR — Fan Platform</h3>
-                <p class="project-desc">
-                  Serverless Lambda/SQS event pipelines with Datadog
-                  observability and CI/CD quality gates serving millions of
-                  users — with IAM-secured EKS workloads and Terraform-managed
-                  multi-environment infrastructure
-                </p>
-                <div class="project-tags">
-                  <span class="tag">AWS Lambda</span>
-                  <span class="tag">Terraform</span>
-                  <span class="tag">Datadog</span>
-                  <span class="tag">EKS</span>
-                  <span class="tag">REST APIs</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="platform">
-              <div class="project-thumbnail">
-                <img
-                  src="assets/img/vena.jpeg"
-                  alt="John Vena Inc. website"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://www.johnvenaproduce.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                  >
-                    View Project
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">John Vena Inc.</h3>
-                <p class="project-desc">
-                  Headless commerce platform — decoupled CMS with a Nuxt.js
-                  front-end and custom REST API layer for wholesale produce
-                  distribution
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Nuxt.js</span>
-                  <span class="tag">Vue.js</span>
-                  <span class="tag">REST APIs</span>
-                  <span class="tag">PHP</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="platform">
-              <div class="project-thumbnail">
-                <img
-                  src="assets/img/tradecentric-screenshot.jpg"
-                  alt="TradeCentric website"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://tradecentric.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                  >
-                    View Project
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">TradeCentric</h3>
-                <p class="project-desc">
-                  B2B SaaS platform connecting procurement and supply chain
-                  systems — custom CMS, marketing automation, and HubSpot
-                  integration
-                </p>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">REST APIs</span>
-                  <span class="tag">HubSpot</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="corporate">
-              <div class="project-thumbnail">
-                <img
-                  src="assets/img/greenwald.jpeg"
-                  alt="Greenwald Research website"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://greenwaldresearch.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                  >
-                    View Project
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">Greenwald Research</h3>
-                <p class="project-desc">
-                  Data-driven platform for a market research and financial
-                  consulting firm — headless CMS, custom data views, and
-                  Vue.js front-end
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Vue.js</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">REST APIs</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="corporate">
-              <div class="project-thumbnail">
-                <img
-                  src="assets/img/reynolds-american-screenshot.png"
-                  alt="Reynolds American website"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://www.reynoldsamerican.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link"
-                  >
-                    View Project
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">Reynolds American</h3>
-                <p class="project-desc">
-                  Enterprise corporate platform for a Fortune 500 — custom
-                  CMS, compliance-aware content workflows, and multi-brand
-                  architecture
-                </p>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">WordPress</span>
-                  <span class="tag">CSS</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <!-- Contact -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="section-header reveal">
-            <span class="section-label">Contact</span>
-            <h2 class="section-title">Let's work together.</h2>
-          </div>
-          <div class="contact-content reveal">
-            <p class="contact-text">
-              Open to Cloud Infrastructure, DevSecOps, Data Engineering, and
-              Quality Engineering roles — Platform Engineer, DevSecOps Engineer,
-              Data Engineer, Quality Engineer, and related senior positions at
-              product-driven companies.
-            </p>
-            <div class="contact-ctas">
-              <a href="mailto:donnovanwint@gmail.com" class="btn btn--primary">
-                Get in Touch
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,12 2,6"></polyline>
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/donnovan-wint-jr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--ghost"
-              >
-                LinkedIn
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-inner">
-          <p class="footer-credit">Designed &amp; built by Donnovan Wint</p>
-          <div class="footer-links">
-            <a
-              href="https://www.linkedin.com/in/donnovan-wint-jr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <p class="footer-copyright">
-          &copy; <span id="year"></span> Donnovan Wint. All rights reserved.
-        </p>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('year').textContent = new Date().getFullYear();
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">Donnovan Wint<span class="brand-dot">.</span></p>
+      <p class="footer-note">
+        Designed &amp; built from scratch — vanilla HTML, CSS &amp; JS with GSAP.
+      </p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/donnovan-wint-jr/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <a href="mailto:donnovanwint@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,12 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Donnovan Wint Jr.</p>
+    </div>
+  </footer>
 
-        const toggle = document.getElementById('nav-toggle');
-        const navLinks = document.getElementById('nav-links');
+  <script src="assets/js/vendor/gsap.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 
-        toggle.addEventListener('click', () => {
-          const isOpen = navLinks.classList.toggle('open');
-          toggle.classList.toggle('active');
-          toggle.setAttribute('aria-expanded', isOpen);
-          document.body.style.overflow = isOpen ? 'hidden' : '';
-        });
-
-        navLinks.querySelectorAll('.nav-link').forEach((link) => {
-          link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          });
-        });
-
-        const header = document.getElementById('site-header');
-        window.addEventListener(
-          'scroll',
-          () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-          },
-          { passive: true },
-        );
-
-        const pills = document.querySelectorAll('.pill[data-tab]');
-        const panels = document.querySelectorAll('.exp-panel');
-
-        pills.forEach((pill) => {
-          pill.addEventListener('click', () => {
-            pills.forEach((p) => {
-              p.classList.remove('active');
-              p.setAttribute('aria-selected', 'false');
-            });
-            panels.forEach((p) => p.classList.remove('active'));
-            pill.classList.add('active');
-            pill.setAttribute('aria-selected', 'true');
-            document
-              .getElementById(
-                pill.dataset.tab === 'work' ? 'work-panel' : 'edu-panel',
-              )
-              .classList.add('active');
-          });
-        });
-
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach((btn) => {
-          btn.addEventListener('click', () => {
-            filterBtns.forEach((b) => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            projectCards.forEach((card) => {
-              const show = filter === 'all' || card.dataset.category === filter;
-              card.style.display = show ? '' : 'none';
-            });
-          });
-        });
-
-        const revealObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' },
-        );
-
-        document
-          .querySelectorAll('.reveal')
-          .forEach((el) => revealObserver.observe(el));
-
-        const sections = document.querySelectorAll('section[id]');
-        const allNavLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener(
-          'scroll',
-          () => {
-            let current = '';
-            sections.forEach((section) => {
-              if (window.scrollY >= section.offsetTop - 100) {
-                current = section.id;
-              }
-            });
-            allNavLinks.forEach((link) => {
-              link.classList.toggle(
-                'active',
-                link.getAttribute('href') === `#${current}`,
-              );
-            });
-          },
-          { passive: true },
-        );
-
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener('click', (e) => {
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-              e.preventDefault();
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
-        });
-      });
-    </script>
-  </body>
 </html>
