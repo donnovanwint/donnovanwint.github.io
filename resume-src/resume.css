@@ -1,0 +1,75 @@
+:root { --teal: #0d7d72; --ink: #1c1c1c; --muted: #565656; --line: #c9c9c9; --faint: #e8e8e8; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 10.1pt;
+  line-height: 1.28;
+  color: var(--ink);
+  margin: 0;
+}
+.name {
+  text-align: center;
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  color: #16201f;
+}
+.title {
+  text-align: center;
+  font-size: 12.5pt;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 4px 0 0;
+}
+.contact {
+  text-align: center;
+  font-size: 9pt;
+  color: var(--muted);
+  margin: 7px 0 0;
+}
+.rule { border: none; border-top: 2px solid var(--teal); margin: 9px 0 2px; }
+
+h2.section {
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #16201f;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 3px;
+  margin: 11px 0 6px;
+}
+p.summary-text { margin: 0; }
+
+table.skills { width: 100%; border-collapse: collapse; }
+table.skills td { vertical-align: top; padding: 3px 0; border-bottom: 1px solid var(--faint); }
+table.skills tr:last-child td { border-bottom: none; }
+td.cat {
+  width: 24%;
+  font-size: 8.6pt;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+  padding-right: 10px;
+}
+td.val { font-size: 9.6pt; color: #2f2f2f; }
+
+.job { margin-bottom: 8px; }
+.job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.job-title { font-size: 11pt; font-weight: 700; color: #16201f; }
+.job-title .role { font-weight: 400; }
+.job-dates { font-size: 9pt; font-style: italic; color: var(--muted); white-space: nowrap; }
+.job-summary { font-size: 9.5pt; font-style: italic; color: #3f3f3f; margin: 2px 0 3px; }
+h4.sub { font-size: 9.9pt; font-weight: 700; color: var(--teal); margin: 4px 0 1px; }
+ul { margin: 2px 0 3px; padding-left: 16px; }
+li { font-size: 9.6pt; margin-bottom: 2px; }
+.client-name { font-weight: 700; color: var(--teal); }
+
+.edu-line { margin: 2px 0; font-size: 9.9pt; }
+.edu-line b { color: #16201f; }
+.keep { break-inside: avoid; }

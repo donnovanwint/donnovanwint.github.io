@@ -1,0 +1,5 @@
+# OS / editor cruft
+.DS_Store
+
+# Node (only used locally to regenerate résumé PDFs via resume-src/render.mjs)
+node_modules/
