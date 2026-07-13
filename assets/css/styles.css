@@ -946,6 +946,10 @@ strong {
   background: var(--bg);
   border: 2px solid var(--accent);
 }
+.tl-marker--current {
+  background: var(--accent);
+  animation: pulse 2.4s infinite;
+}
 .tl-head {
   display: flex;
   flex-wrap: wrap;
