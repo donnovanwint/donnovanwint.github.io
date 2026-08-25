@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body{margin:0;background:#FBF7F0}
+  a{color:#C1613B}
+  a:hover{color:#A6492C}
+  .navlink{color:#1E3A5C;text-decoration:none;font:600 14.5px Figtree,sans-serif;white-space:nowrap}
+  .navlink:hover{color:#C1613B}
+  .pill-cta{display:inline-flex;align-items:center;gap:8px;background:#C1613B;color:#FFF9F2;font:700 15.5px Figtree,sans-serif;padding:14px 28px;border-radius:100px;text-decoration:none;box-shadow:0 6px 18px rgba(193,97,59,0.28);border:none;cursor:pointer}
+  .pill-cta:hover{background:#A6492C;box-shadow:0 8px 22px rgba(193,97,59,0.38);transform:translateY(-1px)}
+  .sec-link{color:#1E3A5C;font:600 15px Figtree,sans-serif;text-decoration:none;border-bottom:2px solid rgba(30,58,92,0.25)}
+  .sec-link:hover{border-color:#1E3A5C}
+  .contact-card{background:#FFFFFF;border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 10px rgba(30,58,92,0.06);text-decoration:none}
+  .contact-card:hover{box-shadow:0 6px 18px rgba(30,58,92,0.12)}
+  .nav-center{display:flex;align-items:center;gap:30px;flex:1;justify-content:center}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .hero-h1{font:700 48px/1.12 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 20px}
+  .steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;position:relative}
+  .cta-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .map-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  @media (max-width: 1100px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-h1{font-size:34px}
+    .cta-grid{grid-template-columns:1fr}
+    .map-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 860px){
+    .nav-center{display:none}
+    .steps-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media (max-width: 600px){
+    .footer-grid{grid-template-columns:1fr}
+    .hero-h1{font-size:28px}
+  }
+</style>
+</helmet>
+
+<div style="font-family:Figtree,sans-serif;color:#2A3B4D;background:#FBF7F0">
+
+<div style="position:sticky;top:0;z-index:50;background:#FBF7F0;border-bottom:1px solid rgba(30,58,92,0.10)">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:28px">
+    <div style="display:flex;align-items:center">
+      <img src="./assets/hvca-logo.png" alt="Huntingdon Valley Christian Academy" style="height:52px;width:auto">
+    </div>
+    <div class="nav-center">
+      <a class="navlink" href="#">Home</a>
+      <a class="navlink" href="#">About</a>
+      <a class="navlink" href="#">Academics</a>
+      <a class="navlink" href="#">Student Life</a>
+      <a class="navlink" href="#">Admissions</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <a href="tel:12159476595" style="color:#1E3A5C;font:600 14px Figtree,sans-serif;text-decoration:none;white-space:nowrap">215-947-6595</a>
+      <a class="pill-cta" href="#" style="white-space:nowrap">Schedule a Tour</a>
+    </div>
+  </div>
+</div>
+
+<div class="hero-grid" style="max-width:1280px;margin:0 auto;padding:64px 32px 48px">
+  <div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(193,97,59,0.10);color:#A6492C;font:700 12.5px Figtree,sans-serif;letter-spacing:.05em;padding:8px 16px;border-radius:100px;margin-bottom:22px">VISIT HVCA</div>
+    <h1 class="hero-h1">We can't wait to meet you.</h1>
+    <p style="font:400 18px/1.6 Figtree,sans-serif;color:#4B5A6B;margin:0 0 28px;max-width:480px">Every family starts with a visit. Walk the halls, meet the teachers, and see a classroom in session — no pressure, just a conversation about your child.</p>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:36px;height:36px;border-radius:50%;background:#EFE2C8;display:flex;align-items:center;justify-content:center;font:700 15px Figtree,sans-serif;color:#A6492C">⏱</div>
+      <span style="font:500 14.5px Figtree,sans-serif;color:#6B7A8B">A team member replies within 2 business days</span>
+    </div>
+  </div>
+  <div style="position:relative">
+    <div style="position:absolute;inset:-24px auto auto -32px;width:70%;height:80%;background:#EFE2C8;border-radius:28px;z-index:0"></div>
+    <image-slot id="visit-photo" shape="rounded" radius="28" style="width:100%;height:440px;position:relative;z-index:1" placeholder="Family touring the campus"></image-slot>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:24px 32px 64px">
+  <h2 style="text-align:center;font:700 32px/1.2 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 40px">What to Expect</h2>
+  <div class="steps-grid">
+    <div style="position:absolute;top:24px;left:16.5%;right:16.5%;height:2px;background:rgba(30,58,92,0.12);z-index:0"></div>
+    <div style="background:#FBF7F0;position:relative;z-index:1;text-align:center;padding:0 12px">
+      <div style="width:48px;height:48px;border-radius:50%;background:#1E3A5C;color:#FFF9F2;display:flex;align-items:center;justify-content:center;font:700 18px 'Source Serif 4',serif;margin:0 auto 18px">1</div>
+      <h3 style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 8px">Request Your Visit</h3>
+      <p style="font:400 14px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">Click below to pick a time that works for your family.</p>
+    </div>
+    <div style="background:#FBF7F0;position:relative;z-index:1;text-align:center;padding:0 12px">
+      <div style="width:48px;height:48px;border-radius:50%;background:#1E3A5C;color:#FFF9F2;display:flex;align-items:center;justify-content:center;font:700 18px 'Source Serif 4',serif;margin:0 auto 18px">2</div>
+      <h3 style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 8px">Tour &amp; Meet the Team</h3>
+      <p style="font:400 14px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">See classrooms in session and talk with teachers and admissions.</p>
+    </div>
+    <div style="background:#FBF7F0;position:relative;z-index:1;text-align:center;padding:0 12px">
+      <div style="width:48px;height:48px;border-radius:50%;background:#1E3A5C;color:#FFF9F2;display:flex;align-items:center;justify-content:center;font:700 18px 'Source Serif 4',serif;margin:0 auto 18px">3</div>
+      <h3 style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 8px">Apply with Confidence</h3>
+      <p style="font:400 14px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">Ready when you are — start the application whenever it feels right.</p>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:0 32px 64px">
+  <div class="cta-grid" style="background:#1E3A5C;border-radius:28px;padding:56px 48px">
+    <div>
+      <h2 style="font:700 30px/1.25 'Source Serif 4',serif;color:#FFF9F2;margin:0 0 14px">Pick a time that works for you.</h2>
+      <p style="font:400 15.5px/1.6 Figtree,sans-serif;color:rgba(255,249,242,0.8);margin:0 0 28px;max-width:440px">Our scheduling page shows real openings on our calendar — choose a day and time in about a minute. No forms, no waiting on a call back.</p>
+      <a class="pill-cta" href="https://login.jupitered.com/register/?interest=HVCA&school=84241&k=c4a5b98f" style="background:#C1613B;font-size:16.5px;padding:16px 32px">Schedule My Visit →</a>
+      <p style="font:400 13px Figtree,sans-serif;color:rgba(255,249,242,0.55);margin:16px 0 0">Takes about 60 seconds · No obligation</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <a class="contact-card" href="tel:12159476595">
+        <div style="width:44px;height:44px;border-radius:12px;background:#EFE2C8;display:flex;align-items:center;justify-content:center;font:700 17px Figtree,sans-serif;color:#A6492C">☏</div>
+        <div><div style="font:700 14.5px Figtree,sans-serif;color:#1E3A5C">Prefer to talk first?</div><div style="font:400 13.5px Figtree,sans-serif;color:#6B7A8B">Call 215-947-6595</div></div>
+      </a>
+      <a class="contact-card" href="mailto:office@myhvca.org">
+        <div style="width:44px;height:44px;border-radius:12px;background:#EFE2C8;display:flex;align-items:center;justify-content:center;font:700 17px Figtree,sans-serif;color:#A6492C">✉</div>
+        <div><div style="font:700 14.5px Figtree,sans-serif;color:#1E3A5C">Have a question?</div><div style="font:400 13.5px Figtree,sans-serif;color:#6B7A8B">office@myhvca.org</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:0 32px 72px">
+  <div style="text-align:center;max-width:640px;margin:0 auto 8px">
+    <div style="font:700 44px 'Source Serif 4',serif;color:#C1613B;line-height:1;margin-bottom:8px">"</div>
+    <p style="font:500 20px/1.6 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 20px">We visited on a whim and left with our minds made up. Everyone knew our names by the time we left.</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px">
+      <image-slot id="parent-avatar-2" shape="circle" style="width:40px;height:40px" placeholder="Parent"></image-slot>
+      <div style="text-align:left;line-height:1.3">
+        <div style="font:700 13.5px Figtree,sans-serif;color:#1E3A5C">The Delgado Family</div>
+        <div style="font:400 12.5px Figtree,sans-serif;color:#6B7A8B">Visited Spring 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="map-grid" style="max-width:1280px;margin:0 auto;padding:0 32px 72px">
+  <image-slot id="map-slot" shape="rounded" radius="20" style="width:100%;height:280px" placeholder="Map — 1845 Byberry Rd"></image-slot>
+  <div style="background:#FFFFFF;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:18px;justify-content:center">
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#A6492C;letter-spacing:.04em;margin-bottom:6px">ADDRESS</div>
+      <div style="font:600 16px Figtree,sans-serif;color:#1E3A5C">1845 Byberry Rd, Huntingdon Valley, PA 19006</div>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#A6492C;letter-spacing:.04em;margin-bottom:6px">OFFICE HOURS</div>
+      <div style="font:600 16px Figtree,sans-serif;color:#1E3A5C">Mon–Thu 8:00am–3:15pm · Fri 8:00am–1:00pm</div>
+    </div>
+  </div>
+</div>
+
+<div style="background:#16283F;padding:56px 32px 28px">
+  <div class="footer-grid" style="max-width:1280px;margin:0 auto">
+    <div>
+      <div style="margin-bottom:16px">
+        <img src="./assets/hvca-logo.png" alt="Huntingdon Valley Christian Academy" style="height:34px;width:auto;filter:invert(1) brightness(1.15)">
+      </div>
+      <p style="font:400 14px/1.6 Figtree,sans-serif;color:rgba(255,249,242,0.6);margin:0;max-width:280px">1845 Byberry Rd, Huntingdon Valley, PA 19006</p>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#FFF9F2;margin-bottom:14px;letter-spacing:.04em">EXPLORE</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="#" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">About Us</a>
+        <a href="#" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">Academics</a>
+        <a href="#" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">Admissions</a>
+      </div>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#FFF9F2;margin-bottom:14px;letter-spacing:.04em">CONTACT</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="tel:12159476595" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">215-947-6595</a>
+        <a href="mailto:office@myhvca.org" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">office@myhvca.org</a>
+        <span style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65)">Mon–Thu 8–3:15, Fri 8–1</span>
+      </div>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#FFF9F2;margin-bottom:14px;letter-spacing:.04em">VISIT</div>
+      <a class="pill-cta" href="#" style="font-size:14px;padding:12px 22px">Schedule a Tour</a>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;border-top:1px solid rgba(255,249,242,0.12);padding-top:20px">
+    <p style="font:400 12.5px Figtree,sans-serif;margin:0;color:rgba(255,249,242,0.45)">© 2026 Huntingdon Valley Christian Academy</p>
+  </div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

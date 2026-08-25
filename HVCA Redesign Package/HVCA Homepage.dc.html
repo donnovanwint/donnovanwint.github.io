@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body{margin:0;background:#FBF7F0}
+  a{color:#C1613B}
+  a:hover{color:#A6492C}
+  .navlink{color:#1E3A5C;text-decoration:none;font:600 14.5px Figtree,sans-serif;white-space:nowrap}
+  .navlink:hover{color:#C1613B}
+  .pill-cta{display:inline-flex;align-items:center;gap:8px;background:#C1613B;color:#FFF9F2;font:700 15.5px Figtree,sans-serif;padding:14px 28px;border-radius:100px;text-decoration:none;box-shadow:0 6px 18px rgba(193,97,59,0.28);border:none;cursor:pointer}
+  .pill-cta:hover{background:#A6492C;box-shadow:0 8px 22px rgba(193,97,59,0.38);transform:translateY(-1px)}
+  .sec-link{color:#1E3A5C;font:600 15px Figtree,sans-serif;text-decoration:none;border-bottom:2px solid rgba(30,58,92,0.25)}
+  .sec-link:hover{border-color:#1E3A5C}
+  .nav-center{display:flex;align-items:center;gap:30px;flex:1;justify-content:center}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .hero-h1{font:700 52px/1.1 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 22px}
+  .why-grid,.curr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .gal-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:200px 200px;gap:16px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  @media (max-width: 1100px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-h1{font-size:38px}
+    .why-grid,.curr-grid{grid-template-columns:repeat(2,1fr)}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 860px){
+    .nav-center{display:none}
+  }
+  @media (max-width: 600px){
+    .why-grid,.curr-grid{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:1fr;grid-template-rows:220px 220px 220px 220px 220px}
+    .footer-grid{grid-template-columns:1fr}
+    .hero-h1{font-size:30px}
+  }
+</style>
+</helmet>
+
+<div style="font-family:Figtree,sans-serif;color:#2A3B4D;background:#FBF7F0">
+
+<div style="position:sticky;top:0;z-index:50;background:#FBF7F0;border-bottom:1px solid rgba(30,58,92,0.10)">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:28px">
+    <div style="display:flex;align-items:center">
+      <img src="./assets/hvca-logo.png" alt="Huntingdon Valley Christian Academy" style="height:52px;width:auto">
+    </div>
+    <div class="nav-center">
+      <a class="navlink" href="#">Home</a>
+      <a class="navlink" href="#">About</a>
+      <a class="navlink" href="#">Academics</a>
+      <a class="navlink" href="#">Student Life</a>
+      <a class="navlink" href="#">Admissions</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <a href="tel:12159476595" style="color:#1E3A5C;font:600 14px Figtree,sans-serif;text-decoration:none;white-space:nowrap">215-947-6595</a>
+      <a class="pill-cta" href="#" style="white-space:nowrap">Schedule a Tour</a>
+    </div>
+  </div>
+</div>
+
+<div class="hero-grid" style="max-width:1280px;margin:0 auto;padding:64px 32px 56px">
+  <div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(193,97,59,0.10);color:#A6492C;font:700 12.5px Figtree,sans-serif;letter-spacing:.05em;padding:8px 16px;border-radius:100px;margin-bottom:22px">K–12 · FAITH-BASED · HUNTINGDON VALLEY, PA</div>
+    <h1 class="hero-h1">Come see why families call HVCA home.</h1>
+    <p style="font:400 18px/1.6 Figtree,sans-serif;color:#4B5A6B;margin:0 0 32px;max-width:480px">A safe, Christ-centered K-12 community where your child is known, nurtured, and prepared to lead. Come meet our teachers and see a classroom in session.</p>
+    <div style="display:flex;align-items:center;gap:24px;margin-bottom:36px;flex-wrap:wrap">
+      <a class="pill-cta" href="#" style="font-size:16.5px;padding:16px 32px">Schedule a Campus Tour</a>
+      <a class="sec-link" href="#">Request Info →</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="color:#C1613B;font-size:15px">★★★★★</span>
+      </div>
+      <span style="font:500 14px Figtree,sans-serif;color:#6B7A8B">Trusted by 200+ families in Huntingdon Valley</span>
+    </div>
+  </div>
+  <div style="position:relative">
+    <div style="position:absolute;inset:-24px 40px auto auto;width:75%;height:88%;background:#EFE2C8;border-radius:28px;z-index:0"></div>
+    <image-slot id="hero-photo" shape="rounded" radius="28" style="width:100%;height:520px;position:relative;z-index:1" placeholder="Students learning together on campus"></image-slot>
+    <div style="position:absolute;left:-28px;bottom:36px;background:#FFFFFF;border-radius:16px;box-shadow:0 12px 32px rgba(30,58,92,0.16);padding:18px 22px;display:flex;align-items:center;gap:14px;z-index:2">
+      <div style="width:44px;height:44px;border-radius:50%;background:#1E3A5C;display:flex;align-items:center;justify-content:center;color:#FFF9F2;font:700 15px 'Source Serif 4',serif">15:1</div>
+      <div style="line-height:1.25"><div style="font:700 14px Figtree,sans-serif;color:#1E3A5C">Student-Teacher Ratio</div><div style="font:400 12.5px Figtree,sans-serif;color:#6B7A8B">Small classes, real attention</div></div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:28px 32px 56px;border-top:1px solid rgba(30,58,92,0.10)">
+  <p style="text-align:center;font:600 12.5px Figtree,sans-serif;letter-spacing:.06em;color:#8B98A6;margin:0 0 24px">ACCREDITED &amp; TRUSTED BY</p>
+  <div style="display:flex;justify-content:center;gap:56px;flex-wrap:wrap;opacity:0.72">
+    <image-slot id="badge-1" shape="rect" style="width:120px;height:44px" placeholder="Accreditation badge"></image-slot>
+    <image-slot id="badge-2" shape="rect" style="width:120px;height:44px" placeholder="Association logo"></image-slot>
+    <image-slot id="badge-3" shape="rect" style="width:120px;height:44px" placeholder="Conference logo"></image-slot>
+    <image-slot id="badge-4" shape="rect" style="width:120px;height:44px" placeholder="Membership badge"></image-slot>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:56px 32px">
+  <div style="text-align:center;margin-bottom:44px">
+    <h2 style="font:700 36px/1.2 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 12px">Why Families Choose HVCA</h2>
+    <p style="font:400 16px Figtree,sans-serif;color:#6B7A8B;margin:0">Four things every parent tells us matters most</p>
+  </div>
+  <div class="why-grid">
+    <div style="background:#FFFFFF;border-radius:18px;padding:32px 26px;box-shadow:0 2px 10px rgba(30,58,92,0.06)">
+      <div style="width:48px;height:48px;border-radius:12px;background:#EFE2C8;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font:700 20px 'Source Serif 4',serif;color:#A6492C">✦</div>
+      <h3 style="font:700 18px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 10px">Christ-Centered Learning</h3>
+      <p style="font:400 14.5px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">Faith is woven into every subject, not set apart from it.</p>
+    </div>
+    <div style="background:#FFFFFF;border-radius:18px;padding:32px 26px;box-shadow:0 2px 10px rgba(30,58,92,0.06)">
+      <div style="width:48px;height:48px;border-radius:12px;background:#EFE2C8;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font:700 20px 'Source Serif 4',serif;color:#A6492C">◔</div>
+      <h3 style="font:700 18px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 10px">Small Class Sizes</h3>
+      <p style="font:400 14.5px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">A 15:1 ratio means every child is known by name.</p>
+    </div>
+    <div style="background:#FFFFFF;border-radius:18px;padding:32px 26px;box-shadow:0 2px 10px rgba(30,58,92,0.06)">
+      <div style="width:48px;height:48px;border-radius:12px;background:#EFE2C8;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font:700 20px 'Source Serif 4',serif;color:#A6492C">⛊</div>
+      <h3 style="font:700 18px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 10px">Safe, Nurturing Campus</h3>
+      <p style="font:400 14.5px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">A close-knit community where kids feel secure to grow.</p>
+    </div>
+    <div style="background:#FFFFFF;border-radius:18px;padding:32px 26px;box-shadow:0 2px 10px rgba(30,58,92,0.06)">
+      <div style="width:48px;height:48px;border-radius:12px;background:#EFE2C8;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font:700 20px 'Source Serif 4',serif;color:#A6492C">✓</div>
+      <h3 style="font:700 18px 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 10px">Academic Excellence</h3>
+      <p style="font:400 14.5px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0">Rigorous K-12 standards that prepare students to lead.</p>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:24px 32px 64px">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;flex-wrap:wrap;gap:12px">
+    <h2 style="font:700 36px/1.2 'Source Serif 4',serif;color:#1E3A5C;margin:0">A Well-Rounded Christian Education</h2>
+    <a class="sec-link" href="#">View Full Curriculum →</a>
+  </div>
+  <div class="curr-grid" style="gap:18px">
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Bible</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Growing faith and Scripture knowledge</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Language Arts</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Reading &amp; writing at every level</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Mathematics</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Understanding through God's order</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Science</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Exploring creation with curiosity</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">History</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Seeing God's hand in human events</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Music</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Performance &amp; appreciation</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Visual Art</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Creative expression &amp; technique</span></div>
+    <div style="background:#FFFFFF;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px"><span style="font:700 15px 'Source Serif 4',serif;color:#1E3A5C">Technology</span><span style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Digital skills for the future</span></div>
+  </div>
+</div>
+
+<div style="background:#1E3A5C;padding:72px 32px">
+  <div style="max-width:820px;margin:0 auto;text-align:center">
+    <div style="font:700 56px 'Source Serif 4',serif;color:#C1613B;line-height:1;margin-bottom:16px">"</div>
+    <p style="font:500 26px/1.5 'Source Serif 4',serif;color:#FFF9F2;margin:0 0 28px">HVCA feels like family. My daughter is known by name, challenged in the classroom, and growing in her faith every single day.</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+      <image-slot id="parent-avatar" shape="circle" style="width:48px;height:48px" placeholder="Parent"></image-slot>
+      <div style="text-align:left;line-height:1.3">
+        <div style="font:700 14px Figtree,sans-serif;color:#FFF9F2">Sarah M.</div>
+        <div style="font:400 13px Figtree,sans-serif;color:rgba(255,249,242,0.65)">Parent of a 4th grader</div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:28px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#C1613B"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:rgba(255,249,242,0.25)"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:rgba(255,249,242,0.25)"></span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:0 auto;padding:64px 32px">
+  <h2 style="text-align:center;font:700 36px/1.2 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 36px">Life at HVCA</h2>
+  <div class="gal-grid">
+    <image-slot id="gal-1" shape="rounded" radius="18" style="grid-row:span 2" placeholder="Chapel &amp; worship"></image-slot>
+    <image-slot id="gal-2" shape="rounded" radius="18" placeholder="Classroom moment"></image-slot>
+    <image-slot id="gal-3" shape="rounded" radius="18" placeholder="Recess &amp; play"></image-slot>
+    <image-slot id="gal-4" shape="rounded" radius="18" placeholder="Music &amp; performance"></image-slot>
+    <image-slot id="gal-5" shape="rounded" radius="18" placeholder="Science &amp; discovery"></image-slot>
+  </div>
+</div>
+
+<div style="background:#C1613B;padding:64px 32px">
+  <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+    <div>
+      <h2 style="font:700 32px/1.2 'Source Serif 4',serif;color:#FFF9F2;margin:0 0 10px">Ready to see it for yourself?</h2>
+      <p style="font:400 16px Figtree,sans-serif;color:rgba(255,249,242,0.85);margin:0">Walk the halls, meet the teachers, and picture your child here.</p>
+    </div>
+    <a href="#" style="background:#FFF9F2;color:#A6492C;font:700 16px Figtree,sans-serif;padding:16px 32px;border-radius:100px;text-decoration:none;white-space:nowrap;box-shadow:0 6px 18px rgba(30,15,5,0.18)">Schedule Your Visit</a>
+  </div>
+</div>
+
+<div style="background:#16283F;padding:56px 32px 28px">
+  <div class="footer-grid" style="max-width:1280px;margin:0 auto">
+    <div>
+      <div style="margin-bottom:16px">
+        <img src="./assets/hvca-logo.png" alt="Huntingdon Valley Christian Academy" style="height:34px;width:auto;filter:invert(1) brightness(1.15)">
+      </div>
+      <p style="font:400 14px/1.6 Figtree,sans-serif;color:rgba(255,249,242,0.6);margin:0;max-width:280px">1845 Byberry Rd, Huntingdon Valley, PA 19006</p>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#FFF9F2;margin-bottom:14px;letter-spacing:.04em">EXPLORE</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="#" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">About Us</a>
+        <a href="#" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">Academics</a>
+        <a href="#" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">Admissions</a>
+      </div>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#FFF9F2;margin-bottom:14px;letter-spacing:.04em">CONTACT</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="tel:12159476595" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">215-947-6595</a>
+        <a href="mailto:office@myhvca.org" style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65);text-decoration:none">office@myhvca.org</a>
+        <span style="font:400 14px Figtree,sans-serif;color:rgba(255,249,242,0.65)">Mon–Thu 8–3:15, Fri 8–1</span>
+      </div>
+    </div>
+    <div>
+      <div style="font:700 13px Figtree,sans-serif;color:#FFF9F2;margin-bottom:14px;letter-spacing:.04em">VISIT</div>
+      <a class="pill-cta" href="#" style="font-size:14px;padding:12px 22px">Schedule a Tour</a>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;border-top:1px solid rgba(255,249,242,0.12);padding-top:20px">
+    <p style="font:400 12.5px Figtree,sans-serif;color:rgba(255,249,242,0.45);margin:0">© 2026 Huntingdon Valley Christian Academy</p>
+  </div>
+</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

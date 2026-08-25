@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#FBF7F0}
+  .swatch-btn{border:none;cursor:pointer;padding:0}
+  .style-card{background:#FFFFFF;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 2px 10px rgba(30,58,92,0.06)}
+  .btn-base{display:inline-flex;align-items:center;justify-content:center;font:700 15.5px Figtree,sans-serif;padding:14px 28px;text-decoration:none;transition:all .18s ease;cursor:pointer}
+</style>
+</helmet>
+
+<div style="font-family:Figtree,sans-serif;color:#2A3B4D;background:#FBF7F0;padding:64px 48px 96px">
+  <div style="max-width:1080px;margin:0 auto">
+
+    <div style="margin-bottom:16px">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(193,97,59,0.10);color:#A6492C;font:700 12.5px Figtree,sans-serif;letter-spacing:.05em;padding:8px 16px;border-radius:100px;margin-bottom:20px">CLIENT REVIEW</div>
+      <h1 style="font:700 38px/1.15 'Source Serif 4',serif;color:#1E3A5C;margin:0 0 12px">Primary CTA Button — Style Options</h1>
+      <p style="font:400 16.5px/1.6 Figtree,sans-serif;color:#6B7A8B;margin:0;max-width:640px">Four directions for the site's main "Schedule a Tour" / "Apply Now" button. Try each accent color below to see how it looks across all four styles.</p>
+    </div>
+
+    <div style="margin:36px 0 44px">
+      <div style="font:700 13px Figtree,sans-serif;color:#A6492C;letter-spacing:.08em;margin:0 0 14px">ACCENT COLOR</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <sc-for list="{{ colors }}" as="c" hint-placeholder-count="4">
+          <button class="swatch-btn" onClick="{{ c.select }}" style="{{ c.wrapStyle }}">
+            <span style="{{ c.dotStyle }}"></span>
+            <span style="{{ c.labelStyle }}">{{ c.name }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px">
+
+      <div class="style-card">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+            <span style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C">A. Pill, Solid Fill</span>
+            <span style="font:700 10.5px Figtree,sans-serif;color:#A6492C;background:rgba(193,97,59,0.12);padding:3px 9px;border-radius:100px">CURRENT PICK</span>
+          </div>
+          <div style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B">Fully rounded, solid fill, soft drop shadow. Reads friendly and approachable — the shape a hand-drawn "come on in" invite would take.</div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center;padding:8px 0">
+          <a href="#" class="btn-base" style="{{ pillStyle }}" style-hover="{{ pillHover }}">Schedule a Tour</a>
+        </div>
+        <div style="font:500 12.5px Figtree,sans-serif;color:#8B98A6"><b style="color:#4B5A6B">Hover:</b> darkens one shade + lifts 1px with a deeper shadow.</div>
+      </div>
+
+      <div class="style-card">
+        <div>
+          <span style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C">B. Rounded Rectangle</span>
+          <div style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B;margin-top:4px">Slight 10px radius, solid fill. More structured and institutional — reads a touch more "official school form" than the pill.</div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center;padding:8px 0">
+          <a href="#" class="btn-base" style="{{ rectStyle }}" style-hover="{{ rectHover }}">Apply Now</a>
+        </div>
+        <div style="font:500 12.5px Figtree,sans-serif;color:#8B98A6"><b style="color:#4B5A6B">Hover:</b> darkens one shade, no movement — calm and steady.</div>
+      </div>
+
+      <div class="style-card">
+        <div>
+          <span style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C">C. Outline, Inverts on Hover</span>
+          <div style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B;margin-top:4px">Transparent with a colored border; fills solid only on hover. Feels lower-pressure and confident — good as a secondary tour CTA next to a bolder primary.</div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center;padding:8px 0">
+          <a href="#" class="btn-base" style="{{ outlineStyle }}" style-hover="{{ outlineHover }}">Schedule a Tour</a>
+        </div>
+        <div style="font:500 12.5px Figtree,sans-serif;color:#8B98A6"><b style="color:#4B5A6B">Hover:</b> border and text invert into a solid fill — a little "reveal" moment.</div>
+      </div>
+
+      <div class="style-card">
+        <div>
+          <span style="font:700 17px 'Source Serif 4',serif;color:#1E3A5C">D. Soft Tint Fill</span>
+          <div style="font:400 13.5px/1.5 Figtree,sans-serif;color:#6B7A8B;margin-top:4px">A light tint of the accent color with matching text, no border. Quiet and warm at rest, then commits to full color on hover — least "salesy" of the four.</div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:center;padding:8px 0">
+          <a href="#" class="btn-base" style="{{ tintStyle }}" style-hover="{{ tintHover }}">Request Info</a>
+        </div>
+        <div style="font:500 12.5px Figtree,sans-serif;color:#8B98A6"><b style="color:#4B5A6B">Hover:</b> tint fills to full solid color, text turns white.</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:40px;background:#1E3A5C;border-radius:20px;padding:32px 36px">
+      <div style="font:700 13px Figtree,sans-serif;color:#EFE2C8;letter-spacing:.06em;margin-bottom:10px">WHY THIS MATTERS FOR HVCA</div>
+      <p style="font:400 15px/1.65 Figtree,sans-serif;color:rgba(255,249,242,0.85);margin:0;max-width:760px">A pill shape and a warm accent color read as an invitation, not a hard sell — important for parents making an emotional, unhurried decision about their child's school. Outline and tint styles work well as secondary actions ("Request Info") next to a bolder primary ("Schedule a Tour") without competing for attention.</p>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { accent: '#C1613B' };
+
+  palette = [
+    { name: 'Terracotta', hex: '#C1613B' },
+    { name: 'Golden Amber', hex: '#D9A441' },
+    { name: 'Forest Green', hex: '#4C7A5B' },
+    { name: 'Muted Burgundy', hex: '#A65868' },
+  ];
+
+  hexToRgb(hex) {
+    const h = hex.replace('#', '');
+    return { r: parseInt(h.slice(0,2),16), g: parseInt(h.slice(2,4),16), b: parseInt(h.slice(4,6),16) };
+  }
+  darken(hex, amt) {
+    const { r, g, b } = this.hexToRgb(hex);
+    const d = (v) => Math.max(0, Math.round(v * (1 - amt)));
+    return `rgb(${d(r)},${d(g)},${d(b)})`;
+  }
+  tint(hex, alpha) {
+    const { r, g, b } = this.hexToRgb(hex);
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+
+  renderVals() {
+    const accent = this.state.accent;
+    const dark = this.darken(accent, 0.18);
+    const tintBg = this.tint(accent, 0.13);
+
+    const colors = this.palette.map((c) => {
+      const selected = c.hex === accent;
+      return {
+        name: c.name,
+        select: () => this.setState({ accent: c.hex }),
+        wrapStyle: { display: 'flex', alignItems: 'center', gap: '8px', background: selected ? '#FFFFFF' : 'transparent', padding: '8px 14px 8px 8px', borderRadius: '100px', boxShadow: selected ? '0 0 0 2px ' + c.hex + ', 0 4px 12px rgba(30,58,92,0.10)' : '0 0 0 1px rgba(30,58,92,0.12)' },
+        dotStyle: { width: '26px', height: '26px', borderRadius: '50%', background: c.hex, display: 'inline-block' },
+        labelStyle: { font: '600 13px Figtree,sans-serif', color: '#1E3A5C' },
+      };
+    });
+
+    return {
+      colors,
+      pillStyle: { background: accent, color: '#FFF9F2', borderRadius: '100px', boxShadow: '0 6px 18px ' + this.tint(accent, 0.32) },
+      pillHover: { background: dark, boxShadow: '0 8px 22px ' + this.tint(accent, 0.4), transform: 'translateY(-1px)' },
+      rectStyle: { background: accent, color: '#FFF9F2', borderRadius: '10px' },
+      rectHover: { background: dark },
+      outlineStyle: { background: 'transparent', color: accent, borderRadius: '100px', border: '2px solid ' + accent, padding: '12px 26px' },
+      outlineHover: { background: accent, color: '#FFF9F2', borderColor: accent },
+      tintStyle: { background: tintBg, color: accent, borderRadius: '100px' },
+      tintHover: { background: accent, color: '#FFF9F2' },
+    };
+  }
+}
+
+</script>
+</body>
+</html>
