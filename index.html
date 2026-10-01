@@ -1,883 +1,757 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donnovan Wint — Development Manager &amp; Senior Software Engineer</title>
+<meta name="description" content="Donnovan Wint is a development manager and senior software engineer with 7+ years building high-traffic web platforms, from B2B agencies to NASCAR. Philadelphia, PA, open to remote.">
+<meta name="author" content="Donnovan Wint Jr.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#fcfaf5">
+<link rel="canonical" href="https://donwint.com/">
 
-  <title>Donnovan Wint Jr. — Senior Full Stack Software Engineer</title>
-  <meta name="description"
-    content="Donnovan Wint Jr. — Senior Full Stack Software Engineer with 7+ years building enterprise web platforms end to end: React, Next.js, Vue &amp; Nuxt front-ends, PHP, Node &amp; Java APIs, headless WordPress, and the testing and observability that keep releases reliable." />
-  <meta name="author" content="Donnovan Wint Jr." />
-  <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0d1013" media="(prefers-color-scheme: dark)" />
-  <link rel="canonical" href="https://donwint.com/" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://donwint.com/">
+<meta property="og:site_name" content="Donnovan Wint">
+<meta property="og:title" content="Donnovan Wint — Development Manager &amp; Senior Software Engineer">
+<meta property="og:description" content="7+ years building web platforms for high-traffic brands, from B2B agencies to NASCAR. Just as comfortable writing code as coaching the engineers who ship it.">
+<meta property="og:image" content="https://donwint.com/assets/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Donnovan Wint, Development Manager and Senior Software Engineer">
+<meta name="twitter:card" content="summary_large_image">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://donwint.com/" />
-  <meta property="og:site_name" content="Donnovan Wint Jr." />
-  <meta property="og:title" content="Donnovan Wint Jr. — Senior Full Stack Software Engineer" />
-  <meta property="og:description"
-    content="7+ years building enterprise web platforms end to end — React, Next.js, Vue &amp; Nuxt, PHP, Node &amp; Java APIs, headless WordPress, testing &amp; observability." />
-  <meta property="og:image" content="https://donwint.com/assets/img/og-card.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Donnovan Wint Jr., Senior Full Stack Software Engineer" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Donnovan Wint Jr. — Senior Full Stack Software Engineer" />
-  <meta name="twitter:description"
-    content="7+ years building enterprise web platforms end to end — React, Next.js, Vue &amp; Nuxt, PHP, Node &amp; Java APIs, headless WordPress, testing &amp; observability." />
-  <meta name="twitter:image" content="https://donwint.com/assets/img/og-card.jpg" />
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="32x32" />
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+<link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+      imagesrcset="assets/img/hero-portrait-480.avif 480w, assets/img/hero-portrait-720.avif 720w, assets/img/hero-portrait-960.avif 960w"
+      imagesizes="(max-width: 767px) 80vw, (max-width: 1199px) 52vw, 40vw">
+<link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Set theme before paint to avoid flash -->
-  <script>
-    (function () {
-      try {
-        var t = localStorage.getItem('theme');
-        if (t === 'light' || t === 'dark') {
-          document.documentElement.setAttribute('data-theme', t);
-        }
-      } catch (e) { }
-      document.documentElement.classList.add('has-js');
-    })();
-  </script>
+<script>
+  /* Hide reveal targets only when motion is allowed and JS runs; main.js removes the class if GSAP fails to load. */
+  (function (d) {
+    var el = d.documentElement;
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) el.classList.add('motion');
+    /* Safety net: never leave content hidden if scripts fail to load. */
+    window.setTimeout(function () { if (!window.gsap) el.classList.remove('motion'); }, 2500);
+  })(document);
+</script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 
-  <!-- Preload critical fonts + hero image -->
-  <link rel="preload" href="assets/fonts/fraunces-latin-var.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" as="image" type="image/avif"
-    imagesrcset="assets/img/opt/headshot-480.avif 480w, assets/img/opt/headshot-960.avif 960w"
-    imagesizes="(max-width: 640px) 68vw, 420px" />
-
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Donnovan Wint Jr.",
-        "url": "https://donwint.com/",
-        "jobTitle": "Senior Full Stack Software Engineer",
-        "email": "mailto:donnovanwint@gmail.com",
-        "address": {
-          "@type": "PostalPlace",
-          "addressLocality": "Philadelphia",
-          "addressRegion": "PA",
-          "addressCountry": "US"
-        },
-        "sameAs": ["https://www.linkedin.com/in/donnovan-wint-jr/"],
-        "knowsAbout": [
-          "React",
-          "Next.js",
-          "Vue.js",
-          "Nuxt.js",
-          "TypeScript",
-          "PHP",
-          "Node.js",
-          "Java",
-          "REST APIs",
-          "GraphQL",
-          "Headless WordPress",
-          "PostgreSQL",
-          "Test Automation",
-          "Playwright"
-        ]
-      }
-    </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Donnovan Wint Jr.",
+    "jobTitle": "Development Manager & Senior Software Engineer",
+    "url": "https://donwint.com/",
+    "email": "mailto:donnovanwint@gmail.com",
+    "image": "https://donwint.com/assets/img/hero-portrait-960.webp",
+    "address": { "@type": "PostalAddress", "addressLocality": "Philadelphia", "addressRegion": "PA", "addressCountry": "US" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Penn State Abington" },
+    "sameAs": ["https://www.linkedin.com/in/donnovan-wint-jr/"],
+    "knowsAbout": ["Engineering management", "Full-stack development", "React", "Next.js", "PHP", "Node.js", "Headless CMS", "WordPress", "AWS", "Technical SEO", "Core Web Vitals", "Accessibility"]
+  }
+}
+</script>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="site-header">
-    <div class="wrap header-inner">
-      <a href="#top" class="brand" aria-label="Donnovan Wint — home">
-        Donnovan Wint<span class="brand-dot">.</span>
-      </a>
+<!-- ========== Header ========== -->
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="logo" href="#top" aria-label="Donnovan Wint, back to top">DW<span aria-hidden="true">.</span></a>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
-        <ul role="list">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#work" class="nav-link">Work</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+        <span class="visually-hidden">Menu</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+      <ul class="site-nav__list" id="primary-menu" data-menu>
+        <li><a href="#about" data-nav-link>About</a></li>
+        <li><a href="#work" data-nav-link>Work</a></li>
+        <li><a href="#experience" data-nav-link>Experience</a></li>
+        <li><a href="#contact" data-nav-link>Contact</a></li>
+      </ul>
+    </nav>
 
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme"
-          title="Switch color theme">
-          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path
-              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
-            </path>
-          </svg>
-          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
+    <p class="site-header__location">
+      <svg class="icon" width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path d="M9 21s7-6.2 7-11.5A7 7 0 0 0 2 9.5C2 14.8 9 21 9 21z"/><circle cx="9" cy="9.5" r="2.4"/></svg>
+      Philadelphia, PA <span class="dot-sep" aria-hidden="true">·</span> Open to remote
+    </p>
 
-        <a href="assets/resume.pdf" download class="btn btn--primary btn--sm resume-btn">
-          Resume
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-        </a>
+    <a class="btn btn--primary btn--sm site-header__cta" href="./assets/resume.pdf" target="_blank" rel="noopener">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10.5 12 15.5l5-5M4 20h16"/></svg>
+      <span>Download resume<span class="visually-hidden"> (PDF, opens in a new tab)</span></span>
+    </a>
+  </div>
+</header>
 
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
-          aria-controls="primary-nav">
-          <span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+<main id="main" tabindex="-1">
 
-  <main id="main">
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" id="top">
-      <div class="hero-grid-lines" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="hero-eyebrow" data-hero>
-            <span class="status-dot" aria-hidden="true"></span>
-            Senior Software Engineer & Web Optimization Consultant
-          </p>
-          <h1 class="hero-title">
-            <span class="line" data-hero>Donnovan</span>
-            <span class="line" data-hero>Wint<span class="accent-dot">.</span></span>
-          </h1>
-          <p class="hero-lede" data-hero>
-            Seven+ years building enterprise web platforms end to end with modern technologies and rigorous testing to
-            keep releases reliable. Most recently at <strong>NASCAR</strong> and <strong>AlphaSense</strong>, I’ve
-            delivered high-performance digital
-            experiences with a focus on technical SEO, Core Web Vitals, accessibility, and readiness for emerging
-            AI-powered search.
-          </p>
-          <div class="hero-ctas" data-hero>
-            <a href="#work" class="btn btn--primary" data-magnetic>
-              View selected work
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="assets/resume.pdf" download class="btn btn--ghost" data-magnetic>
-              Download résumé
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-visual" data-hero>
-          <div class="hero-photo">
-            <picture>
-              <source type="image/avif"
-                srcset="assets/img/opt/headshot-480.avif 480w, assets/img/opt/headshot-960.avif 960w"
-                sizes="(max-width: 640px) 68vw, 420px" />
-              <source type="image/webp"
-                srcset="assets/img/opt/headshot-480.webp 480w, assets/img/opt/headshot-960.webp 960w"
-                sizes="(max-width: 640px) 68vw, 420px" />
-              <img src="assets/img/opt/headshot-480.jpg" width="480" height="720" alt="Donnovan Wint Jr."
-                fetchpriority="high" decoding="async" />
-            </picture>
-          </div>
-          <div class="hero-badge" aria-hidden="true">
-            <span class="hero-badge-num">7+</span>
-            <span class="hero-badge-label">years shipping<br />production web</span>
-          </div>
-        </div>
-      </div>
-
-      <a href="#about" class="scroll-cue" aria-label="Scroll to about">
-        <span>Scroll</span>
-        <span class="scroll-cue-line" aria-hidden="true"></span>
-      </a>
-    </section>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section about" id="about">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="section-index">01</span>
-          <span class="section-kicker">About</span>
-        </div>
-        <div class="about-grid">
-          <div class="about-lead">
-            <h2 class="display-h2 reveal">
-              I build web platforms<br />
-              <em>end to end.</em>
-            </h2>
-          </div>
-          <div class="about-body">
-            <p class="lead-text reveal">
-              I'm a senior software engineer with 7+ years building and maintaining
-              enterprise web platforms across frontend, backend, and content-management
-              systems — from architecture through production support.
-            </p>
-
-            <p class="reveal">
-              I've delivered production solutions across modern web stacks, including
-              React, Next.js, Vue, Node, PHP, and headless CMS platforms. Recent work
-              includes NASCAR's fan profile and rewards platform, CMS migrations,
-              authentication systems, mobile content APIs, and an LLM-powered product demo
-              at AlphaSense.
-            </p>
-
-            <p class="reveal">
-              I focus on building reliable, scalable experiences through thoughtful
-              architecture, clear integrations, strong testing practices, and the
-              performance, accessibility, and usability standards that make products
-              successful.
-            </p>
-
-            <p class="reveal">
-              Beyond engineering, I help businesses improve how their websites perform
-              across modern search experiences. My consulting work combines technical SEO,
-              Core Web Vitals, structured data, accessibility, content architecture, and
-              AI Search Readiness to create websites that are faster, easier to understand,
-              and better positioned to be discovered through both traditional search and
-              emerging AI-powered search experiences.
-            </p>
-
-            <dl class="about-stats reveal">
-              <div class="stat">
-                <dt>Experience</dt>
-                <dd><span class="stat-num">7+</span> years</dd>
-              </div>
-              <div class="stat">
-                <dt>Platforms shipped</dt>
-                <dd><span class="stat-num">30+</span> B2B &amp; enterprise</dd>
-              </div>
-              <div class="stat">
-                <dt>Based in</dt>
-                <dd>Philadelphia, PA</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-
-        <!-- Skills / stack -->
-        <div class="skills" id="skills">
-          <div class="skills-head reveal">
-            <h3 class="display-h3">The stack</h3>
-            <p class="skills-sub">
-              Full-stack by default — weighted toward the front, deep enough on
-              the back and in test to own a feature from contract to release.
-            </p>
-          </div>
-          <div class="skills-grid">
-            <article class="skill-card reveal">
-              <h4>Frontend</h4>
-              <ul role="list">
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Vue.js</li>
-                <li>Nuxt.js</li>
-                <li>React Native</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Responsive UI</li>
-              </ul>
-            </article>
-            <article class="skill-card reveal">
-              <h4>Backend &amp; APIs</h4>
-              <ul role="list">
-                <li>PHP</li>
-                <li>Node.js</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>REST</li>
-                <li>GraphQL</li>
-                <li>Webhooks</li>
-                <li>OAuth / OIDC</li>
-                <li>Auth0</li>
-                <li>Sessions</li>
-              </ul>
-            </article>
-            <article class="skill-card reveal">
-              <h4>CMS &amp; Platforms</h4>
-              <ul role="list">
-                <li>WordPress</li>
-                <li>Headless WordPress</li>
-                <li>HubSpot</li>
-                <li>Adobe Experience Platform</li>
-                <li>Adobe Journey Optimizer</li>
-              </ul>
-            </article>
-            <article class="skill-card reveal">
-              <h4>Data</h4>
-              <ul role="list">
-                <li>PostgreSQL</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>Redis</li>
-                <li>Schema design</li>
-                <li>Query optimization</li>
-                <li>ETL pipelines</li>
-              </ul>
-            </article>
-            <article class="skill-card reveal">
-              <h4>Testing &amp; QA</h4>
-              <ul role="list">
-                <li>Playwright</li>
-                <li>Selenium</li>
-                <li>Postman / Newman</li>
-                <li>Integration &amp; E2E</li>
-                <li>Regression</li>
-                <li>Accessibility</li>
-                <li>Cross-browser</li>
-                <li>Core Web Vitals</li>
-              </ul>
-            </article>
-            <article class="skill-card reveal">
-              <h4>DevOps &amp; Monitoring</h4>
-              <ul role="list">
-                <li>Git</li>
-                <li>GitHub Actions</li>
-                <li>AWS (CloudFront, S3, Lambda)</li>
-                <li>RDS · IAM · CloudWatch</li>
-                <li>Datadog</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== WORK ===================== -->
-    <section class="section work" id="work">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="section-index">02</span>
-          <span class="section-kicker">Selected work</span>
-        </div>
-        <h2 class="display-h2 work-title reveal">
-          Platforms I've<br /><em>built &amp; shipped.</em>
-        </h2>
-
-        <div class="work-grid">
-          <!-- NASCAR -->
-          <article class="project reveal" data-tilt>
-            <a class="project-media" href="https://www.nascar.com/myprofile" target="_blank" rel="noopener noreferrer"
-              tabindex="-1" aria-hidden="true">
-              <picture>
-                <source type="image/avif"
-                  srcset="assets/img/opt/nascar-640.avif 640w, assets/img/opt/nascar-1280.avif 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <source type="image/webp"
-                  srcset="assets/img/opt/nascar-640.webp 640w, assets/img/opt/nascar-1280.webp 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <img src="assets/img/opt/nascar-640.webp" width="640" height="400"
-                  alt="NASCAR My Profile and Fan Rewards" loading="lazy" decoding="async" />
-              </picture>
-            </a>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="project-role">Senior Software Engineer · NASCAR</span>
-                <span class="project-year">2023–2025</span>
-              </div>
-              <h3 class="project-title">
-                <a href="https://www.nascar.com/myprofile" target="_blank" rel="noopener noreferrer">
-                  My Profile &amp; Fan Rewards
-                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M7 17 17 7M8 7h9v9"></path>
-                  </svg>
-                </a>
-              </h3>
-              <p class="project-desc">
-                Rebuilt the fan profile and rewards experiences across
-                WordPress, React, and PHP REST APIs — with Auth0/OIDC
-                authentication, session handling, driver preferences,
-                subscriptions, and loyalty data. Maintained WordPress as a
-                shared content backend for web and React Native, and validated
-                critical account flows through automated and manual regression
-                testing, with Datadog for production monitoring.
-              </p>
-              <ul class="project-tags" role="list">
-                <li>WordPress</li>
-                <li>PHP REST APIs</li>
-                <li>React</li>
-                <li>Auth0 / OIDC</li>
-                <li>Datadog</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- AlphaSense -->
-          <article class="project reveal" data-tilt>
-            <a class="project-media" href="https://www.alpha-sense.com/" target="_blank" rel="noopener noreferrer"
-              tabindex="-1" aria-hidden="true">
-              <picture>
-                <source type="image/avif"
-                  srcset="assets/img/opt/alphasense-640.avif 640w, assets/img/opt/alphasense-1280.avif 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <source type="image/webp"
-                  srcset="assets/img/opt/alphasense-640.webp 640w, assets/img/opt/alphasense-1280.webp 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <img src="assets/img/opt/alphasense-640.webp" width="640" height="400"
-                  alt="AlphaSense enterprise financial-search platform" loading="lazy" decoding="async" />
-              </picture>
-            </a>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="project-role">Senior Software Engineer · AlphaSense</span>
-                <span class="project-year">2022–2023</span>
-              </div>
-              <h3 class="project-title">
-                <a href="https://www.alpha-sense.com/" target="_blank" rel="noopener noreferrer">
-                  Alphred &amp; the search platform
-                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M7 17 17 7M8 7h9v9"></path>
-                  </svg>
-                </a>
-              </h3>
-              <p class="project-desc">
-                A React/Next.js frontend on a WordPress content backend for an
-                enterprise financial-search platform. Built Alphred — a
-                lightweight LLM-driven conversational interface wired to
-                AlphaSense product APIs — plus REST integrations, reduced plugin
-                dependence in shared page components, and resolved Core Web
-                Vitals regressions across supported browsers.
-              </p>
-              <ul class="project-tags" role="list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>WordPress backend</li>
-                <li>LLM · APIs</li>
-                <li>TypeScript</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- John Vena -->
-          <article class="project reveal" data-tilt>
-            <a class="project-media" href="https://www.johnvenaproduce.com/" target="_blank" rel="noopener noreferrer"
-              tabindex="-1" aria-hidden="true">
-              <picture>
-                <source type="image/avif"
-                  srcset="assets/img/opt/johnvena-640.avif 640w, assets/img/opt/johnvena-1280.avif 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <source type="image/webp"
-                  srcset="assets/img/opt/johnvena-640.webp 640w, assets/img/opt/johnvena-1280.webp 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <img src="assets/img/opt/johnvena-640.webp" width="640" height="400"
-                  alt="John Vena Inc. wholesale produce platform" loading="lazy" decoding="async" />
-              </picture>
-            </a>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="project-role">Software Engineer · Sagefrog</span>
-                <span class="project-year">2019–2022</span>
-              </div>
-              <h3 class="project-title">
-                <a href="https://www.johnvenaproduce.com/" target="_blank" rel="noopener noreferrer">
-                  John Vena Inc.
-                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M7 17 17 7M8 7h9v9"></path>
-                  </svg>
-                </a>
-              </h3>
-              <p class="project-desc">
-                Architected a headless platform for a wholesale-produce
-                distributor: WordPress as the CMS/backend with defined content
-                models and REST endpoints, feeding a Vue.js / Nuxt front-end
-                that separated editorial workflows from the customer-facing
-                application.
-              </p>
-              <ul class="project-tags" role="list">
-                <li>Headless WordPress</li>
-                <li>Vue.js</li>
-                <li>Nuxt.js</li>
-                <li>REST APIs</li>
-                <li>PHP</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- TradeCentric -->
-          <article class="project reveal" data-tilt>
-            <a class="project-media" href="https://tradecentric.com/" target="_blank" rel="noopener noreferrer"
-              tabindex="-1" aria-hidden="true">
-              <picture>
-                <source type="image/avif"
-                  srcset="assets/img/opt/tradecentric-640.avif 640w, assets/img/opt/tradecentric-1280.avif 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <source type="image/webp"
-                  srcset="assets/img/opt/tradecentric-640.webp 640w, assets/img/opt/tradecentric-1280.webp 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <img src="assets/img/opt/tradecentric-640.webp" width="640" height="400"
-                  alt="TradeCentric marketing platform" loading="lazy" decoding="async" />
-              </picture>
-            </a>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="project-role">Senior Software Engineer · PriceWeber</span>
-                <span class="project-year">2022</span>
-              </div>
-              <h3 class="project-title">
-                <a href="https://tradecentric.com/" target="_blank" rel="noopener noreferrer">
-                  TradeCentric
-                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M7 17 17 7M8 7h9v9"></path>
-                  </svg>
-                </a>
-              </h3>
-              <p class="project-desc">
-                A WordPress site with HubSpot-connected marketing features
-                supporting lead-generation and campaign workflows — built so
-                non-technical teams could manage content and campaigns without
-                editing code.
-              </p>
-              <ul class="project-tags" role="list">
-                <li>WordPress</li>
-                <li>PHP</li>
-                <li>HubSpot</li>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Greenwald -->
-          <article class="project reveal" data-tilt>
-            <a class="project-media" href="https://greenwaldresearch.com/" target="_blank" rel="noopener noreferrer"
-              tabindex="-1" aria-hidden="true">
-              <picture>
-                <source type="image/avif"
-                  srcset="assets/img/opt/greenwald-640.avif 640w, assets/img/opt/greenwald-1280.avif 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <source type="image/webp"
-                  srcset="assets/img/opt/greenwald-640.webp 640w, assets/img/opt/greenwald-1280.webp 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <img src="assets/img/opt/greenwald-640.webp" width="640" height="400" alt="Greenwald Research website"
-                  loading="lazy" decoding="async" />
-              </picture>
-            </a>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="project-role">Software Engineer · Sagefrog</span>
-                <span class="project-year">2019–2022</span>
-              </div>
-              <h3 class="project-title">
-                <a href="https://greenwaldresearch.com/" target="_blank" rel="noopener noreferrer">
-                  Greenwald Research
-                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M7 17 17 7M8 7h9v9"></path>
-                  </svg>
-                </a>
-              </h3>
-              <p class="project-desc">
-                A custom WordPress site for a market-research and
-                financial-consulting firm, with reusable page components,
-                structured content, and responsive front-end behavior.
-              </p>
-              <ul class="project-tags" role="list">
-                <li>WordPress</li>
-                <li>PHP</li>
-                <li>JavaScript</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Reynolds American -->
-          <article class="project reveal" data-tilt>
-            <a class="project-media" href="https://www.reynoldsamerican.com/" target="_blank" rel="noopener noreferrer"
-              tabindex="-1" aria-hidden="true">
-              <picture>
-                <source type="image/avif"
-                  srcset="assets/img/opt/reynolds-640.avif 640w, assets/img/opt/reynolds-1280.avif 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <source type="image/webp"
-                  srcset="assets/img/opt/reynolds-640.webp 640w, assets/img/opt/reynolds-1280.webp 1280w"
-                  sizes="(max-width: 900px) 92vw, 560px" />
-                <img src="assets/img/opt/reynolds-640.webp" width="640" height="400"
-                  alt="Reynolds American corporate website" loading="lazy" decoding="async" />
-              </picture>
-            </a>
-            <div class="project-body">
-              <div class="project-topline">
-                <span class="project-role">Software Engineer · Sagefrog</span>
-                <span class="project-year">2019–2022</span>
-              </div>
-              <h3 class="project-title">
-                <a href="https://www.reynoldsamerican.com/" target="_blank" rel="noopener noreferrer">
-                  Reynolds American
-                  <svg class="ext" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M7 17 17 7M8 7h9v9"></path>
-                  </svg>
-                </a>
-              </h3>
-              <p class="project-desc">
-                WordPress-based campaign and content experiences for a Fortune
-                500 — built with PHP, JavaScript, and CSS, with attention to
-                responsive behavior and repeatable content management.
-              </p>
-              <ul class="project-tags" role="list">
-                <li>WordPress</li>
-                <li>PHP</li>
-                <li>JavaScript</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== EXPERIENCE ===================== -->
-    <section class="section experience" id="experience">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="section-index">03</span>
-          <span class="section-kicker">Experience</span>
-        </div>
-        <h2 class="display-h2 reveal">Where I've<br /><em>worked.</em></h2>
-
-        <ol class="timeline" role="list">
-          <li class="tl-item reveal">
-            <div class="tl-marker tl-marker--current" aria-hidden="true"></div>
-            <div class="tl-content">
-              <div class="tl-head">
-                <h3 class="tl-role">Independent Software Engineer &amp; Consultant</h3>
-                <span class="tl-dates">Nov 2025 – Present</span>
-              </div>
-              <p class="tl-company">Freelance</p>
-              <ul class="tl-points" role="list">
-                <li>
-                  Partner with clients as a senior technical lead, owning delivery end to end —
-                  from discovery and architecture through build, launch, and handoff — while
-                  translating business goals into maintainable, well-tested systems.
-                </li>
-
-                <li>
-                  Conduct technical SEO, Core Web Vitals, accessibility, structured-data, and
-                  AI Search Readiness audits to identify opportunities that improve website
-                  performance, search visibility, and how effectively content is understood by
-                  search engines and AI-powered systems.
-                </li>
-
-                <li>
-                  Implement prioritized improvements across WordPress, headless CMS, React, and
-                  Next.js websites, including performance optimization, semantic structure,
-                  schema markup, internal linking, content architecture, and technical SEO.
-                </li>
-
-                <li>
-                  Lead WordPress and Drupal migrations, rebrands, and platform improvements,
-                  modernizing legacy templates, content models, and editorial workflows while
-                  protecting SEO value and minimizing downtime.
-                </li>
-
-                <li>
-                  Architect and build modern websites from scratch using React, Next.js, and
-                  headless CMS platforms, pairing fast, accessible front ends with scalable
-                  authoring experiences that teams can manage independently.
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-marker" aria-hidden="true"></div>
-            <div class="tl-content">
-              <div class="tl-head">
-                <h3 class="tl-role">Senior Software Engineer / Development Manager</h3>
-                <span class="tl-dates">May 2023 – Nov 2025</span>
-              </div>
-              <p class="tl-company">NASCAR</p>
-              <ul class="tl-points" role="list">
-                <li>Rebuilt My Profile and Fan Rewards across WordPress, React, and PHP APIs with Auth0/OIDC
-                  authentication, session handling, driver preferences, subscriptions, and loyalty data — defining API
-                  contracts and validating account flows with automated and manual regression testing.</li>
-                <li>Built API-driven content workflows that transformed race schedules, driver data, and editorial feeds
-                  into reusable Adobe Journey Optimizer email templates, replacing manual campaign assembly with
-                  structured, testable integrations.</li>
-                <li>Maintained WordPress as a shared content backend for web and React Native apps — developing REST
-                  endpoints, content models, and caching used by both traditional and React-based frontends.</li>
-                <li>Led delivery of responsive WordPress properties and internal publishing tools, balancing editor
-                  usability, component reuse, accessibility, performance, and reliable multi-environment deployment.
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-marker" aria-hidden="true"></div>
-            <div class="tl-content">
-              <div class="tl-head">
-                <h3 class="tl-role">Senior Software Engineer</h3>
-                <span class="tl-dates">Aug 2022 – May 2023</span>
-              </div>
-              <p class="tl-company">AlphaSense</p>
-              <ul class="tl-points" role="list">
-                <li>Worked on a WordPress-powered content platform with a React/Next.js frontend, reducing plugin
-                  dependence and improving the maintainability and performance of shared page components, content APIs,
-                  and publishing workflows.</li>
-                <li>Implemented the Alphred product demo — connecting an LLM-driven conversational interface to
-                  AlphaSense product APIs, building the web experience, request flow, and prompt behavior used to
-                  demonstrate capabilities to prospective customers.</li>
-                <li>Built and tested REST integrations, resolved Core Web Vitals issues, and verified responsive
-                  behavior, accessibility, and releases across supported environments.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-marker" aria-hidden="true"></div>
-            <div class="tl-content">
-              <div class="tl-head">
-                <h3 class="tl-role">Senior Software Engineer</h3>
-                <span class="tl-dates">Apr 2022 – Aug 2022</span>
-              </div>
-              <p class="tl-company">PriceWeber</p>
-              <ul class="tl-points" role="list">
-                <li>Delivered custom WordPress, PHP, JavaScript, and CSS implementations for enterprise marketing
-                  programs, connecting frontend components to CMS content and external APIs.</li>
-                <li>Performed cross-browser, responsive, accessibility, SEO, and performance validation before
-                  production releases, translating audit findings into actionable engineering work.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item reveal">
-            <div class="tl-marker" aria-hidden="true"></div>
-            <div class="tl-content">
-              <div class="tl-head">
-                <h3 class="tl-role">Software Engineer</h3>
-                <span class="tl-dates">Jun 2019 – May 2022</span>
-              </div>
-              <p class="tl-company">Sagefrog Marketing Group</p>
-              <ul class="tl-points" role="list">
-                <li>Built and maintained more than 30 B2B websites using custom WordPress themes, plugins, PHP,
-                  JavaScript, CSS, MySQL, and third-party integrations.</li>
-                <li>Architected a headless WordPress + Vue.js platform for John Vena Inc., defining content models and
-                  REST endpoints that separated editorial workflows from the customer-facing application.</li>
-                <li>Established reusable development patterns, code-review practices, and launch checklists covering
-                  responsive behavior, accessibility, SEO, and performance — and mentored developers.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-
-        <div class="edu reveal">
-          <div class="edu-item">
-            <h3 class="edu-title">B.S. Information Technology</h3>
-            <p class="edu-sub">Penn State Abington · 2019</p>
-          </div>
-          <div class="edu-item">
-            <h3 class="edu-title">Certifications</h3>
-            <p class="edu-sub">Responsive Web Design · Front-End Development Libraries — freeCodeCamp</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <section class="section contact" id="contact">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="section-index">04</span>
-          <span class="section-kicker">Contact</span>
-        </div>
-        <div class="contact-inner reveal">
-          <h2 class="display-h2 contact-title">
-            Let's build<br /><em>something solid.</em>
-          </h2>
-          <p class="contact-text">
-            I take on senior engineering work and hands-on consulting engagements — full builds,
-            migrations, performance and technical SEO — for teams and businesses that want a site
-            working harder for them. If that sounds like your project, email is the fastest way to
-            start the conversation.
-          </p>
-          <div class="contact-actions">
-            <a href="mailto:donnovanwint@gmail.com" class="btn btn--primary btn--lg" data-magnetic>
-              donnovanwint@gmail.com
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,12 2,6"></polyline>
-              </svg>
-            </a>
-            <div class="contact-secondary">
-              <a href="https://www.linkedin.com/in/donnovan-wint-jr/" target="_blank" rel="noopener noreferrer"
-                class="btn btn--ghost">
-                LinkedIn
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M7 17 17 7M8 7h9v9"></path>
-                </svg>
-              </a>
-              <a href="assets/resume.pdf" download class="btn btn--ghost">
-                Résumé (PDF)
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p class="footer-brand">Donnovan Wint<span class="brand-dot">.</span></p>
-      <p class="footer-note">
-        Designed &amp; built from scratch — vanilla HTML, CSS &amp; JS with GSAP.
+<!-- ========== Hero ========== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow" data-hero-item>Development Manager &amp; Senior Software Engineer</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__line" data-hero-line>Donnovan</span>
+        <span class="hero__line hero__line--accent" data-hero-line>Wint</span>
+      </h1>
+      <p class="hero__lede" data-hero-item>
+        7+ years building web platforms for high-traffic brands, from B2B agencies to NASCAR. Just as comfortable writing code as coaching the engineers who ship it.
+        <span class="hero__lede-muted">Now consulting independently on platform architecture, performance, and delivery.</span>
       </p>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/donnovan-wint-jr/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-          </svg>
+      <div class="hero__actions" data-hero-item>
+        <a class="btn btn--primary btn--lg" href="#work">
+          <span>View selected work</span>
+          <svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="mailto:donnovanwint@gmail.com" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,12 2,6"></polyline>
-          </svg>
+        <a class="btn btn--outline btn--lg btn--icon-box" href="./assets/resume.pdf" target="_blank" rel="noopener">
+          <span class="btn__icon-box"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10.5 12 15.5l5-5M4 20h16"/></svg></span>
+          <span>Download resume<span class="visually-hidden"> (PDF, opens in a new tab)</span></span>
         </a>
       </div>
-      <p class="footer-copy">&copy; <span id="year">2026</span> Donnovan Wint Jr.</p>
     </div>
-  </footer>
 
-  <script src="assets/js/vendor/gsap.min.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+    <div class="hero__stage stage" aria-hidden="true">
+      <svg class="hero__swoosh" viewBox="0 0 944 770" preserveAspectRatio="none" focusable="false">
+        <defs>
+          <linearGradient id="swoosh-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#b9d8fa"/><stop offset=".4" stop-color="#c6e0fa"/><stop offset=".66" stop-color="#dcebfb"/><stop offset="1" stop-color="#fefaf4" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#swoosh-grad)" d="M249 0C202 150 107 320 97 470c-7 130 7 230 45 320h90c-30-100-40-200-20-320 20-140 120-320 157-470z"/>
+      </svg>
+      <picture class="hero__portrait" data-hero-portrait>
+        <source type="image/avif" srcset="assets/img/hero-portrait-480.avif 480w, assets/img/hero-portrait-720.avif 720w, assets/img/hero-portrait-960.avif 960w" sizes="(max-width: 767px) 80vw, (max-width: 1199px) 52vw, 40vw">
+        <img src="assets/img/hero-portrait-720.webp" srcset="assets/img/hero-portrait-480.webp 480w, assets/img/hero-portrait-720.webp 720w, assets/img/hero-portrait-960.webp 960w" sizes="(max-width: 767px) 80vw, (max-width: 1199px) 52vw, 40vw" width="960" height="1062" alt="" fetchpriority="high" decoding="async">
+      </picture>
+      <svg class="hero__swoosh hero__swoosh--front" viewBox="0 0 944 770" preserveAspectRatio="none" focusable="false">
+        <defs>
+          <linearGradient id="swoosh-front-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#b9d8fa"/><stop offset=".45" stop-color="#c6e0fa"/><stop offset="1" stop-color="#d7e9fb"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#swoosh-front-grad)" d="M249 0C202 150 107 320 97 470c-7 130 7 230 45 320h90c-30-100-40-200-20-320 20-140 120-320 157-470z"/>
+      </svg>
+
+    </div>
+  </div>
+
+  <div class="container hero__meta">
+    <a class="scroll-cue" href="#about"><span>Scroll</span></a>
+    <ul class="stats stats--hero" aria-label="At a glance">
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        <p><strong>7+ years</strong><span>shipping production web</span></p>
+      </li>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></svg>
+        <p><strong>30+ platforms</strong><span>shipped (B2B &amp; enterprise)</span></p>
+      </li>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 28 26" aria-hidden="true"><circle cx="14" cy="6" r="3.4"/><circle cx="6.5" cy="10" r="2.6"/><circle cx="21.5" cy="10" r="2.6"/><path d="M8 24c0-4 2.7-6.6 6-6.6s6 2.6 6 6.6M1.5 20c0-2.6 1.8-4.4 4.2-4.4M26.5 20c0-2.6-1.8-4.4-4.2-4.4"/></svg>
+        <p><strong>Team of 5</strong><span>engineers led</span></p>
+      </li>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 24 28" aria-hidden="true"><path d="M12 26s9-8 9-14.5A9 9 0 0 0 3 11.5C3 18 12 26 12 26z"/><circle cx="12" cy="11.5" r="3.4"/></svg>
+        <p><strong>Philadelphia, PA</strong><span>Open to remote</span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== About ========== -->
+<section class="about section" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="about__top">
+      <div class="about__copy">
+        <p class="eyebrow" data-reveal>About me</p>
+        <h2 class="display about__title" id="about-title" data-reveal>I build web <br class="br-lg">platforms <span class="accent">end to end.</span></h2>
+        <div class="prose about__prose" data-reveal>
+          <p>Senior engineer with 7+ years building and maintaining enterprise web platforms across front end, back end and content-management systems, from architecture through production support.</p>
+          <p>Delivered production work across React, Next.js, Vue, Node, PHP and headless CMS. Recent work includes NASCAR’s fan profile and rewards platform, CMS migrations, authentication systems, mobile content APIs, and an LLM-powered product demo (Alphred) at AlphaSense.</p>
+          <p>Led a team of 5 engineers at NASCAR: weekly Scrum and 1:1s, code-review sessions, hiring, and weekend on-call support.</p>
+          <p>Consulting work combines technical SEO, Core Web Vitals, structured data, accessibility, content architecture and AI Search Readiness, so sites are faster, easier to understand, and discoverable in both traditional and AI-powered search.</p>
+        </div>
+      </div>
+
+      <div class="about__stage stage">
+        <svg class="about__brush" viewBox="0 0 160 480" aria-hidden="true" focusable="false">
+          <path d="M71 14h79v101l-27-25-23-20-20-20-8-18z" fill="#e3eef9"/>
+          <path d="M148 225 72 322l28-5 48-19z" fill="#d8eafb"/>
+          <path d="M148 298 78 340l9 3 13 19h48z" fill="#c9e2fa"/>
+        </svg>
+        <div class="dots about__dots about__dots--a" aria-hidden="true"></div>
+        <div class="dots about__dots about__dots--b" aria-hidden="true"></div>
+        <picture class="about__swoosh" aria-hidden="true">
+          <source type="image/avif" srcset="assets/img/about-swoosh-287.avif 287w, assets/img/about-swoosh-574.avif 574w" sizes="18vw">
+          <img src="assets/img/about-swoosh-574.webp" srcset="assets/img/about-swoosh-287.webp 287w, assets/img/about-swoosh-574.webp 574w" sizes="18vw" width="574" height="144" alt="" loading="lazy" decoding="async">
+        </picture>
+        <picture class="about__photo" data-parallax="-6">
+          <source type="image/avif" srcset="assets/img/about-code-735.avif 735w, assets/img/about-code-1470.avif 1470w" sizes="(max-width: 767px) 92vw, 48vw">
+          <img src="assets/img/about-code-1470.webp" srcset="assets/img/about-code-735.webp 735w, assets/img/about-code-1470.webp 1470w" sizes="(max-width: 767px) 92vw, 48vw" width="1470" height="908" alt="Laptop on a white desk showing code in an editor" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+    <ul class="stats stats--panel" aria-label="At a glance" data-reveal>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        <p><strong>7+ years</strong><span>shipping production web</span></p>
+      </li>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/></svg>
+        <p><strong>30+ platforms</strong><span>shipped (B2B &amp; enterprise)</span></p>
+      </li>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 28 26" aria-hidden="true"><circle cx="14" cy="6" r="3.4"/><circle cx="6.5" cy="10" r="2.6"/><circle cx="21.5" cy="10" r="2.6"/><path d="M8 24c0-4 2.7-6.6 6-6.6s6 2.6 6 6.6M1.5 20c0-2.6 1.8-4.4 4.2-4.4M26.5 20c0-2.6-1.8-4.4-4.2-4.4"/></svg>
+        <p><strong>Team of 5</strong><span>engineers led</span></p>
+      </li>
+      <li class="stat">
+        <svg class="stat__icon" viewBox="0 0 24 28" aria-hidden="true"><path d="M12 26s9-8 9-14.5A9 9 0 0 0 3 11.5C3 18 12 26 12 26z"/><circle cx="12" cy="11.5" r="3.4"/></svg>
+        <p><strong>Philadelphia, PA</strong><span>Open to remote</span></p>
+      </li>
+    </ul>
+
+    <h3 class="eyebrow stack__label" id="stack-title" data-reveal>Tech stack</h3>
+    <ul class="stack" aria-labelledby="stack-title">
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 28 26" aria-hidden="true"><circle cx="14" cy="6" r="3.4"/><circle cx="6.5" cy="10" r="2.6"/><circle cx="21.5" cy="10" r="2.6"/><path d="M8 24c0-4 2.7-6.6 6-6.6s6 2.6 6 6.6M1.5 20c0-2.6 1.8-4.4 4.2-4.4M26.5 20c0-2.6-1.8-4.4-4.2-4.4"/></svg></span>
+        <h4>Leadership</h4>
+        <p>Team management, hiring, 1:1s, coaching, Scrum, Jira, code review, release management, incident escalation, AI-assisted development</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span>
+        <h4>Front end</h4>
+        <p>JavaScript, TypeScript, React, Next.js, Vue.js, Nuxt.js, React Native, HTML5, CSS3, Responsive UI</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+        <h4>Back end &amp; APIs</h4>
+        <p>PHP, Node.js, Python, Java, REST, GraphQL, Webhooks, OAuth/OIDC, Auth0, Sessions</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 9h2"/></svg></span>
+        <h4>CMS &amp; platforms</h4>
+        <p>WordPress, Headless WordPress, Drupal, HubSpot, Adobe Experience Platform, Adobe Journey Optimizer</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 24 26" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v8c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 13v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg></span>
+        <h4>Data</h4>
+        <p>PostgreSQL, MySQL, MongoDB, Redis, Schema design, Query optimization, ETL pipelines</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 24 26" aria-hidden="true"><path d="M12 2.5 4 5.5v7c0 5 3.5 8.3 8 10 4.5-1.7 8-5 8-10v-7z"/><path d="m8.3 12.5 2.7 2.7 4.8-5.4"/></svg></span>
+        <h4>Testing &amp; QA</h4>
+        <p>Playwright, Selenium, Postman/Newman, Integration &amp; E2E, Regression, Accessibility, Cross-browser, Core Web Vitals</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 28 22" aria-hidden="true"><path d="M7.5 19.5a5.2 5.2 0 0 1-.6-10.4 7.4 7.4 0 0 1 14.2 1.2A4.6 4.6 0 0 1 21 19.5z"/></svg></span>
+        <h4>DevOps &amp; monitoring</h4>
+        <p>Git, GitHub Actions, AWS (CloudFront, S3, Lambda, SQS, RDS, IAM, CloudWatch), Docker, Terraform, Datadog</p>
+      </li>
+      <li class="stack-card" data-reveal-item>
+        <span class="icon-bubble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7zM19 16c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3z"/></svg></span>
+        <h4>AI &amp; search</h4>
+        <p>LLM API integration, Prompt engineering, RAG pipelines, Technical SEO, Structured data, AI-search readiness</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== Selected work ========== -->
+<section class="work section" id="work" aria-labelledby="work-title">
+  <svg class="work__swoosh" viewBox="0 0 1536 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M1150 320c140-40 280-105 386-152v152z" fill="#e0edfa" opacity=".8"/>
+  </svg>
+  <div class="container">
+    <div class="work__head">
+      <div>
+        <p class="eyebrow" data-reveal>Selected work</p>
+        <h2 class="display work__title" id="work-title" data-reveal>Real projects.<br><span class="accent">Real impact.</span></h2>
+      </div>
+      <p class="work__intro" data-reveal>A selection of platforms I’ve built, shipped, and led — from high-traffic consumer experiences to enterprise websites and AI-powered products.</p>
+    </div>
+
+    <div class="work__body" data-tabs>
+      <div class="project-list" data-reveal>
+        <div class="project-list__tabs" role="tablist" aria-label="Projects" aria-orientation="vertical">
+        <button class="project-tab" type="button" role="tab" id="tab-nascar" aria-controls="panel-nascar" aria-selected="true">
+          <picture><source type="image/avif" srcset="assets/img/project-nascar-180.avif"><img src="assets/img/project-nascar-180.webp" width="180" height="112" alt="" loading="lazy" decoding="async"></picture>
+          <span class="project-tab__text"><strong>NASCAR</strong><span>Fan profile &amp; rewards platform</span></span>
+          <span class="project-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <button class="project-tab" type="button" role="tab" id="tab-alphasense" aria-controls="panel-alphasense" aria-selected="false" tabindex="-1">
+          <picture><source type="image/avif" srcset="assets/img/project-alphasense-180.avif"><img src="assets/img/project-alphasense-180.webp" width="180" height="112" alt="" loading="lazy" decoding="async"></picture>
+          <span class="project-tab__text"><strong>AlphaSense</strong><span>Marketing rebrand &amp; LLM demo</span></span>
+          <span class="project-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <button class="project-tab" type="button" role="tab" id="tab-tradecentric" aria-controls="panel-tradecentric" aria-selected="false" tabindex="-1">
+          <picture><source type="image/avif" srcset="assets/img/project-tradecentric-180.avif"><img src="assets/img/project-tradecentric-180.webp" width="180" height="112" alt="" loading="lazy" decoding="async"></picture>
+          <span class="project-tab__text"><strong>TradeCentric</strong><span>WordPress + HubSpot integration</span></span>
+          <span class="project-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <button class="project-tab" type="button" role="tab" id="tab-johnvena" aria-controls="panel-johnvena" aria-selected="false" tabindex="-1">
+          <picture><source type="image/avif" srcset="assets/img/project-johnvena-180.avif"><img src="assets/img/project-johnvena-180.webp" width="180" height="112" alt="" loading="lazy" decoding="async"></picture>
+          <span class="project-tab__text"><strong>John Vena</strong><span>WordPress CMS + Vue.js</span></span>
+          <span class="project-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <button class="project-tab" type="button" role="tab" id="tab-greenwald" aria-controls="panel-greenwald" aria-selected="false" tabindex="-1">
+          <picture><source type="image/avif" srcset="assets/img/project-greenwald-180.avif"><img src="assets/img/project-greenwald-180.webp" width="180" height="112" alt="" loading="lazy" decoding="async"></picture>
+          <span class="project-tab__text"><strong>Greenwald Research</strong><span>Custom WordPress platform</span></span>
+          <span class="project-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <button class="project-tab" type="button" role="tab" id="tab-reynolds" aria-controls="panel-reynolds" aria-selected="false" tabindex="-1">
+          <picture><source type="image/avif" srcset="assets/img/project-reynolds-180.avif"><img src="assets/img/project-reynolds-180.webp" width="180" height="112" alt="" loading="lazy" decoding="async"></picture>
+          <span class="project-tab__text"><strong>Reynolds American</strong><span>Fortune 500 campaign sites</span></span>
+          <span class="project-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        </div>
+      </div>
+
+      <div class="project-panels">
+        <!-- NASCAR -->
+        <div class="project-panel project-panel--featured" role="tabpanel" id="panel-nascar" aria-labelledby="tab-nascar" tabindex="0">
+          <div class="project-panel__head">
+            <p class="eyebrow">Featured project</p>
+            <h3 class="project-panel__title">NASCAR</h3>
+            <p class="project-panel__subtitle">Fan profile &amp; rewards platform</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Development Manager &amp; Senior Software Engineer</dd></div>
+            <div><dt>Years</dt><dd>2023 – 2025</dd></div>
+            <div><dt>Focus</dt><dd>Full-stack development, team leadership, platform architecture</dd></div>
+          </dl>
+          <div class="project-panel__body">
+            <p>Led a team of 5 engineers to build and maintain NASCAR’s fan profile and rewards platform, a high-traffic, consumer-facing system. Shipped new features, improved performance and reliability, and provided weekend on-call support during race events.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>React</li><li>PHP APIs</li><li>Auth0</li><li>WordPress</li><li>AWS</li><li>Performance</li><li>Accessibility</li><li>Engineering Leadership</li>
+            </ul>
+            <a class="btn btn--dark btn--md" href="https://www.nascar.com/myprofile" rel="noopener" target="_blank">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span>View live site<span class="visually-hidden"> (NASCAR, opens in a new tab)</span></span>
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <figure class="project-panel__browser">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <picture><source type="image/avif" srcset="assets/img/project-nascar-640.avif 640w, assets/img/project-nascar-1280.avif 1280w" sizes="(max-width: 767px) 92vw, 46vw"><img src="assets/img/project-nascar-1280.webp" srcset="assets/img/project-nascar-640.webp 640w, assets/img/project-nascar-1280.webp 1280w" sizes="(max-width: 767px) 92vw, 46vw" width="1280" height="800" alt="NASCAR.com homepage" loading="lazy" decoding="async"></picture>
+          </figure>
+        </div>
+
+        <!-- AlphaSense -->
+        <div class="project-panel" role="tabpanel" id="panel-alphasense" hidden aria-labelledby="tab-alphasense" tabindex="0">
+          <div class="project-panel__head">
+            <p class="eyebrow">Project</p>
+            <h3 class="project-panel__title">AlphaSense</h3>
+            <p class="project-panel__subtitle">Marketing site &amp; Alphred LLM demo</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Senior Software Engineer</dd></div>
+            <div><dt>Years</dt><dd>2022 – 2023</dd></div>
+            <div><dt>Focus</dt><dd>Front-end architecture, headless CMS, LLM integration</dd></div>
+          </dl>
+          <div class="project-panel__body">
+            <p>A React/Next.js front end on a WordPress content backend for an enterprise financial-search platform. As the sole web engineer I approved every site change, led the rebrand, and built Alphred — a lightweight LLM-driven conversational interface wired to AlphaSense product APIs — while reducing plugin dependence and resolving Core Web Vitals regressions.</p>
+            <ul class="tags" aria-label="Technologies"><li>React</li><li>Next.js</li><li>WordPress backend</li><li>LLM · APIs</li><li>TypeScript</li><li>Core Web Vitals</li></ul>
+            <a class="btn btn--dark btn--md" href="https://www.alpha-sense.com/" rel="noopener" target="_blank">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span>View live site<span class="visually-hidden"> (AlphaSense, opens in a new tab)</span></span>
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <figure class="project-panel__browser">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <picture><source type="image/avif" srcset="assets/img/project-alphasense-640.avif 640w, assets/img/project-alphasense-1280.avif 1280w" sizes="(max-width: 767px) 92vw, 46vw"><img src="assets/img/project-alphasense-1280.webp" srcset="assets/img/project-alphasense-640.webp 640w, assets/img/project-alphasense-1280.webp 1280w" sizes="(max-width: 767px) 92vw, 46vw" width="1280" height="800" alt="AlphaSense enterprise financial-search platform homepage" loading="lazy" decoding="async"></picture>
+          </figure>
+        </div>
+
+        <!-- TradeCentric -->
+        <div class="project-panel" role="tabpanel" id="panel-tradecentric" hidden aria-labelledby="tab-tradecentric" tabindex="0">
+          <div class="project-panel__head">
+            <p class="eyebrow">Project</p>
+            <h3 class="project-panel__title">TradeCentric</h3>
+            <p class="project-panel__subtitle">WordPress + HubSpot integration</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Senior Software Engineer (Contract) · PriceWeber</dd></div>
+            <div><dt>Years</dt><dd>2022</dd></div>
+            <div><dt>Focus</dt><dd>CMS development, marketing integrations</dd></div>
+          </dl>
+          <div class="project-panel__body">
+            <p>A WordPress site with HubSpot-connected marketing features supporting lead-generation and campaign workflows — built so non-technical teams could manage content and campaigns without editing code, with cross-browser, accessibility and performance checks before every release.</p>
+            <ul class="tags" aria-label="Technologies"><li>WordPress</li><li>PHP</li><li>HubSpot</li><li>JavaScript</li><li>Accessibility</li></ul>
+            <a class="btn btn--dark btn--md" href="https://tradecentric.com/" rel="noopener" target="_blank">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span>View live site<span class="visually-hidden"> (TradeCentric, opens in a new tab)</span></span>
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <figure class="project-panel__browser">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <picture><source type="image/avif" srcset="assets/img/project-tradecentric-640.avif 640w, assets/img/project-tradecentric-1280.avif 1280w" sizes="(max-width: 767px) 92vw, 46vw"><img src="assets/img/project-tradecentric-1280.webp" srcset="assets/img/project-tradecentric-640.webp 640w, assets/img/project-tradecentric-1280.webp 1280w" sizes="(max-width: 767px) 92vw, 46vw" width="1280" height="800" alt="TradeCentric marketing website" loading="lazy" decoding="async"></picture>
+          </figure>
+        </div>
+
+        <!-- John Vena -->
+        <div class="project-panel" role="tabpanel" id="panel-johnvena" hidden aria-labelledby="tab-johnvena" tabindex="0">
+          <div class="project-panel__head">
+            <p class="eyebrow">Project</p>
+            <h3 class="project-panel__title">John Vena Inc.</h3>
+            <p class="project-panel__subtitle">Headless WordPress + Vue.js</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Software Engineer · Sagefrog</dd></div>
+            <div><dt>Years</dt><dd>2019 – 2022</dd></div>
+            <div><dt>Focus</dt><dd>Headless architecture, content modeling</dd></div>
+          </dl>
+          <div class="project-panel__body">
+            <p>Architected a headless platform for a wholesale-produce distributor: WordPress as the CMS with defined content models and REST endpoints, feeding a Vue.js / Nuxt front end that separated editorial workflows from the customer-facing application and sped up page loads through API-driven delivery.</p>
+            <ul class="tags" aria-label="Technologies"><li>Headless WordPress</li><li>Vue.js</li><li>Nuxt.js</li><li>REST APIs</li><li>PHP</li></ul>
+            <a class="btn btn--dark btn--md" href="https://www.johnvenaproduce.com/" rel="noopener" target="_blank">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span>View live site<span class="visually-hidden"> (John Vena Inc., opens in a new tab)</span></span>
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <figure class="project-panel__browser">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <picture><source type="image/avif" srcset="assets/img/project-johnvena-640.avif 640w, assets/img/project-johnvena-1280.avif 1280w" sizes="(max-width: 767px) 92vw, 46vw"><img src="assets/img/project-johnvena-1280.webp" srcset="assets/img/project-johnvena-640.webp 640w, assets/img/project-johnvena-1280.webp 1280w" sizes="(max-width: 767px) 92vw, 46vw" width="1280" height="800" alt="John Vena Inc. wholesale produce website" loading="lazy" decoding="async"></picture>
+          </figure>
+        </div>
+
+        <!-- Greenwald -->
+        <div class="project-panel" role="tabpanel" id="panel-greenwald" hidden aria-labelledby="tab-greenwald" tabindex="0">
+          <div class="project-panel__head">
+            <p class="eyebrow">Project</p>
+            <h3 class="project-panel__title">Greenwald Research</h3>
+            <p class="project-panel__subtitle">Custom WordPress platform</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Software Engineer · Sagefrog</dd></div>
+            <div><dt>Years</dt><dd>2019 – 2022</dd></div>
+            <div><dt>Focus</dt><dd>Component systems, responsive front end</dd></div>
+          </dl>
+          <div class="project-panel__body">
+            <p>A custom WordPress site for a market-research and financial-consulting firm, with reusable page components, structured content and responsive front-end behavior — shipped with launch checklists covering accessibility, SEO and performance.</p>
+            <ul class="tags" aria-label="Technologies"><li>WordPress</li><li>PHP</li><li>JavaScript</li><li>CSS</li><li>Technical SEO</li></ul>
+            <a class="btn btn--dark btn--md" href="https://greenwaldresearch.com/" rel="noopener" target="_blank">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span>View live site<span class="visually-hidden"> (Greenwald Research, opens in a new tab)</span></span>
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <figure class="project-panel__browser">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <picture><source type="image/avif" srcset="assets/img/project-greenwald-640.avif 640w, assets/img/project-greenwald-1280.avif 1280w" sizes="(max-width: 767px) 92vw, 46vw"><img src="assets/img/project-greenwald-1280.webp" srcset="assets/img/project-greenwald-640.webp 640w, assets/img/project-greenwald-1280.webp 1280w" sizes="(max-width: 767px) 92vw, 46vw" width="1280" height="800" alt="Greenwald Research website" loading="lazy" decoding="async"></picture>
+          </figure>
+        </div>
+
+        <!-- Reynolds -->
+        <div class="project-panel" role="tabpanel" id="panel-reynolds" hidden aria-labelledby="tab-reynolds" tabindex="0">
+          <div class="project-panel__head">
+            <p class="eyebrow">Project</p>
+            <h3 class="project-panel__title">Reynolds American</h3>
+            <p class="project-panel__subtitle">Fortune 500 campaign sites</p>
+          </div>
+          <dl class="project-meta">
+            <div><dt>Role</dt><dd>Software Engineer · Sagefrog</dd></div>
+            <div><dt>Years</dt><dd>2019 – 2022</dd></div>
+            <div><dt>Focus</dt><dd>Campaign experiences, content management</dd></div>
+          </dl>
+          <div class="project-panel__body">
+            <p>WordPress-based campaign and content experiences for a Fortune 500 — built with PHP, JavaScript and CSS, with attention to responsive behavior and repeatable content management so marketing teams could launch quickly.</p>
+            <ul class="tags" aria-label="Technologies"><li>WordPress</li><li>PHP</li><li>JavaScript</li><li>CSS</li></ul>
+            <a class="btn btn--dark btn--md" href="https://www.reynoldsamerican.com/" rel="noopener" target="_blank">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span>View live site<span class="visually-hidden"> (Reynolds American, opens in a new tab)</span></span>
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <figure class="project-panel__browser">
+            <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <picture><source type="image/avif" srcset="assets/img/project-reynolds-640.avif 640w, assets/img/project-reynolds-1280.avif 1280w" sizes="(max-width: 767px) 92vw, 46vw"><img src="assets/img/project-reynolds-1280.webp" srcset="assets/img/project-reynolds-640.webp 640w, assets/img/project-reynolds-1280.webp 1280w" sizes="(max-width: 767px) 92vw, 46vw" width="1280" height="800" alt="Reynolds American corporate website" loading="lazy" decoding="async"></picture>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Experience ========== -->
+<section class="experience section" id="experience" aria-labelledby="experience-title">
+  <div class="experience__watermark" aria-hidden="true" data-text="Experience"></div>
+  <div class="experience__skyline stage">
+    <picture data-parallax="-5">
+      <source type="image/avif" srcset="assets/img/exp-skyline-520.avif 520w, assets/img/exp-skyline-1040.avif 1040w" sizes="(max-width: 767px) 100vw, 34vw">
+      <img src="assets/img/exp-skyline-1040.webp" srcset="assets/img/exp-skyline-520.webp 520w, assets/img/exp-skyline-1040.webp 1040w" sizes="(max-width: 767px) 100vw, 34vw" width="1040" height="1348" alt="Philadelphia skyline and river bridge" loading="lazy" decoding="async">
+    </picture>
+    <div class="place-card">
+      <svg viewBox="0 0 18 22" aria-hidden="true"><path d="M9 21s7-6.2 7-11.5A7 7 0 0 0 2 9.5C2 14.8 9 21 9 21z"/><circle cx="9" cy="9.5" r="2.4"/></svg>
+      <p><strong>Philadelphia, PA</strong>Based in Philadelphia, open to remote opportunities nationwide.</p>
+    </div>
+  </div>
+  <div class="container experience__grid">
+    <div class="experience__intro">
+      <p class="eyebrow" data-reveal>Experience</p>
+      <h2 class="display experience__title" id="experience-title" data-reveal>A track record of building <span class="accent">and leading.</span></h2>
+      <p class="experience__lede" data-reveal>From high-traffic consumer platforms to enterprise websites, I’ve built, shipped, and led teams across the full stack — architecture, development, performance, and production support.</p>
+    </div>
+
+    <div class="timeline" data-tabs>
+      <span class="timeline__track" aria-hidden="true"><span class="timeline__fill" data-timeline-fill></span></span>
+      <div role="tablist" aria-label="Roles" aria-orientation="vertical" class="timeline__list">
+        <button class="role-tab" type="button" role="tab" id="role-freelance" aria-controls="role-panel-freelance" aria-selected="false" tabindex="-1">
+          <span class="role-tab__date">2025 – Now</span>
+          <span class="role-tab__text"><strong>Freelance</strong><span>Independent Software Engineer &amp; Consultant</span></span>
+        </button>
+        <button class="role-tab" type="button" role="tab" id="role-nascar" aria-controls="role-panel-nascar" aria-selected="true">
+          <span class="role-tab__date">2023 – 2025</span>
+          <span class="role-tab__text"><strong>NASCAR</strong><span>Development Manager &amp; Senior Software Engineer</span></span>
+          <span class="role-tab__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </button>
+        <button class="role-tab" type="button" role="tab" id="role-alphasense" aria-controls="role-panel-alphasense" aria-selected="false" tabindex="-1">
+          <span class="role-tab__date">2022 – 2023</span>
+          <span class="role-tab__text"><strong>AlphaSense</strong><span>Senior Software Engineer</span></span>
+        </button>
+        <button class="role-tab" type="button" role="tab" id="role-priceweber" aria-controls="role-panel-priceweber" aria-selected="false" tabindex="-1">
+          <span class="role-tab__date">2022</span>
+          <span class="role-tab__text"><strong>PriceWeber</strong><span>Senior Software Engineer (Contract)</span></span>
+        </button>
+        <button class="role-tab" type="button" role="tab" id="role-sagefrog" aria-controls="role-panel-sagefrog" aria-selected="false" tabindex="-1">
+          <span class="role-tab__date">2019 – 2022</span>
+          <span class="role-tab__text"><strong>Sagefrog Marketing Group</strong><span>Software Engineer</span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="role-panels">
+      <div class="role-panel" role="tabpanel" id="role-panel-freelance" hidden aria-labelledby="role-freelance" tabindex="0">
+        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/freelance-472.avif 472w, assets/img/freelance-900.avif 900w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/freelance-900.webp" srcset="assets/img/freelance-472.webp 472w, assets/img/freelance-900.webp 900w" sizes="(max-width: 767px) 92vw, 31vw" width="900" height="341" alt="" loading="lazy" decoding="async"></picture>
+        <p class="role-panel__meta"><span>Nov 2025 – Present</span><span>Independent Software Engineer &amp; Consultant</span></p>
+        <h3 class="role-panel__title">Freelance</h3>
+        <p class="role-panel__subtitle">Platform builds, audits &amp; consulting</p>
+        <p>Lead client work end to end for healthcare, finance and e-commerce web platforms — discovery, solution architecture, delivery planning, launch and handoff — advising stakeholders on trade-offs, risks and priorities.</p>
+        <ul class="checklist">
+          <li>Discovery, requirements and solution architecture</li>
+          <li>Relational schemas and REST APIs for CRM and reporting</li>
+          <li>Technical SEO, AI-search, Core Web Vitals and WCAG audits</li>
+          <li>AWS hosting with S3, CloudFront and CDN caching</li>
+        </ul>
+      </div>
+      <div class="role-panel" role="tabpanel" id="role-panel-nascar" aria-labelledby="role-nascar" tabindex="0">
+        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/nascar-home-472.avif 472w, assets/img/nascar-home-944.avif 944w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/nascar-home-944.webp" srcset="assets/img/nascar-home-472.webp 472w, assets/img/nascar-home-944.webp 944w" sizes="(max-width: 767px) 92vw, 31vw" width="944" height="357" alt="NASCAR.com homepage" loading="lazy" decoding="async"></picture>
+        <p class="role-panel__meta"><span>May 2023 – Nov 2025</span><span>Development Manager &amp; Senior Software Engineer</span></p>
+        <h3 class="role-panel__title">NASCAR</h3>
+        <p class="role-panel__subtitle">Fan profile &amp; rewards platform</p>
+        <p>Led a team of 5 engineers to build and maintain NASCAR’s fan profile and rewards platform, a high-traffic, consumer-facing system. Shipped new features, improved performance and reliability, and provided weekend on-call support during race events.</p>
+        <ul class="checklist">
+          <li>Team management: weekly Scrum, 1:1s, code-review sessions, hiring</li>
+          <li>Full-stack development and platform architecture</li>
+          <li>Authentication systems and user profiles</li>
+          <li>Mobile APIs and integrations</li>
+          <li>Weekend on-call support during race events</li>
+        </ul>
+      </div>
+      <div class="role-panel" role="tabpanel" id="role-panel-alphasense" hidden aria-labelledby="role-alphasense" tabindex="0">
+        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/alphasense-home-472.avif 472w, assets/img/alphasense-home-944.avif 944w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/alphasense-home-944.webp" srcset="assets/img/alphasense-home-472.webp 472w, assets/img/alphasense-home-944.webp 944w" sizes="(max-width: 767px) 92vw, 31vw" width="944" height="357" alt="AlphaSense homepage" loading="lazy" decoding="async"></picture>
+        <p class="role-panel__meta"><span>Aug 2022 – May 2023</span><span>Senior Software Engineer</span></p>
+        <h3 class="role-panel__title">AlphaSense</h3>
+        <p class="role-panel__subtitle">Website, rebrand &amp; Alphred</p>
+        <p>Owned the company website end to end as its sole engineer, approving every change and leading delivery of the rebrand. Built and demonstrated Alphred, AlphaSense’s AI representative, connecting an LLM-driven interface to product APIs.</p>
+        <ul class="checklist">
+          <li>React, Next.js and headless WordPress components</li>
+          <li>Alphred LLM demo for prospective-customer presentations</li>
+          <li>REST integrations and Core Web Vitals fixes</li>
+          <li>Accessibility and release validation across environments</li>
+        </ul>
+      </div>
+      <div class="role-panel" role="tabpanel" id="role-panel-priceweber" hidden aria-labelledby="role-priceweber" tabindex="0">
+        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/priceweber-home-472.avif 472w, assets/img/priceweber-home-944.avif 944w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/priceweber-home-944.webp" srcset="assets/img/priceweber-home-472.webp 472w, assets/img/priceweber-home-944.webp 944w" sizes="(max-width: 767px) 92vw, 31vw" width="944" height="357" alt="PriceWeber agency homepage" loading="lazy" decoding="async"></picture>
+        <p class="role-panel__meta"><span>Apr 2022 – Aug 2022</span><span>Senior Software Engineer (Contract)</span></p>
+        <h3 class="role-panel__title">PriceWeber</h3>
+        <p class="role-panel__subtitle">Fortune 500 marketing programs</p>
+        <p>Delivered WordPress, PHP and JavaScript builds for Fortune 500 marketing programs, connecting responsive components to CMS content and external APIs, including the TradeCentric site.</p>
+        <ul class="checklist">
+          <li>WordPress and PHP builds with external API integrations</li>
+          <li>Automated marketing analytics and reporting with PHP REST APIs</li>
+          <li>Cross-browser, WCAG, SEO and Core Web Vitals audits</li>
+        </ul>
+      </div>
+      <div class="role-panel" role="tabpanel" id="role-panel-sagefrog" hidden aria-labelledby="role-sagefrog" tabindex="0">
+        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/sagefrog-home-472.avif 472w, assets/img/sagefrog-home-944.avif 944w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/sagefrog-home-944.webp" srcset="assets/img/sagefrog-home-472.webp 472w, assets/img/sagefrog-home-944.webp 944w" sizes="(max-width: 767px) 92vw, 31vw" width="944" height="357" alt="Sagefrog Marketing Group homepage" loading="lazy" decoding="async"></picture>
+        <p class="role-panel__meta"><span>Jun 2019 – May 2022</span><span>Software Engineer</span></p>
+        <h3 class="role-panel__title">Sagefrog Marketing Group</h3>
+        <p class="role-panel__subtitle">30+ B2B websites</p>
+        <p>Built and maintained more than 30 B2B websites with custom WordPress themes, plugins and integrations, and architected a headless WordPress and Vue.js platform for John Vena Inc.</p>
+        <ul class="checklist">
+          <li>Mentored 2 junior developers; hiring manager for engineering roles</li>
+          <li>Reusable development patterns and launch checklists</li>
+          <li>Headless WordPress + Vue.js architecture</li>
+          <li>Accessibility, SEO and performance standards</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="education" aria-labelledby="education-title" data-reveal>
+      <h3 class="eyebrow" id="education-title">Education</h3>
+      <div class="education__items">
+        <div class="education__item">
+          <span class="icon-bubble icon-bubble--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5-10-5zM6 11.2V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.8M22 9v6"/></svg></span>
+          <p><strong>Penn State Abington</strong><span>B.S. in Information Technology</span><small>2019</small></p>
+        </div>
+        <div class="education__item">
+          <span class="icon-bubble icon-bubble--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1.5 7 5-2.5 5 2.5-1.5-7M10 9l1.5 1.5L14.5 7.5"/></svg></span>
+          <p><strong>Certifications</strong><span>Responsive Web Design; Front-End Development Libraries</span><small>freeCodeCamp</small></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- ========== Contact ========== -->
+<section class="contact section" id="contact" aria-labelledby="contact-title">
+  <div class="contact__visual stage" aria-hidden="true">
+    <picture data-parallax="-5">
+      <source type="image/avif" srcset="assets/img/contact-photo-551.avif 551w, assets/img/contact-photo-1102.avif 1102w" sizes="(max-width: 767px) 100vw, 36vw">
+      <img src="assets/img/contact-photo-1102.webp" srcset="assets/img/contact-photo-551.webp 551w, assets/img/contact-photo-1102.webp 1102w" sizes="(max-width: 767px) 100vw, 36vw" width="1102" height="1242" alt="" loading="lazy" decoding="async">
+    </picture>
+    <p class="hand contact__note">Open to<br>&nbsp;opportunities<br>&nbsp;nationwide.</p>
+    <svg class="hand-arrow contact__note-arrow" viewBox="0 0 44 76"><path d="M26 6c14 22 10 44-18 62M8 68l1-14M8 68l14-6"/></svg>
+    <div class="impact-card">
+      <span class="icon-bubble icon-bubble--sm"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+      <p>Fast, accessible,<br>high-performing web<br>experiences that make<br>an impact.</p>
+    </div>
+  </div>
+  <div class="dots contact__dots contact__dots--a" aria-hidden="true"></div>
+  <div class="dots contact__dots contact__dots--b" aria-hidden="true"></div>
+
+  <div class="container contact__grid">
+    <div class="contact__copy">
+      <p class="eyebrow" data-reveal>Contact</p>
+      <h2 class="display contact__title" id="contact-title" data-reveal><span class="contact__title-line">Let’s build</span> <span class="accent">what’s next.</span></h2>
+      <p class="contact__lede" data-reveal>I’m open to engineering management and senior engineering roles, consulting engagements, and interesting projects. Whether you need a full build, a migration, performance improvements, or just a technical sounding board — I’d love to hear about it.</p>
+      <ul class="contact-links">
+        <li data-reveal-item>
+          <a class="contact-link" href="mailto:donnovanwint@gmail.com">
+            <span class="icon-bubble icon-bubble--lg"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+            <span class="contact-link__text"><strong>Email</strong><span>donnovanwint@gmail.com</span></span>
+            <svg class="contact-link__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+        <li data-reveal-item>
+          <a class="contact-link" href="https://www.linkedin.com/in/donnovan-wint-jr/" rel="noopener" target="_blank">
+            <span class="linkedin-mark" aria-hidden="true">in</span>
+            <span class="contact-link__text"><strong>LinkedIn</strong><span>linkedin.com/in/donnovan-wint-jr/</span></span>
+            <span class="visually-hidden">(opens in a new tab)</span>
+            <svg class="contact-link__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+        <li data-reveal-item>
+          <a class="contact-link" href="https://www.google.com/maps/place/Philadelphia,+PA" rel="noopener" target="_blank">
+            <span class="icon-bubble icon-bubble--lg"><svg viewBox="0 0 18 22" aria-hidden="true"><path d="M9 21s7-6.2 7-11.5A7 7 0 0 0 2 9.5C2 14.8 9 21 9 21z"/><circle cx="9" cy="9.5" r="2.4"/></svg></span>
+            <span class="contact-link__text"><strong>Location</strong><span>Philadelphia, PA <span class="dot-sep" aria-hidden="true">·</span> Open to remote</span></span>
+            <span class="visually-hidden">(opens map in a new tab)</span>
+            <svg class="contact-link__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact-form" action="mailto:donnovanwint@gmail.com" method="post" enctype="text/plain" novalidate data-contact-form data-reveal>
+      <h3 class="contact-form__title">Send a message</h3>
+      <p class="contact-form__intro">Tell me about your project, opportunity, or just say hello. I’ll get back to you as soon as possible.</p>
+      <div class="contact-form__row">
+        <div class="field">
+          <input class="field__control" id="cf-name" name="name" type="text" autocomplete="name" placeholder=" " required aria-describedby="cf-name-error">
+          <label class="field__label" for="cf-name">Name</label>
+          <p class="field__error" id="cf-name-error" hidden>Please enter your name.</p>
+        </div>
+        <div class="field">
+          <input class="field__control" id="cf-email" name="email" type="email" autocomplete="email" placeholder=" " required aria-describedby="cf-email-error">
+          <label class="field__label" for="cf-email">Email</label>
+          <p class="field__error" id="cf-email-error" hidden>Please enter a valid email address.</p>
+        </div>
+      </div>
+      <div class="field field--select">
+        <select class="field__control" id="cf-subject" name="subject" required aria-describedby="cf-subject-error">
+          <option value="" selected disabled hidden></option>
+          <option>Engineering management role</option>
+          <option>Senior engineering role</option>
+          <option>Consulting project</option>
+          <option>Just saying hello</option>
+        </select>
+        <label class="field__label" for="cf-subject">Subject</label>
+        <svg class="field__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        <p class="field__error" id="cf-subject-error" hidden>Please choose a subject.</p>
+      </div>
+      <div class="field field--textarea">
+        <textarea class="field__control" id="cf-message" name="message" rows="5" placeholder=" " required aria-describedby="cf-message-error"></textarea>
+        <label class="field__label" for="cf-message">Message</label>
+        <p class="field__error" id="cf-message-error" hidden>Please add a short message.</p>
+      </div>
+      <button class="btn btn--primary btn--block" type="submit">
+        <span>Send message</span>
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="contact-form__status" role="status" aria-live="polite" data-form-status></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ========== Footer ========== -->
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="logo logo--lg" href="#top" aria-label="Donnovan Wint, back to top">DW<span aria-hidden="true">.</span></a>
+      <div>
+        <p class="site-footer__name">Donnovan Wint Jr.</p>
+        <p class="site-footer__bio">Development Manager and Senior Software Engineer based in Philadelphia, PA. 7+ years building web platforms for high-traffic brands, from B2B agencies to NASCAR.</p>
+        <ul class="social" aria-label="Elsewhere">
+          <li><a href="mailto:donnovanwint@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/donnovan-wint-jr/" rel="noopener" target="_blank" aria-label="LinkedIn (opens in a new tab)"><span class="social__in" aria-hidden="true">in</span></a></li>
+          <li><a href="./assets/resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF, opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15.5h6"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <nav class="site-footer__col" aria-labelledby="footer-quick">
+      <h2 class="site-footer__heading" id="footer-quick">Quick links</h2>
+      <ul><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+    </nav>
+    <nav class="site-footer__col" aria-labelledby="footer-work">
+      <h2 class="site-footer__heading" id="footer-work">Selected work</h2>
+      <ul>
+        <li><a href="#work" data-open-project="nascar">NASCAR</a></li>
+        <li><a href="#work" data-open-project="alphasense">AlphaSense</a></li>
+        <li><a href="#work" data-open-project="tradecentric">TradeCentric</a></li>
+        <li><a href="#work" data-open-project="johnvena">John Vena</a></li>
+        <li><a href="#work" data-open-project="greenwald">Greenwald Research</a></li>
+        <li><a href="#work" data-open-project="reynolds">Reynolds American</a></li>
+      </ul>
+    </nav>
+    <div class="site-footer__end">
+      <a class="resume-card" href="./assets/resume.pdf" target="_blank" rel="noopener">
+        <span class="icon-bubble icon-bubble--white"><svg viewBox="0 0 22 24" aria-hidden="true" class="resume-card__doc"><rect x="2" y="1" width="18" height="22" rx="3"/><path d="M6 8h10M6 12h10M6 16h7"/></svg></span>
+        <span class="resume-card__text"><strong>Download resume</strong><span>Full experience, skills, and more.</span></span><span class="visually-hidden"> (PDF, opens in a new tab)</span>
+        <svg class="resume-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="site-footer__copy">© <span data-year>2026</span> Donnovan Wint. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 </body>
-
 </html>
