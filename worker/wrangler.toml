@@ -1,0 +1,7 @@
+name = "donwint-contact-api"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# No routes/custom domain configured by default — this deploys to the
+# standard <name>.<your-subdomain>.workers.dev URL. Add a [[routes]] block
+# here later if you want it on a donwint.com subpath instead.

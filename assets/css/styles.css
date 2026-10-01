@@ -727,6 +727,10 @@ textarea.field__control { height: 137px; padding-top: 28px; resize: vertical; mi
 .field--select select:invalid { color: var(--muted); }
 .field__chevron { position: absolute; right: 15px; top: 17px; width: 16px; height: 16px; color: var(--dark); stroke-width: 2; pointer-events: none; }
 .field__error { margin-top: 6px; font-size: 0.8rem; color: #b13a26; }
+.field--honeypot {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
 .contact-form .btn--block { margin-top: 1px; background: #1f78c8; }
 .contact-form__status { min-height: 1.2em; font-size: 0.86rem; color: var(--text-2); }
 .contact-form__status:empty { display: none; }
@@ -743,7 +747,7 @@ textarea.field__control { height: 137px; padding-top: 28px; resize: vertical; mi
 .contact__note-arrow { position: absolute; left: calc(451 * var(--u)); top: calc(128 * var(--u)); width: calc(44 * var(--u)); }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .contact__grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  .contact__grid { max-width: 640px; }
 }
 
 @media (min-width: 1200px) {
@@ -754,17 +758,19 @@ textarea.field__control { height: 137px; padding-top: 28px; resize: vertical; mi
   .contact__dots--b { left: calc(50% - 768 * var(--u) + 1376 * var(--u)); top: calc(643 * var(--u)); width: calc(120 * var(--u)); height: calc(50 * var(--u)); background-size: calc(23 * var(--u)) calc(23 * var(--u)); }
   .contact__grid { display: block; position: relative; width: calc(1536 * var(--u)); max-width: none; height: 100%; }
   .contact__grid > * { position: absolute; }
-  .contact__copy { left: calc(83 * var(--u)); top: calc(47 * var(--u)); width: calc(500 * var(--u)); }
+  .contact__copy { left: calc(90 * var(--u)); top: calc(70 * var(--u)); width: calc(860 * var(--u)); }
   .contact .eyebrow { font-size: max(11.5px, calc(12.3 * var(--u))); gap: calc(17 * var(--u)); }
   .contact .eyebrow::before { width: calc(43 * var(--u)); }
   .contact__title { margin-top: calc(13 * var(--u)); font-size: calc(76 * var(--u)); line-height: calc(70 * var(--u)); }
-  .contact__lede { margin-top: calc(12 * var(--u)); width: calc(495 * var(--u)); max-width: none; font-size: max(15px, calc(18.5 * var(--u))); }
-  .contact-links { margin-top: calc(24 * var(--u)); width: calc(490 * var(--u)); max-width: none; gap: calc(14 * var(--u)); }
-  .contact-link { min-height: calc(82 * var(--u)); gap: calc(26 * var(--u)); padding: 0 calc(37 * var(--u)) 0 calc(21 * var(--u)); }
-  .contact-link .icon-bubble--lg { width: calc(55 * var(--u)); height: calc(55 * var(--u)); }
-  .contact-link__text strong { font-size: max(15px, calc(17 * var(--u))); }
-  .contact-link__text > span { font-size: max(14px, calc(16 * var(--u))); }
-  .linkedin-mark { width: calc(35 * var(--u)); height: calc(35 * var(--u)); margin-inline: calc(10 * var(--u)); font-size: calc(23 * var(--u)); }
+  .contact__lede { margin-top: calc(12 * var(--u)); width: calc(650 * var(--u)); max-width: none; font-size: max(15px, calc(18.5 * var(--u))); }
+  .contact-links { margin-top: calc(24 * var(--u)); width: 100%; max-width: none; grid-template-columns: repeat(3, 1fr); gap: calc(14 * var(--u)); align-items: stretch; }
+  .contact-link { position: relative; height: 100%; min-height: calc(130 * var(--u)); flex-direction: column; align-items: flex-start; justify-content: center; gap: calc(14 * var(--u)); padding: calc(22 * var(--u)) calc(20 * var(--u)); }
+  .contact-links > li { display: flex; }
+  .contact-link .icon-bubble--lg { width: calc(48 * var(--u)); height: calc(48 * var(--u)); }
+  .contact-link__text strong { font-size: max(15px, calc(16 * var(--u))); }
+  .contact-link__text > span { font-size: max(13px, calc(14.5 * var(--u))); overflow-wrap: anywhere; }
+  .contact-link__arrow { position: absolute; top: calc(20 * var(--u)); right: calc(20 * var(--u)); margin-left: 0; }
+  .linkedin-mark { width: calc(35 * var(--u)); height: calc(35 * var(--u)); margin-inline: 0; font-size: calc(23 * var(--u)); }
   .contact-form { left: calc(622 * var(--u)); top: calc(98 * var(--u)); width: calc(494 * var(--u)); min-height: calc(534 * var(--u)); padding: calc(33 * var(--u)) calc(33 * var(--u)) calc(34 * var(--u)) calc(31 * var(--u)); gap: calc(17 * var(--u)); }
   .contact-form__title { font-size: max(20px, calc(24 * var(--u))); }
   .contact-form__intro { font-size: max(14px, calc(15.3 * var(--u))); margin-bottom: calc(12 * var(--u)); }

@@ -4,6 +4,10 @@
 (() => {
   'use strict';
 
+  // Set by the Worker deploy (see worker/README.md) — the browser POSTs the
+  // contact form here; the Worker holds the Resend API key, never the site.
+  const CONTACT_API_URL = 'https://donwint-contact-api.YOUR-SUBDOMAIN.workers.dev';
+
   const root = document.documentElement;
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
@@ -103,11 +107,12 @@
     });
   });
 
-  /* ---------- Contact form: validate, then hand off to the visitor's mail app ---------- */
+  /* ---------- Contact form: validate, then POST to the Resend-backed Worker ---------- */
   const form = $('[data-contact-form]');
   if (form) {
     const status = $('[data-form-status]', form);
-    const fields = $$('.field__control', form);
+    const submitBtn = $('button[type="submit"]', form);
+    const fields = $$('.field__control', form).filter((f) => f.name !== 'company');
     const showError = (field, invalid) => {
       const error = document.getElementById(field.getAttribute('aria-describedby'));
       field.setAttribute('aria-invalid', String(invalid));
@@ -116,7 +121,7 @@
     fields.forEach((f) => f.addEventListener('input', () => {
       if (f.getAttribute('aria-invalid') === 'true') showError(f, !f.checkValidity());
     }));
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let firstInvalid = null;
       fields.forEach((f) => {
@@ -130,11 +135,29 @@
         return;
       }
       const data = new FormData(form);
-      const subject = `${data.get('subject')} — from ${data.get('name')}`;
-      const body = `${data.get('message')}\n\n— ${data.get('name')} (${data.get('email')})`;
-      window.location.href = `mailto:donnovanwint@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      status.textContent = 'Opening your email app with the message filled in. If nothing opens, email donnovanwint@gmail.com directly.';
-      form.reset();
+      submitBtn.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const response = await fetch(CONTACT_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: data.get('name'),
+            email: data.get('email'),
+            subject: data.get('subject'),
+            message: data.get('message'),
+            company: data.get('company'), // honeypot, left blank by real visitors
+          }),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) throw new Error(result.error || 'Request failed');
+        status.textContent = "Thanks — your message is on its way. I'll get back to you soon.";
+        form.reset();
+      } catch (err) {
+        status.textContent = `Something went wrong sending that. Email donnovanwint@gmail.com directly instead.`;
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
   }
 

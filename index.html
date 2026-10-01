@@ -540,7 +540,7 @@
 
     <div class="role-panels">
       <div class="role-panel" role="tabpanel" id="role-panel-freelance" hidden aria-labelledby="role-freelance" tabindex="0">
-        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/freelance-472.avif 472w, assets/img/freelance-900.avif 900w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/freelance-900.webp" srcset="assets/img/freelance-472.webp 472w, assets/img/freelance-900.webp 900w" sizes="(max-width: 767px) 92vw, 31vw" width="900" height="341" alt="" loading="lazy" decoding="async"></picture>
+        <picture class="role-panel__media"><source type="image/avif" srcset="assets/img/freelance-home-472.avif 472w, assets/img/freelance-home-944.avif 944w" sizes="(max-width: 767px) 92vw, 31vw"><img src="assets/img/freelance-home-944.webp" srcset="assets/img/freelance-home-472.webp 472w, assets/img/freelance-home-944.webp 944w" sizes="(max-width: 767px) 92vw, 31vw" width="944" height="357" alt="donwint.com homepage" loading="lazy" decoding="async"></picture>
         <p class="role-panel__meta"><span>Nov 2025 – Present</span><span>Independent Software Engineer &amp; Consultant</span></p>
         <h3 class="role-panel__title">Freelance</h3>
         <p class="role-panel__subtitle">Platform builds, audits &amp; consulting</p>
@@ -663,7 +663,7 @@
         <li data-reveal-item>
           <a class="contact-link" href="https://www.google.com/maps/place/Philadelphia,+PA" rel="noopener" target="_blank">
             <span class="icon-bubble icon-bubble--lg"><svg viewBox="0 0 18 22" aria-hidden="true"><path d="M9 21s7-6.2 7-11.5A7 7 0 0 0 2 9.5C2 14.8 9 21 9 21z"/><circle cx="9" cy="9.5" r="2.4"/></svg></span>
-            <span class="contact-link__text"><strong>Location</strong><span>Philadelphia, PA <span class="dot-sep" aria-hidden="true">·</span> Open to remote</span></span>
+            <span class="contact-link__text"><strong>Location</strong><span>Philadelphia, PA</span></span>
             <span class="visually-hidden">(opens map in a new tab)</span>
             <svg class="contact-link__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
@@ -671,44 +671,51 @@
       </ul>
     </div>
 
-    <form class="contact-form" action="mailto:donnovanwint@gmail.com" method="post" enctype="text/plain" novalidate data-contact-form data-reveal>
-      <h3 class="contact-form__title">Send a message</h3>
-      <p class="contact-form__intro">Tell me about your project, opportunity, or just say hello. I’ll get back to you as soon as possible.</p>
-      <div class="contact-form__row">
-        <div class="field">
-          <input class="field__control" id="cf-name" name="name" type="text" autocomplete="name" placeholder=" " required aria-describedby="cf-name-error">
-          <label class="field__label" for="cf-name">Name</label>
-          <p class="field__error" id="cf-name-error" hidden>Please enter your name.</p>
+    <!-- Contact form removed until the Resend-backed submit endpoint is verified end-to-end; markup kept inert below for restoring later. -->
+    <template id="contact-form-template">
+      <form class="contact-form" novalidate data-contact-form data-reveal>
+        <h3 class="contact-form__title">Send a message</h3>
+        <p class="contact-form__intro">Tell me about your project, opportunity, or just say hello. I’ll get back to you as soon as possible.</p>
+        <div class="contact-form__row">
+          <div class="field">
+            <input class="field__control" id="cf-name" name="name" type="text" autocomplete="name" placeholder=" " required aria-describedby="cf-name-error">
+            <label class="field__label" for="cf-name">Name</label>
+            <p class="field__error" id="cf-name-error" hidden>Please enter your name.</p>
+          </div>
+          <div class="field">
+            <input class="field__control" id="cf-email" name="email" type="email" autocomplete="email" placeholder=" " required aria-describedby="cf-email-error">
+            <label class="field__label" for="cf-email">Email</label>
+            <p class="field__error" id="cf-email-error" hidden>Please enter a valid email address.</p>
+          </div>
         </div>
-        <div class="field">
-          <input class="field__control" id="cf-email" name="email" type="email" autocomplete="email" placeholder=" " required aria-describedby="cf-email-error">
-          <label class="field__label" for="cf-email">Email</label>
-          <p class="field__error" id="cf-email-error" hidden>Please enter a valid email address.</p>
+        <div class="field field--select">
+          <select class="field__control" id="cf-subject" name="subject" required aria-describedby="cf-subject-error">
+            <option value="" selected disabled hidden></option>
+            <option>Engineering management role</option>
+            <option>Senior engineering role</option>
+            <option>Consulting project</option>
+            <option>Just saying hello</option>
+          </select>
+          <label class="field__label" for="cf-subject">Subject</label>
+          <svg class="field__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          <p class="field__error" id="cf-subject-error" hidden>Please choose a subject.</p>
         </div>
-      </div>
-      <div class="field field--select">
-        <select class="field__control" id="cf-subject" name="subject" required aria-describedby="cf-subject-error">
-          <option value="" selected disabled hidden></option>
-          <option>Engineering management role</option>
-          <option>Senior engineering role</option>
-          <option>Consulting project</option>
-          <option>Just saying hello</option>
-        </select>
-        <label class="field__label" for="cf-subject">Subject</label>
-        <svg class="field__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-        <p class="field__error" id="cf-subject-error" hidden>Please choose a subject.</p>
-      </div>
-      <div class="field field--textarea">
-        <textarea class="field__control" id="cf-message" name="message" rows="5" placeholder=" " required aria-describedby="cf-message-error"></textarea>
-        <label class="field__label" for="cf-message">Message</label>
-        <p class="field__error" id="cf-message-error" hidden>Please add a short message.</p>
-      </div>
-      <button class="btn btn--primary btn--block" type="submit">
-        <span>Send message</span>
-        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-      </button>
-      <p class="contact-form__status" role="status" aria-live="polite" data-form-status></p>
-    </form>
+        <div class="field field--textarea">
+          <textarea class="field__control" id="cf-message" name="message" rows="5" placeholder=" " required aria-describedby="cf-message-error"></textarea>
+          <label class="field__label" for="cf-message">Message</label>
+          <p class="field__error" id="cf-message-error" hidden>Please add a short message.</p>
+        </div>
+        <div class="field field--honeypot" aria-hidden="true">
+          <input class="field__control" id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
+          <label class="field__label" for="cf-company">Company</label>
+        </div>
+        <button class="btn btn--primary btn--block" type="submit">
+          <span>Send message</span>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="contact-form__status" role="status" aria-live="polite" data-form-status></p>
+      </form>
+    </template>
   </div>
 </section>
 </main>
